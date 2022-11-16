@@ -11,64 +11,39 @@ import Tailwind from '../assets/tailwind.png';
 import Mongo from '../assets/mongo.png';
 
 import $ from 'jquery'
-import './jquery.svg3dtagcloud'
+import '../js/jquery.svg3dtagcloud'
 
 const Skills = () => {
     const entries = [ 
    
-        { image: './img/Basket.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Lorem ipsum' },
-        { image: './img/Briefcase.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Dolor sit amet' },
-        { image: './img/Brush.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Consetetur sadipscing' },
-        { image: './img/Calendar.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Sed diam' },
-        { image: './img/Camera.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'At vero' },
-        { image: './img/Cassette.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Nonumy eirmod' },
-        { image: './img/Clock.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Stet clita' },
-        { image: './img/Cloud_Download.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Justo duo' },
-        { image: './img/Cloud_Upload.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Ut wisi enim' },
-        { image: './img/Coffee.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Minim veniam' },
-        { image: './img/Comments.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Quis nostrud' },
-        { image: './img/Credit_Card.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Exerci tation' },
-        { image: './img/Diary.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Duis autem' },
-        { image: './img/Document.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Vel eum iriure' },
-        { image: './img/Envelope.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Dolor in hendrerit' },
-        { image: './img/Eraser.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'In vulputate' },
-        { image: './img/File_Browser.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Velit esse' },
-        { image: './img/Games.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Molestie consequat' },
-        { image: './img/Headphones.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Vel illum' },
-        { image: './img/Heart.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Dolore eu' },
-        { image: './img/Home.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Feugiat nulla' },
-        { image: './img/ID.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Facilisis at vero' },
-        { image: './img/iPod.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Eros et accumsa' },
-        { image: './img/Key.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Et iusto odio' },
-        { image: './img/Location.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Dignissim qui' },
-        { image: './img/Location_Map.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Blandit praesent' },
-        { image: './img/Map.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Nam liber' },
-        { image: './img/Megaphone.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Soluta nobis' },
-        { image: './img/Message.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Magna aliquam' },
-        { image: './img/Microphone.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Duis autem' },
-        { image: './img/Mobile.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Lori novis' },
-        { image: './img/Money.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Meno eqiam' },
-        { image: './img/Padlock.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Meno equox' },
-        { image: './img/Pencil.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Iri orem' },
-        { image: './img/Photo.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Orel pas' },
-        { image: './img/Polaroid.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Psi sit' },
-        { image: './img/Printer.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Amet et quam' },
-        { image: './img/Record.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Molare cons' },
-        { image: './img/Save.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Digi tal' },
-        { image: './img/Scissors.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Felenope liber' },
-        { image: './img/Spanner.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Officia dolor' },
-        { image: './img/Toolbox.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Autem insto' },
-        { image: './img/Umbrella.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Veniam isictus' }
+        { image: '../assets/html.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'HTML'},
+        { image: '../assets/css.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'CSS3' },
+        { image: '../assets/javascript.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'JavaScript' },
+        { image: '../assets/react.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'ReactJS' },
+        { image: '../assets/react-native.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Cisco' },
+        { image: '../assets/node.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Node' },
+        { image: '../assets/firebase.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Firebase' },
+        { image: '../assets/github.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Github' },
+        { image: '../assets/tailwind.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Tailwind' },
+        { image: '../assets/mongo.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'MongoDB' },
+        { image: '../assets/mysql.png', width: '100', height: '100', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'MySQL' },
+        { image: '../assets/cisco.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Cisco' },
+        { image: '../assets/csharp.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'C#' },
+        { image: '../assets/aspnet.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'ASP.NET' },
+        { image: '../assets/gitlab.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'GitLab' },
+        { image: '../assets/aws.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'AWS' },
+        { image: '../assets/angular.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Angular' },
+        { image: '../assets/typescript.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'TypeScript' },
     
     ];
     const settings = {        
     entries: entries,
-    width: 480,
-    height: 480,
+    width: 900,
+    height: 900,
     radius: '65%',
     radiusMin: 75,
     bgDraw: true,
-    bgColor: '#111',
+    bgColor: 'rgb(10 25 47)',
     opacityOver: 1.00,
     opacityOut: 0.05,
     opacitySpeed: 6,
@@ -103,8 +78,12 @@ const Skills = () => {
     }, [])
 
   return (
-    <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300'>
-      <div id="tagcloud" ref={svgEl}></div>
+    <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300 text-center items-center justify-center'>
+      <div className='flex flex-col justify-center items-center w-full '>
+        <h1 className='timelineTitle font-bold text-7xl mb-[30px] mt-[30px]'>Minhas habilidades</h1>
+        <div id="tagcloud" ref={svgEl} className=''></div>
+      </div>
+      
     </div>
   );
 };

@@ -111,7 +111,7 @@ import jQuery from "jquery";
             if(svg){
                 element.removeChild( svg );
                 svg.removeEventListener( 'mousemove', mouseMoveHandler );
-                svg = undefined;
+
             }
         }
 
@@ -119,6 +119,7 @@ import jQuery from "jquery";
 
             svg = document.createElementNS( svgNS, 'svg' );
             svg.addEventListener( 'mousemove', mouseMoveHandler );
+            svg.setAttribute('style', 'display: initial !important')
 
             element.appendChild( svg );
 
@@ -273,7 +274,6 @@ import jQuery from "jquery";
 
                     entry.diffX = entryObj.width / 2;
                     entry.diffY = entryObj.height / 2;
-                    
                 }
 
                 entry.link = document.createElementNS( svgNS, 'a' );
@@ -703,7 +703,7 @@ if ( typeof jQuery !== 'undefined' ) {
 
                 if ( !$.data( this, 'plugin_SVG3DTagCloud' ) ) {
 
-                    $.data( this, 'plugin_SVG3DTagCloud', new this.SVG3DTagCloud( this, params ) );
+                    $.data( this, 'plugin_SVG3DTagCloud', new window.SVG3DTagCloud( this, params ) );
 
                 } else {
 

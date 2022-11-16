@@ -36,7 +36,7 @@ const Timeline = ({ setObserver, callback }) => {
     <h2 style='color: rgba(19, 226, 166, 1);font-weight: bolder;font-size: 2rem;'>Escola Técnica Estadual de SP</h2>
     <h4 style='color: #fff;font-weight: bolder;'>02/2017 - 12/2020</h4>
 
-    <p style='font-size: .85rem; font-weight: 400'>Aqui, cursando o ensino médio com o curso de TI, pude vivenciar o ensino médio com uma formação em tecnologia abrangente, com estudos nas áreas de:</p>
+    <p id='timelineP' style='font-size: .85rem; font-weight: 400; margin-left: 30px; margin-right: 30px; margin-top: 20px; margin-bottom: 10px;'>Aqui, cursando o ensino médio com o curso de TI, pude vivenciar o ensino médio com uma formação em tecnologia abrangente, com estudos nas áreas de:</p>
     <ul style='font-size: .85rem; font-weight: 400'>
       <li>◉ Desenvolvimento de Sistemas</li>
       <li>◉ Bancos de Dados</li>
@@ -56,7 +56,8 @@ const Timeline = ({ setObserver, callback }) => {
       <h4 style='color: #fff;font-weight: bolder;'><h4 style='animation: color-animation 4s linear infinite; --color-1: #DF8453;--color-2: #3D8DAE;--color-3: #E4A9A8; margin-right: 5px;'>PRESENTE </h4> <h4></h4>- 12/2025</h4>
     </div>
     
-    <p style='font-size: .85rem; font-weight: 400'>Escolhi o curso de <strong>Engenharia da Computação</strong> para estudar por acreditar que seria o curso mais completo para minha formação como profissional. Aqui posso aprender diversos conceitos relacionados a tanto engenharia como a computação. Estudo na Universidade São Judas Tadeu - SP.</p>
+    <p id='timelineP' style='font-size: .85rem; font-weight: 400; margin-left: 30px; margin-right: 30px; margin-top: 20px; margin-bottom: 10px;'>Escolhi o curso de <strong>Engenharia da Computação</strong> para estudar por acreditar que seria o curso mais completo para minha formação como profissional.</p>
+    <p id='timelineP' style='font-size: .85rem; font-weight: 400; margin-left: 30px; margin-right: 30px; margin-top: 20px; margin-bottom: 10px;'> Aqui posso aprender diversos conceitos relacionados a tanto engenharia como a computação. Estudo na Universidade São Judas Tadeu - SP.</p>
     
     `);
   };
@@ -66,7 +67,7 @@ const Timeline = ({ setObserver, callback }) => {
     <div style='display: -webkit-inline-box;'>
       <img style="width: 180px; height: 40px; margin-top: 20px" src="../assets/tsystems.png"/>
 
-      <div>
+      <div style='margin-bottom: 20px;'>
         <img style="width: 130px; margin-left: 25px" src="../assets/mercedes-logo.png"/>
         <span style='margin-left: 10px;font-size: 21px;font-weight: 400;color: #7f8588;'>Mercedes-Benz</span>
       </div>
@@ -76,7 +77,7 @@ const Timeline = ({ setObserver, callback }) => {
     </div>
     <h4 style='color: #fff;font-weight: bolder;'>07/2021 - 04/2022</h4>
 
-    <p style='font-size: .85rem; font-weight: 400'>Estagiário em Redes na Mercedes-Benz. Por meio da T-Systems do Brasil, consegui meu primeiro estágio! Atuei em:</p>
+    <p id='timelineP' style='font-size: .85rem; font-weight: 400; margin-left: 30px; margin-right: 30px; margin-top: 20px; margin-bottom: 10px;'>Estagiário em Redes na Mercedes-Benz. Por meio da T-Systems do Brasil, consegui meu primeiro estágio! Atuei em:</p>
     <ul style='font-size: .85rem; font-weight: 400'>
       <li>◉ Atualizando documentação como mapeamento e topologia de rede para Mercedes-Benz</li>
       <li>◉ Providenciando configurações e suporte de redes para Mercedes-Benz</li>
@@ -98,7 +99,7 @@ const Timeline = ({ setObserver, callback }) => {
     </div>
     
     
-    <p style='font-size: .85rem; font-weight: 400'>Estagiário em Desenvolvimento. E finalmente, atualmente estou na Deutsche Telekom Global Bussiness Solutions Brasil, trabalhando com:</p>
+    <p id='timelineP' style='font-size: .85rem; font-weight: 400; margin-left: 30px; margin-right: 30px; margin-top: 20px; margin-bottom: 10px;'>Estagiário em Desenvolvimento. E finalmente, atualmente estou na Deutsche Telekom Global Bussiness Solutions Brasil, trabalhando com:</p>
     <ul style='font-size: .85rem; font-weight: 400'>
       <li>◉ Desenvolvendo soluções em IOT</li>
       <li>◉ Dando suporte e atuando em sistemas de Asset Tracking</li>
@@ -182,7 +183,7 @@ const About = () => {
 
   
   return (
-    <div name='about' className='w-full h-[200vh] bg-[#2d2f39] text-gray-300'>
+    <div name='about' id='about' className='w-full h-[270vh] bg-[#2d2f39] text-gray-300'>
       <div className='flex flex-col justify-center items-center w-full '>
         <div className=''>
 
@@ -199,7 +200,6 @@ const About = () => {
             />
           )}
         />
-        <div className="stub2">{message}</div>
 
 
 

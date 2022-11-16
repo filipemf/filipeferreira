@@ -4,7 +4,7 @@ import FOTO from '../assets/foto3png.png'
 
 const Home = () => {
   return (
-    <div name='home' className='w-full h-screen bg-[#22232a]'>
+    <div name='home' id='home' className='w-full h-screen bg-[#22232a]'>
       {/* Container */}
       <div className=' mx-auto px-8 flex flex-col justify-center h-full'>
         

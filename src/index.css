@@ -95,11 +95,11 @@ body {height: 100%;}
 
 @media screen and (max-width: 883px) {
 
-    .containerPhoto {
+    /* .containerPhoto {
         display:none;
         width: 262px;
         height: 350px;
-    }
+    } */
 /* 
     .homeContainer{
       display: flex;
@@ -158,27 +158,30 @@ body {height: 100%;}
 
 .circle {
   width: 30px;
-  height: 30px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: #e5e5e5;
-
-  font-weight: bolder;
-  color: rgb(34 35 42 / var(--tw-bg-opacity));
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* background-color: #e5e5e5; */
+    font-weight: bolder;
+    color: rgb(34 35 42 / var(--tw-bg-opacity));
+    /* margin-left: 240px;*/
 }
 
 .circleWrapper {
   position: relative;
+  display: contents;
 }
 
 .message {
-  position: absolute;
+  /* position: absolute; */
   top: 10%;
   left: 200%;
   min-width: 150px;
   font-weight: bold;
+  margin-left: 20px;
+  display: contents;
 }
 
 #homeWrapper{
@@ -197,4 +200,77 @@ body {height: 100%;}
   66%   {color: var(--color-3)}
   99%   {color: var(--color-3)}
   100%  {color: var(--color-1)}
+}
+
+@media screen and (max-width: 883px) {
+
+  .containerPhoto {
+    display: table-header-group;
+    text-align: center;
+    
+  }
+  .homeContainer{
+    justify-content: center;
+    display: table;
+    flex-direction: column-reverse;
+  }
+
+
+  .image{
+    height: 300px;
+    display: inline;
+  }
+/* 
+  .homeContainer{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .h-screen{
+    height: auto !important;
+  } */
+  /* .homeText{
+      width: 600px;
+  } */
+
+}
+
+@media screen and (max-width: 880px) {
+
+  #about{
+    height: 305vh;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  #timelineP{
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  /* .wrapper{
+    display: inline-flex !important;
+  }
+
+  #about{
+    height: 250vh !important;
+  } */
+
+  
+/* 
+  .homeContainer{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .h-screen{
+    height: auto !important;
+  } */
+  /* .homeText{
+      width: 600px;
+  } */
+
 }
