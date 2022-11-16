@@ -277,7 +277,7 @@ import jQuery from "jquery";
                 }
 
                 entry.link = document.createElementNS( svgNS, 'a' );
-                entry.link.setAttributeNS( 'http://www.w3.org/1999/xlink', 'xlink:href', entryObj.url );
+                
                 entry.link.setAttribute( 'target', entryObj.target );
                 entry.link.addEventListener( 'mouseover', mouseOverHandler, true );
                 entry.link.addEventListener( 'mouseout', mouseOutHandler, true );

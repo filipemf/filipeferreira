@@ -1,8 +1,10 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import FOTO from '../assets/foto3png.png'
+import { Link } from 'react-scroll';
 
 const Home = () => {
+
   return (
     <div name='home' id='home' className='w-full h-screen bg-[#22232a]'>
       {/* Container */}
@@ -10,7 +12,7 @@ const Home = () => {
         
         <div className='homeContainer flex mt-[100px] justify-center'>
           <div className='homeText width-[695px]'>
-            <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>
+            <h1 className='text-4xl sm:text-5xl font-bold text-[#ccd6f6]'>
               Filipe Ferreira
             </h1>
           
@@ -31,10 +33,12 @@ const Home = () => {
             </p>
             <div>
               <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
-                View Work
-                <span className='group-hover:rotate-90 duration-300'>
-                  <HiArrowNarrowRight className='ml-3 ' />
-                </span>
+              <Link to='about' smooth={true} duration={500}>
+                  Ver meu trabalho
+                  <span className='group-hover:rotate-90 duration-300'>
+                    <HiArrowNarrowRight className='ml-3 ' />
+                  </span>
+               </Link>  
               </button>
             </div>
 

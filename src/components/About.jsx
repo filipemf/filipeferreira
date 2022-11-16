@@ -183,12 +183,12 @@ const About = () => {
 
   
   return (
-    <div name='about' id='about' className='w-full h-[270vh] bg-[#2d2f39] text-gray-300'>
+    <div name='about' id='about' className='w-full h-[auto] bg-[#2d2f39] text-gray-300 pb-[30px]'>
       <div className='flex flex-col justify-center items-center w-full '>
-        <div className=''>
+        <div className='' style={{textAlign: 'center'}}>
 
 
-        <h1 className='timelineTitle font-bold text-7xl mt-[50px] mb-[30px]'>Minha história</h1>
+        <h1 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>Sobre mim</h1>
         <TimelineObserver
           initialColor="#fff"
           fillColor="rgba(19, 226, 166, 1)"

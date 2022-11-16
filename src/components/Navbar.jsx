@@ -16,10 +16,12 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
+  // transparent #00000000
   return (
-    <div className='fixed w-[-webkit-fill-available] h-[80px] flex justify-between items-center px-4 bg-[#00000000] text-gray-300 ml-3 mr-3 mt-2 z-50'>
-      <div>
-        <img src={Logo} alt='Logo Image' style={{ width: '200px' }} />
+    <div className='fixed w-[-webkit-fill-available] h-[80px] flex justify-between items-center px-4 bg-[#17171c] text-gray-300 ml-3 mr-3 mt-2 z-50'>
+      <div className='textWrapper'>
+        <p className='navbarTitle w-[200px] font-bold'>FILIPE FERREIRA</p>
+        {/* <img src={Logo} alt='Logo Image' style={{ width: '200px' }} /> */}
       </div>
 
       {/* menu */}
@@ -31,7 +33,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link to='about' smooth={true} duration={500}>
-            About
+            Sobre mim
           </Link>
         </li>
         <li>
@@ -41,12 +43,12 @@ const Navbar = () => {
         </li>
         <li>
           <Link to='work' smooth={true} duration={500}>
-            Work
+            Portfolio
           </Link>
         </li>
         <li>
           <Link to='contact' smooth={true} duration={500}>
-            Contact
+            Contato
           </Link>
         </li>
       </ul>
@@ -67,7 +69,7 @@ const Navbar = () => {
 
       {/* Hamburger */}
       <div onClick={handleClick} className='md:hidden z-10'>
-        {!nav ? <FaBars /> : <FaTimes />}
+        {!nav ? <FaBars values={{color: '#fff'}} /> : <FaTimes />}
       </div>
 
       {/* Mobile menu */}
@@ -75,7 +77,7 @@ const Navbar = () => {
         className={
           !nav
             ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
+            : 'absolute top-0 left-0 w-full h-screen bg-[#22232a] flex flex-col justify-center items-center'
         }
       >
         <li className='py-6 text-4xl'>
@@ -86,7 +88,7 @@ const Navbar = () => {
         <li className='py-6 text-4xl'>
           {' '}
           <Link onClick={handleClick} to='about' smooth={true} duration={500}>
-            About
+            Sobre mim
           </Link>
         </li>
         <li className='py-6 text-4xl'>
@@ -98,13 +100,13 @@ const Navbar = () => {
         <li className='py-6 text-4xl'>
           {' '}
           <Link onClick={handleClick} to='work' smooth={true} duration={500}>
-            Work
+            Portfolio
           </Link>
         </li>
         <li className='py-6 text-4xl'>
           {' '}
           <Link onClick={handleClick} to='contact' smooth={true} duration={500}>
-            Contact
+            Contato
           </Link>
         </li>
       </ul>

@@ -16,34 +16,34 @@ import '../js/jquery.svg3dtagcloud'
 const Skills = () => {
     const entries = [ 
    
-        { image: '../assets/html.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'HTML'},
-        { image: '../assets/css.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'CSS3' },
-        { image: '../assets/javascript.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'JavaScript' },
-        { image: '../assets/react.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'ReactJS' },
-        { image: '../assets/react-native.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Cisco' },
-        { image: '../assets/node.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Node' },
-        { image: '../assets/firebase.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Firebase' },
-        { image: '../assets/github.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Github' },
-        { image: '../assets/tailwind.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Tailwind' },
-        { image: '../assets/mongo.png', width: '50', height: '50', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'MongoDB' },
-        { image: '../assets/mysql.png', width: '100', height: '100', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'MySQL' },
-        { image: '../assets/cisco.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Cisco' },
-        { image: '../assets/csharp.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'C#' },
-        { image: '../assets/aspnet.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'ASP.NET' },
-        { image: '../assets/gitlab.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'GitLab' },
-        { image: '../assets/aws.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'AWS' },
-        { image: '../assets/angular.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'Angular' },
-        { image: '../assets/typescript.png', width: '70', height: '70', url: 'http://niklasknaack.de/', target: '_top', tooltip: 'TypeScript' },
+        { image: '../assets/html.png', width: '50', height: '50', target: '_top', tooltip: 'HTML'},
+        { image: '../assets/css.png', width: '50', height: '50', target: '_top', tooltip: 'CSS3' },
+        { image: '../assets/javascript.png', width: '50', height: '50', target: '_top', tooltip: 'JavaScript' },
+        { image: '../assets/react.png', width: '50', height: '50', target: '_top', tooltip: 'ReactJS' },
+        { image: '../assets/react-native.png', width: '70', height: '70', target: '_top', tooltip: 'React Native' },
+        { image: '../assets/node.png', width: '50', height: '50', target: '_top', tooltip: 'Node' },
+        { image: '../assets/firebase.png', width: '50', height: '50', target: '_top', tooltip: 'Firebase' },
+        { image: '../assets/github.png', width: '50', height: '50', target: '_top', tooltip: 'Github' },
+        { image: '../assets/tailwind.png', width: '50', height: '50', target: '_top', tooltip: 'Tailwind' },
+        { image: '../assets/mongo.png', width: '50', height: '50', target: '_top', tooltip: 'MongoDB' },
+        { image: '../assets/mysql.png', width: '100', height: '100', target: '_top', tooltip: 'MySQL' },
+        { image: '../assets/cisco.png', width: '70', height: '70', target: '_top', tooltip: 'Cisco' },
+        { image: '../assets/csharp.png', width: '70', height: '70', target: '_top', tooltip: 'C#' },
+        { image: '../assets/aspnet.png', width: '70', height: '70', target: '_top', tooltip: 'ASP.NET' },
+        { image: '../assets/gitlab.png', width: '70', height: '70', target: '_top', tooltip: 'GitLab' },
+        { image: '../assets/aws.png', width: '70', height: '70', target: '_top', tooltip: 'AWS' },
+        { image: '../assets/angular.png', width: '70', height: '70', target: '_top', tooltip: 'Angular' },
+        { image: '../assets/typescript.png', width: '70', height: '70', target: '_top', tooltip: 'TypeScript' },
     
     ];
     const settings = {        
     entries: entries,
-    width: 900,
-    height: 900,
+    width: 800,
+    height: 800,
     radius: '65%',
     radiusMin: 75,
     bgDraw: true,
-    bgColor: 'rgb(10 25 47)',
+    bgColor: '#22232A',
     opacityOver: 1.00,
     opacityOut: 0.05,
     opacitySpeed: 6,
@@ -78,9 +78,9 @@ const Skills = () => {
     }, [])
 
   return (
-    <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300 text-center items-center justify-center'>
-      <div className='flex flex-col justify-center items-center w-full '>
-        <h1 className='timelineTitle font-bold text-7xl mb-[30px] mt-[30px]'>Minhas habilidades</h1>
+    <div name='skills' className='w-full h-screen bg-[#22232A] text-gray-300 text-center items-center justify-center'>
+      <div className='flex flex-col justify-center items-center w-full text-center'>
+        <h1 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>Minhas habilidades</h1>
         <div id="tagcloud" ref={svgEl} className=''></div>
       </div>
       

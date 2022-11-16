@@ -211,7 +211,7 @@ body {height: 100%;}
   }
   .homeContainer{
     justify-content: center;
-    display: table;
+    /* display: table; */
     flex-direction: column-reverse;
   }
 
@@ -239,7 +239,12 @@ body {height: 100%;}
 @media screen and (max-width: 880px) {
 
   #about{
-    height: 305vh;
+    /* height: 305vh; */
+  }
+
+  #home{
+    height: auto;
+    padding-bottom: 30px;
   }
 }
 
@@ -249,28 +254,59 @@ body {height: 100%;}
     margin-left: 150px;
     margin-right: 150px;
   }
+}
 
-  /* .wrapper{
-    display: inline-flex !important;
+.textWrapper{
+}
+
+.navbarTitle{
+  margin: 0;
+  line-height: 1;
+  font-size: 2em;
+  color: transparent;
+  text-transform: uppercase;
+  background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+  -webkit-background-clip: text;
+  animation: animate 5s linear infinite;
+  -webkit-background-size: 500%;
+  background-size: 500%;
+  text-align: center;
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0 100%;
   }
-
-  #about{
-    height: 250vh !important;
-  } */
-
-  
-/* 
-  .homeContainer{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column-reverse;
-    align-items: center;
+  50%{
+    background-position: 100% 0;
   }
-  .h-screen{
-    height: auto !important;
-  } */
-  /* .homeText{
-      width: 600px;
-  } */
+  100%{
+    background-position: 0 100%;
+  }
+}
 
+
+#leftContact {
+  position: absolute;
+  top: 0;
+}
+
+#rightContact {
+  width: 100px;
+  align-self: flex-end;
+}
+
+#topContact {
+  position: absolute;
+  top: 0;
+}
+
+#bottomContact {
+  position: absolute;
+  bottom: 0;
+}
+
+.contactDiv{
+  display: inline-block;
+  padding: 1rem;
 }
