@@ -21,9 +21,9 @@ const Home = () => {
             <div className='wrapper flex-row-reverse contents' id='homeWrapper'>
               {/* <div className='static-txt'>Eu sou</div> */}
               <ul className='dynamic-txts'>
-                <li><span>estudante</span></li>
                 <li><span>programador</span></li>
-                <li><span>quase engenheiro</span></li>
+                <li><span>quase</span></li>
+                <li><span>engenheiro!</span></li>
               </ul>
             </div>
 
@@ -32,7 +32,7 @@ const Home = () => {
             Meus pontos fortes incluem Redes e Cyber Security, JavaScript (frameworks: React.js e React Native), Python, C#, Node.js e SQL (com alguns trabalhos em No-SQL também).
             </p>
             <div>
-              <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
+              <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
               <Link to='about' smooth={true} duration={500}>
                   Ver meu trabalho
                   <span className='group-hover:rotate-90 duration-300'>

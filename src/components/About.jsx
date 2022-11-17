@@ -33,11 +33,11 @@ const Timeline = ({ setObserver, callback }) => {
 
   const someCallback = () => {
     setMessage1(`
-    <h2 style='color: rgba(19, 226, 166, 1);font-weight: bolder;font-size: 2rem;'>Escola Técnica Estadual de SP</h2>
+    <h2 style='color: rgba(19, 226, 166, 1);font-weight: bolder;font-size: 2rem; margin-top: 50px;'>Escola Técnica Estadual de SP</h2>
     <h4 style='color: #fff;font-weight: bolder;'>02/2017 - 12/2020</h4>
 
     <p id='timelineP' style='font-size: .85rem; font-weight: 400; margin-left: 30px; margin-right: 30px; margin-top: 20px; margin-bottom: 10px;'>Aqui, cursando o ensino médio com o curso de TI, pude vivenciar o ensino médio com uma formação em tecnologia abrangente, com estudos nas áreas de:</p>
-    <ul style='font-size: .85rem; font-weight: 400'>
+    <ul style='font-size: .85rem; font-weight: 400; margin-bottom: 50px;'>
       <li>◉ Desenvolvimento de Sistemas</li>
       <li>◉ Bancos de Dados</li>
       <li>◉ Redes de Computadores</li>
@@ -51,20 +51,20 @@ const Timeline = ({ setObserver, callback }) => {
 
   const someCallback2 = () => {
     setMessage2(`
-    <h2 style='color: rgba(19, 226, 166, 1);font-weight: bolder;font-size: 2rem;'>FACULDADE</h2>
+    <h2 style='color: rgba(19, 226, 166, 1);font-weight: bolder;font-size: 2rem; margin-top: 50px;'>FACULDADE</h2>
     <div style='display: -webkit-inline-box;'>
       <h4 style='color: #fff;font-weight: bolder;'><h4 style='animation: color-animation 4s linear infinite; --color-1: #DF8453;--color-2: #3D8DAE;--color-3: #E4A9A8; margin-right: 5px;'>PRESENTE </h4> <h4></h4>- 12/2025</h4>
     </div>
     
-    <p id='timelineP' style='font-size: .85rem; font-weight: 400; margin-left: 30px; margin-right: 30px; margin-top: 20px; margin-bottom: 10px;'>Escolhi o curso de <strong>Engenharia da Computação</strong> para estudar por acreditar que seria o curso mais completo para minha formação como profissional.</p>
-    <p id='timelineP' style='font-size: .85rem; font-weight: 400; margin-left: 30px; margin-right: 30px; margin-top: 20px; margin-bottom: 10px;'> Aqui posso aprender diversos conceitos relacionados a tanto engenharia como a computação. Estudo na Universidade São Judas Tadeu - SP.</p>
+    <p id='timelineP' style='font-size: .85rem; font-weight: 400; margin-left: 30px; margin-right: 30px; margin-top: 20px;'>Escolhi o curso de <strong>Engenharia da Computação</strong> para estudar por acreditar que seria o curso mais completo para minha formação como profissional.</p>
+    <p id='timelineP' style='font-size: .85rem; font-weight: 400; margin-left: 30px; margin-right: 30px; margin-top: 20px; margin-bottom: 50px;'> Aqui posso aprender diversos conceitos relacionados a tanto engenharia como a computação. Estudo na Universidade São Judas Tadeu - SP.</p>
     
     `);
   };
 
   const someCallback3 = () => {
     setMessage3(`
-    <div style='display: -webkit-inline-box;'>
+    <div style='display: -webkit-inline-box; margin-top: 50px;'>
       <img style="width: 180px; height: 40px; margin-top: 20px" src="../assets/tsystems.png"/>
 
       <div style='margin-bottom: 20px;'>
@@ -78,7 +78,7 @@ const Timeline = ({ setObserver, callback }) => {
     <h4 style='color: #fff;font-weight: bolder;'>07/2021 - 04/2022</h4>
 
     <p id='timelineP' style='font-size: .85rem; font-weight: 400; margin-left: 30px; margin-right: 30px; margin-top: 20px; margin-bottom: 10px;'>Estagiário em Redes na Mercedes-Benz. Por meio da T-Systems do Brasil, consegui meu primeiro estágio! Atuei em:</p>
-    <ul style='font-size: .85rem; font-weight: 400'>
+    <ul style='font-size: .85rem; font-weight: 400; margin-bottom: 50px;'>
       <li>◉ Atualizando documentação como mapeamento e topologia de rede para Mercedes-Benz</li>
       <li>◉ Providenciando configurações e suporte de redes para Mercedes-Benz</li>
       <li>◉ Monitorando redes e configurações relacionadas a redes na Mercedes-Benz</li>
@@ -90,7 +90,7 @@ const Timeline = ({ setObserver, callback }) => {
 
   const someCallback4 = () => {
     setMessage4(`
-    <div style='display: inline-flex'>
+    <div style='display: inline-flex; margin-top: 50px;'>
       <img className='deutscheLogo' src="../assets/deutsche-telekom.png" style="width: 50px; height: 55px;"/>
       <span style='margin-left: 10px; margin-top: 15px; font-size: 21px; color: #e20074'>Deutsche Telekom</span>
     </div>
@@ -100,7 +100,7 @@ const Timeline = ({ setObserver, callback }) => {
     
     
     <p id='timelineP' style='font-size: .85rem; font-weight: 400; margin-left: 30px; margin-right: 30px; margin-top: 20px; margin-bottom: 10px;'>Estagiário em Desenvolvimento. E finalmente, atualmente estou na Deutsche Telekom Global Bussiness Solutions Brasil, trabalhando com:</p>
-    <ul style='font-size: .85rem; font-weight: 400'>
+    <ul style='font-size: .85rem; font-weight: 400; margin-bottom: 50px;'>
       <li>◉ Desenvolvendo soluções em IOT</li>
       <li>◉ Dando suporte e atuando em sistemas de Asset Tracking</li>
     </ul>

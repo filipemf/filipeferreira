@@ -714,9 +714,11 @@ if ( typeof jQuery !== 'undefined' ) {
                         plugin[ params ].apply( this, Array.prototype.slice.call( args, 1 ) );
 
                     } else {
+                        
+                        $.data( this, 'plugin_SVG3DTagCloud', new window.SVG3DTagCloud( this, params ) );
 
                         $.error( 'Method ' +  params + ' does not exist on jQuery.svg3DTagCloud' );
-
+                        
                     }
 
                 }
