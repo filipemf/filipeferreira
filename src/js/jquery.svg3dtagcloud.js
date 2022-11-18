@@ -198,7 +198,8 @@ import jQuery from "jquery";
 
             //---
 
-            svg.setAttribute( 'width', svgWidth );
+            // original: svg.setAttribute( 'width', svgWidth );
+            svg.setAttribute( 'width', 'auto' );
             svg.setAttribute( 'height', svgHeight );
 
             if ( settings.bgDraw ) {

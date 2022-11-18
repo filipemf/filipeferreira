@@ -8,7 +8,8 @@ import SkillsBar from './SkillsBar';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { HiCode,HiArrowNarrowDown,HiDatabase,HiCloud} from "react-icons/hi";
+import { HiCode,HiArrowNarrowDown,HiDatabase,HiCloud, HiTerminal} from "react-icons/hi";
+import { MdLanguage} from "react-icons/md";
 
 const Progress = ({step, steps, height}) =>{
   return(
@@ -43,6 +44,9 @@ const Skills = () => {
       { image: '../assets/aws.png', width: '70', height: '70', target: '_top', tooltip: 'AWS' },
       { image: '../assets/angular.png', width: '70', height: '70', target: '_top', tooltip: 'Angular' },
       { image: '../assets/typescript.png', width: '70', height: '70', target: '_top', tooltip: 'TypeScript' },
+      { image: '../assets/usflag.png', width: '50', height: '50', target: '_top', tooltip: 'Ingles' },
+      { image: '../assets/brflag.png', width: '50', height: '50', target: '_top', tooltip: 'Portugues' },
+      { image: '../assets/spainflag.png', width: '50', height: '50', target: '_top', tooltip: 'Espanhol' },
   
     ];
 
@@ -52,13 +56,17 @@ const Skills = () => {
     function openCloud(className = 'nada', entries = entries2){
       $('#tagcloud').empty()
 
+
+
       let skillsContent = document.getElementsByClassName('skills__content')
+
 
       let arraySkills = Array.from(skillsContent);
 
 
       arraySkills.forEach(e =>{
         console.log(e.className)
+
         if(e.className.includes(className)){
           console.log('opa')
           try{
@@ -75,10 +83,12 @@ const Skills = () => {
         
       })
 
+      
+
       const settings = {
       entries: entries,
-      width: 800,
-      height: 800,
+      width: 400,
+      height: 400,
       radius: '65%',
       radiusMin: 75,
       bgDraw: true,
@@ -123,6 +133,7 @@ const Skills = () => {
   const myRefFE = useRef();
   const myRefBE = useRef();
   const myRefDB = useRef();
+  const myRefOS = useRef();
   
   
 
@@ -138,6 +149,9 @@ const Skills = () => {
     if(itemClass.current.parentElement.className === 'skills__content fe skills__close'){
       console.log('abrir')
       itemClass.current.parentElement.className = 'skills__content fe skills__open'
+
+      $('#tagcloud').prependTo($('.skills__content.fe.skills__open  div.skills__list.grid'))
+
     }
     else{
       for(let i=0;i<skillsContent.length; i++){
@@ -172,6 +186,8 @@ const Skills = () => {
     if(itemClass.current.parentElement.className === 'skills__content be skills__close'){
       console.log('abrir')
       itemClass.current.parentElement.className = 'skills__content be skills__open'
+
+      $('#tagcloud').prependTo($('.skills__content.be.skills__open  div.skills__list.grid'))
     }
     else{
       for(let i=0;i<skillsContent.length; i++){
@@ -196,6 +212,8 @@ const Skills = () => {
     if(itemClass.current.parentElement.className === 'skills__content db skills__close'){
       console.log('abrir')
       itemClass.current.parentElement.className = 'skills__content db skills__open'
+
+      $('#tagcloud').prependTo($('.skills__content.db.skills__open  div.skills__list.grid'))
     }
     else{
       for(let i=0;i<skillsContent.length; i++){
@@ -213,6 +231,33 @@ const Skills = () => {
     ]
     openCloud(itemClass.current.parentElement.className, ent)
   }
+
+    
+   
+  function toggleSkillsOS(){
+    let skillsContent = document.getElementsByClassName('skills__content os')
+    let itemClass = myRefOS
+
+    console.log(itemClass.current.parentElement.className)
+    
+    if(itemClass.current.parentElement.className === 'skills__content os skills__close'){
+      console.log('abrir')
+      itemClass.current.parentElement.className = 'skills__content os skills__open'
+
+      $('#tagcloud').prependTo($('.skills__content.os.skills__open  div.skills__list.grid'))
+    }
+    else{
+      for(let i=0;i<skillsContent.length; i++){
+        skillsContent[i].className = 'skills__content os skills__close'
+      }
+    }
+    let ent = [
+      { image: '../assets/usflag.png', width: '50', height: '50', target: '_top', tooltip: 'Ingles' },
+      { image: '../assets/brflag.png', width: '50', height: '50', target: '_top', tooltip: 'Portugues' },
+      { image: '../assets/spainflag.png', width: '50', height: '50', target: '_top', tooltip: 'Espanhol' },
+    ]
+    openCloud(itemClass.current.parentElement.className, ent)
+  }
     
 
   return (
@@ -222,16 +267,17 @@ const Skills = () => {
 
 
                 
-        <div className='skills__container container grid'>
-          <div className='inline-flex gap-[50px]'>
+        <div className='skills__container' style={{width: '100%'}}>
+          <div className='skills__subcontainer gap-[50px] inline-block'>
             
             {/* FRONTEND SKILLS */}
             <div className='skills__content fe skills__close'>
+              
               <div className="skills__header" onClick={toggleSkillsFE} ref={myRefFE}>
                 <HiCode size={30} className='skills__icon'/>
 
                 <div>
-                  <h1 className='skills__titles'>Frontend</h1>
+                  <h2 className='skills__titles'>Frontend</h2>
                 </div>
 
                 <HiArrowNarrowDown size={18}/>
@@ -253,7 +299,7 @@ const Skills = () => {
 
 
                                 
-                <div className="skills_data">
+                <div className="skills__data">
                   <div className="skills__titles">
                     <h3 className='skills__name'>JavaScript</h3>
                     <span className='skills__number'>90%</span>
@@ -275,10 +321,14 @@ const Skills = () => {
                   <div className='skills__bar'>
                     <span className="skills__percentage skills__css"></span>
                   </div>
+                  
                 </div>
 
+                
 
               </div>
+
+              
 
 
             </div>
@@ -289,10 +339,10 @@ const Skills = () => {
             {/* BACKEND SKILLS */}
             <div className='skills__content be skills__close'>
               <div className="skills__header"  onClick={toggleSkillsBE} ref={myRefBE}>
-                <HiCloud size={30} className='skills__icon'/>
+                <HiTerminal size={30} className='skills__icon'/>
 
                 <div>
-                  <h1 className='skills__titles'>Backend</h1>
+                  <h2 className='skills__titles'>Backend</h2>
                 </div>
 
                 <HiArrowNarrowDown size={18}/>
@@ -342,6 +392,67 @@ const Skills = () => {
               </div>
 
             </div>
+            {/* BACKEND SKILLS */}
+
+                        
+
+            {/* OTHER SKILLS */}
+            <div className='skills__content os skills__close'>
+              <div className="skills__header"  onClick={toggleSkillsOS} ref={myRefOS}>
+                <MdLanguage size={30} className='skills__icon'/>
+
+                <div>
+                  <h2 className='skills__titles'>Linguagens</h2>
+                </div>
+
+                <HiArrowNarrowDown size={18}/>
+
+              </div>
+
+              <div className="skills__list grid">
+
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Inglês</h3>
+                    <span className='skills__number'>Fluente</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__html"></span>
+                  </div>
+                </div>
+
+
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Portugues</h3>
+                    <span className='skills__number'>Nativo</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__js"></span>
+                  </div>
+                </div>
+
+
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Espanhol</h3>
+                    <span className='skills__number'>Intermediário</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__css"></span>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+            {/* OTHER SKILLS */}
             {/* FRONTEND SKILLS */}
 
 
@@ -353,7 +464,7 @@ const Skills = () => {
                 <HiCloud size={30} className='skills__icon'/>
 
                 <div>
-                  <h1 className='skills__titles'>DB e outras Tecnologias</h1>
+                  <h2 className='skills__titles'>DB e outras Tecnologias</h2>
                 </div>
 
                 <HiArrowNarrowDown size={18}/>
@@ -405,12 +516,15 @@ const Skills = () => {
             </div>
             {/* FRONTEND SKILLS */}
 
-
+            
+            <div id="tagcloud" ref={svgEl} className=''></div>
           </div>
+
+          
         </div>
 
 
-        <div id="tagcloud" ref={svgEl} className=''></div>
+        
 
 
         <h2 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>Certificações</h2>
@@ -449,13 +563,6 @@ const Skills = () => {
           
           
         </div>
-
-          <h2 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>Outras Skills</h2>
-          <div div style={{display: 'contents'}}>
-
-            <SkillsBar/>
-          </div>
-
 
       </div>
       
