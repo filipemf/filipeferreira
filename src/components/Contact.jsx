@@ -24,7 +24,7 @@ const Contact = () => {
           <div className='pb-[50px]'>
 
             <div className='contactDiv'>
-              <a className='flex justify-between items-center w-full text-gray-300'
+              <a className='averageLink flex justify-between items-center w-full text-gray-300'
                 href='https://github.com/filipemf'
                 >
                   Github<AiFillGithub size={30}/>
@@ -32,7 +32,7 @@ const Contact = () => {
             </div>
 
             <div className='contactDiv'>
-              <a className='flex justify-between items-center w-full text-gray-300'
+              <a className='averageLink flex justify-between items-center w-full text-gray-300'
                 href='https://www.linkedin.com/in/filipemarquesf/'
                 >
                   Linkedin<AiFillLinkedin size={30}/>
@@ -40,7 +40,7 @@ const Contact = () => {
             </div>
 
             <div className='contactDiv'>
-              <a className='flex justify-between items-center w-full text-gray-300'
+              <a className='averageLink flex justify-between items-center w-full text-gray-300'
                 href='mailto:filipemarquesf01@gmail.com?Subject=Contato%20Filipe%20Ferreira&Body=Oi%21%20Gostei%20do%20seu%20trabalho%21%20Podemos%20entrar%20em%20contato%3F'
                 >
                   Mail<AiFillMail size={30}/>

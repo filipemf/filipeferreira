@@ -12,13 +12,16 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Logo from '../assets/logo.png';
 import { Link } from 'react-scroll';
 
+import {FaFlagUsa} from "react-icons/fa";
+import {GiBrazilFlag} from "react-icons/gi";
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
   // transparent #00000000
   return (
-    <div className='fixed w-[-webkit-fill-available] h-[80px] flex justify-between items-center px-4 bg-[#17171c] text-gray-300 ml-3 mr-3 mt-2 z-50'>
+    <div id='navbarDefault' className='fixed w-[-webkit-fill-available] h-[80px] flex justify-between items-center px-4 bg-[#17171c] text-gray-300 ml-3 mr-3 mt-2 z-50'>
       <div className='textWrapper'>
         <p className='navbarTitle w-[200px] font-bold'>FILIPE FERREIRA</p>
         {/* <img src={Logo} alt='Logo Image' style={{ width: '200px' }} /> */}
@@ -57,12 +60,12 @@ const Navbar = () => {
       <ul className='hidden md:flex'>
         <li>
           <Link to='work' smooth={true} duration={500}>
-            pt-BR 
+            <GiBrazilFlag className='ml-[10px]' size={25}/> pt-BR
           </Link>
         </li>
-        <li>
+        <li className='mt-[5px]'>
           <Link to='contact' smooth={true} duration={500}>
-            en 
+            <FaFlagUsa size={20}/> en
           </Link>
         </li>
       </ul>

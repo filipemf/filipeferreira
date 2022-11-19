@@ -4,24 +4,14 @@ import $ from 'jquery'
 import '../js/jquery.svg3dtagcloud'
 
 
-import SkillsBar from './SkillsBar';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { HiCode,HiArrowNarrowDown,HiDatabase,HiCloud, HiTerminal} from "react-icons/hi";
 import { MdLanguage} from "react-icons/md";
 
-const Progress = ({step, steps, height}) =>{
-  return(
-    <div className='bg-[rgba(0,0,0,0.1)] rounded overflow-hidden'>
-      <p>{step}/{steps}</p>
-      <div className='w-[100vh] rounded bg-[rgba(0,0,0,0.5)] absolute left-0 top-0'>
-
-      </div>
-    </div>
-    
-  )
-}
+import {FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNode, FaCloud, FaGithub, FaGitlab, FaAws, FaAngular,  FaFlagUsa, FaPython} from "react-icons/fa";
+import {SiMongodb, SiFirebase, SiMysql, SiCisco, SiCsharp, SiTypescript, SiDotnet} from "react-icons/si";
+import {GiBrazilFlag, GiSpain} from "react-icons/gi";
 
 const Skills = () => {
     const entries2 = [ 
@@ -34,7 +24,6 @@ const Skills = () => {
       { image: '../assets/node.png', width: '50', height: '50', target: '_top', tooltip: 'Node' },
       { image: '../assets/firebase.png', width: '50', height: '50', target: '_top', tooltip: 'Firebase' },
       { image: '../assets/github.png', width: '50', height: '50', target: '_top', tooltip: 'Github' },
-      { image: '../assets/tailwind.png', width: '50', height: '50', target: '_top', tooltip: 'Tailwind' },
       { image: '../assets/mongo.png', width: '50', height: '50', target: '_top', tooltip: 'MongoDB' },
       { image: '../assets/mysql.png', width: '100', height: '100', target: '_top', tooltip: 'MySQL' },
       { image: '../assets/cisco.png', width: '70', height: '70', target: '_top', tooltip: 'Cisco' },
@@ -166,9 +155,6 @@ const Skills = () => {
       { image: '../assets/css.png', width: '50', height: '50', target: '_top', tooltip: 'CSS3' },
       { image: '../assets/javascript.png', width: '50', height: '50', target: '_top', tooltip: 'JavaScript' },
       { image: '../assets/react.png', width: '50', height: '50', target: '_top', tooltip: 'ReactJS' },
-      { image: '../assets/react-native.png', width: '70', height: '70', target: '_top', tooltip: 'React Native' },
-      { image: '../assets/tailwind.png', width: '50', height: '50', target: '_top', tooltip: 'Tailwind' },
-      { image: '../assets/aspnet.png', width: '70', height: '70', target: '_top', tooltip: 'ASP.NET' },
       { image: '../assets/angular.png', width: '70', height: '70', target: '_top', tooltip: 'Angular' },
       { image: '../assets/typescript.png', width: '70', height: '70', target: '_top', tooltip: 'TypeScript' },
     ]
@@ -195,6 +181,8 @@ const Skills = () => {
       }
     }
     let ent = [
+      { image: '../assets/react-native.png', width: '70', height: '70', target: '_top', tooltip: 'React Native' },
+      { image: '../assets/aspnet.png', width: '70', height: '70', target: '_top', tooltip: 'ASP.NET' },
       { image: '../assets/node.png', width: '50', height: '50', target: '_top', tooltip: 'Node' },
       { image: '../assets/csharp.png', width: '70', height: '70', target: '_top', tooltip: 'C#' },
       { image: '../assets/python.png', width: '70', height: '70', target: '_top', tooltip: 'Python' },
@@ -288,12 +276,12 @@ const Skills = () => {
 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>HTML</h3>
-                    <span className='skills__number'>90%</span>
+                    <h3 className='skills__name'>HTML <FaHtml5 size={20}/> </h3>
+                    <span className='skills__number'>100%</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__html"></span>
+                    <span className="skills__percentage skills__100"></span>
                   </div>
                 </div>
 
@@ -301,12 +289,12 @@ const Skills = () => {
                                 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>JavaScript</h3>
-                    <span className='skills__number'>90%</span>
+                    <h3 className='skills__name'>JavaScript <FaJsSquare size={20}/> </h3>
+                    <span className='skills__number'>100%</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__js"></span>
+                    <span className="skills__percentage skills__100"></span>
                   </div>
                 </div>
 
@@ -314,23 +302,62 @@ const Skills = () => {
                                 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>CSS</h3>
-                    <span className='skills__number'>CSS</span>
+                    <h3 className='skills__name'>CSS <FaCss3Alt size={20}/> </h3>
+                    <span className='skills__number'>85%</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__css"></span>
+                    <span className="skills__percentage skills__85"></span>
                   </div>
                   
                 </div>
 
                 
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>React <FaReact size={20}/> </h3>
+                    <span className='skills__number'>90%</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__90"></span>
+                  </div>
+                  
+                </div>
+
+
+                
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Angular <FaAngular size={20}/> </h3>
+                    <span className='skills__number'>60%</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__60"></span>
+                  </div>
+                  
+                </div>
+
+
+                
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Typescript <SiTypescript size={20}/> </h3>
+                    <span className='skills__number'>65%</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__65"></span>
+                  </div>
+                  
+                </div>
+
 
               </div>
-
-              
-
-
             </div>
             {/* FRONTEND SKILLS */}
                         
@@ -353,12 +380,12 @@ const Skills = () => {
 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>NodeJS</h3>
+                    <h3 className='skills__name'>NodeJS <FaNode size={20}/> </h3>
                     <span className='skills__number'>90%</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__html"></span>
+                    <span className="skills__percentage skills__90"></span>
                   </div>
                 </div>
 
@@ -366,12 +393,12 @@ const Skills = () => {
                                 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>C#</h3>
-                    <span className='skills__number'>90%</span>
+                    <h3 className='skills__name'>C# <SiCsharp size={20}/> </h3>
+                    <span className='skills__number'>70%</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__js"></span>
+                    <span className="skills__percentage skills__70"></span>
                   </div>
                 </div>
 
@@ -379,12 +406,36 @@ const Skills = () => {
                                 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>CSS</h3>
-                    <span className='skills__number'>CSS</span>
+                    <h3 className='skills__name'>Python <FaPython size={20}/> </h3>
+                    <span className='skills__number'>80%</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__css"></span>
+                    <span className="skills__percentage skills__80"></span>
+                  </div>
+                </div>
+
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>ASP.NET <SiDotnet size={20}/> </h3>
+                    <span className='skills__number'>60%</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__60"></span>
+                  </div>
+                </div>
+
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>React Native <FaReact size={20}/> </h3>
+                    <span className='skills__number'>85%</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__85"></span>
                   </div>
                 </div>
 
@@ -413,12 +464,12 @@ const Skills = () => {
 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>Inglês</h3>
+                    <h3 className='skills__name'>Inglês <FaFlagUsa size={20}/> </h3>
                     <span className='skills__number'>Fluente</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__html"></span>
+                    <span className="skills__percentage skills__100"></span>
                   </div>
                 </div>
 
@@ -426,12 +477,12 @@ const Skills = () => {
                                 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>Portugues</h3>
+                    <h3 className='skills__name'>Portugues <GiBrazilFlag size={20}/> </h3>
                     <span className='skills__number'>Nativo</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__js"></span>
+                    <span className="skills__percentage skills__100"></span>
                   </div>
                 </div>
 
@@ -439,12 +490,12 @@ const Skills = () => {
                                 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>Espanhol</h3>
+                    <h3 className='skills__name'>Espanhol <GiSpain size={20}/> </h3>
                     <span className='skills__number'>Intermediário</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__css"></span>
+                    <span className="skills__percentage skills__50"></span>
                   </div>
                 </div>
 
@@ -453,7 +504,6 @@ const Skills = () => {
 
             </div>
             {/* OTHER SKILLS */}
-            {/* FRONTEND SKILLS */}
 
 
             
@@ -475,12 +525,25 @@ const Skills = () => {
 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>MySQL</h3>
+                    <h3 className='skills__name'>Firebase <SiFirebase size={20}/> </h3>
+                    <span className='skills__number'>65%</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__65"></span>
+                  </div>
+                </div>
+
+
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Github <FaGithub size={20}/> </h3>
                     <span className='skills__number'>90%</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__html"></span>
+                    <span className="skills__percentage skills__90"></span>
                   </div>
                 </div>
 
@@ -488,25 +551,64 @@ const Skills = () => {
                                 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>Firebase</h3>
-                    <span className='skills__number'>MongoDB</span>
+                    <h3 className='skills__name'>MongoDB <SiMongodb size={20}/> </h3>
+                    <span className='skills__number'>70%</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__js"></span>
+                    <span className="skills__percentage skills__70"></span>
                   </div>
                 </div>
 
-
+                
                                 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>Oracle</h3>
-                    <span className='skills__number'>CSS</span>
+                    <h3 className='skills__name'>MySQL <SiMysql size={20}/></h3>
+                    <span className='skills__number'>65%</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__css"></span>
+                    <span className="skills__percentage skills__65"></span>
+                  </div>
+                </div>
+
+                
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Networks <SiCisco size={20}/></h3>
+                    <span className='skills__number'>65%</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__65"></span>
+                  </div>
+                </div>
+
+                
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Gitlab <FaGitlab size={20}/></h3>
+                    <span className='skills__number'>70%</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__70"></span>
+                  </div>
+                </div>
+
+                
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>AWS <FaAws size={20}/></h3>
+                    <span className='skills__number'>60%</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__60"></span>
                   </div>
                 </div>
 
@@ -514,7 +616,7 @@ const Skills = () => {
               </div>
 
             </div>
-            {/* FRONTEND SKILLS */}
+            {/* DATABASE SKILLS */}
 
             
             <div id="tagcloud" ref={svgEl} className=''></div>
@@ -529,19 +631,27 @@ const Skills = () => {
 
         <h2 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>Certificações</h2>
         
-        <div className='inline-flex p-[30px] gap-[100px]'>
+        <div className='inline-flex gap-[100px]'>
 
           <div>
             <h3 className='timelineTitle font-bold text-3xl mt-[50px] mb-[30px]'>Network</h3>
             <div className='inline-flex gap-[20px]'> 
               <div>
-                <img src='../assets/certifications/ccna.png' alt='CCNA 1' className='w-[200px]'/>
-                <span>CCNA 1</span>
+                <a className='averageLink block'
+                  href='https://www.credly.com/badges/702c0876-bfb2-43dc-856b-264e6a0cb735?source=linked_in_profile'
+                  >
+                  <img src='../assets/certifications/ccna.png' alt='CCNA 1' className='w-[200px]'/>
+                  <span className='text-[#d1dbdc]'>CCNA 1</span>
+                </a>
               </div>
 
               <div>
-                <img src='../assets/certifications/cyberops.png' alt='Cyber Ops Associate' className='w-[200px]'/>
-                <span>Cyber Ops Associate</span>
+                <a className='averageLink block'
+                    href='https://www.credly.com/badges/7ac2956d-9369-4e9a-921c-6700a4dabd5e?source=linked_in_profile'
+                    >
+                  <img src='../assets/certifications/cyberops.png' alt='Cyber Ops Associate' className='w-[200px]'/>
+                  <span className='text-[#d1dbdc]'>Cyber Ops Associate</span>
+                </a>
               </div>
               
             </div>
@@ -552,8 +662,12 @@ const Skills = () => {
             <h3 className='timelineTitle font-bold text-3xl mt-[50px] mb-[30px]'>AWS</h3>
             <div className='inline-flex gap-[20px]'> 
             <div>
-              <img src='../assets/certifications/cloud-foundations.png' alt='Cloud Foundations' className='w-[200px]'/>
-              <span>Cloud Foundations</span>
+              <a className='averageLink block'
+                    href='https://www.credly.com/badges/9896c202-6322-46c1-a5a5-fa4ec5b353a3/public_url'
+                    >
+                <img src='../assets/certifications/cloud-foundations.png' alt='Cloud Foundations' className='w-[200px]'/>
+                <span className='text-[#d1dbdc]'>Cloud Foundations</span>
+              </a>
             </div>
             
           </div>
