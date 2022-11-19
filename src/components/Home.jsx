@@ -1,6 +1,5 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
-import FOTO from '../assets/foto3png.png'
 import { Link } from 'react-scroll';
 
 const Home = () => {
@@ -47,7 +46,7 @@ const Home = () => {
 
 
           <div className='containerPhoto'>
-            <img className='image h-[500px]' src={FOTO} alt="HTML icon" />
+            <img className='image h-[500px]' src='../assets/foto3png.png' alt="HTML icon" />
           </div>
 
           {/* <div className='photoContainer right-0 top-0'>

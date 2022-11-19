@@ -13,6 +13,13 @@ import {FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNode, FaCloud, FaGithub, FaGi
 import {SiMongodb, SiFirebase, SiMysql, SiCisco, SiCsharp, SiTypescript, SiDotnet} from "react-icons/si";
 import {GiBrazilFlag, GiSpain} from "react-icons/gi";
 
+
+
+const scrollTo = (ref) => {
+  console.log(ref)
+  ref.current.scrollIntoView()
+}
+
 const Skills = () => {
     const entries2 = [ 
    
@@ -41,8 +48,9 @@ const Skills = () => {
 
     const svgEl = useRef()
 
+    const myRef = useRef(null)
 
-    function openCloud(className = 'nada', entries = entries2){
+    function openCloud(className = 'nada', entries = entries2, ref = undefined){
       $('#tagcloud').empty()
 
 
@@ -72,7 +80,7 @@ const Skills = () => {
         
       })
 
-      
+      if(ref!==undefined) scrollTo(ref)
 
       const settings = {
       entries: entries,
@@ -110,6 +118,8 @@ const Skills = () => {
 
       const $svgEl = $(svgEl.current)
       $svgEl.svg3DTagCloud(settings)
+
+      
     }
     
 
@@ -123,6 +133,7 @@ const Skills = () => {
   const myRefBE = useRef();
   const myRefDB = useRef();
   const myRefOS = useRef();
+
   
   
 
@@ -158,7 +169,9 @@ const Skills = () => {
       { image: '../assets/angular.png', width: '70', height: '70', target: '_top', tooltip: 'Angular' },
       { image: '../assets/typescript.png', width: '70', height: '70', target: '_top', tooltip: 'TypeScript' },
     ]
-    openCloud(itemClass.current.parentElement.className, ent)
+    openCloud(itemClass.current.parentElement.className, ent, itemClass)
+
+    
 
   }
 
@@ -180,6 +193,8 @@ const Skills = () => {
         skillsContent[i].className = 'skills__content be skills__close'
       }
     }
+
+
     let ent = [
       { image: '../assets/react-native.png', width: '70', height: '70', target: '_top', tooltip: 'React Native' },
       { image: '../assets/aspnet.png', width: '70', height: '70', target: '_top', tooltip: 'ASP.NET' },
@@ -187,7 +202,9 @@ const Skills = () => {
       { image: '../assets/csharp.png', width: '70', height: '70', target: '_top', tooltip: 'C#' },
       { image: '../assets/python.png', width: '70', height: '70', target: '_top', tooltip: 'Python' },
     ]
-    openCloud(itemClass.current.parentElement.className, ent)
+    openCloud(itemClass.current.parentElement.className, ent, itemClass)
+
+    
   }
   
    
@@ -208,6 +225,7 @@ const Skills = () => {
         skillsContent[i].className = 'skills__content db skills__close'
       }
     }
+
     let ent = [
       { image: '../assets/firebase.png', width: '50', height: '50', target: '_top', tooltip: 'Firebase' },
       { image: '../assets/github.png', width: '50', height: '50', target: '_top', tooltip: 'Github' },
@@ -217,7 +235,8 @@ const Skills = () => {
       { image: '../assets/gitlab.png', width: '70', height: '70', target: '_top', tooltip: 'GitLab' },
       { image: '../assets/aws.png', width: '70', height: '70', target: '_top', tooltip: 'AWS' },
     ]
-    openCloud(itemClass.current.parentElement.className, ent)
+    openCloud(itemClass.current.parentElement.className, ent, itemClass)
+
   }
 
     
@@ -239,12 +258,14 @@ const Skills = () => {
         skillsContent[i].className = 'skills__content os skills__close'
       }
     }
+    
+
     let ent = [
       { image: '../assets/usflag.png', width: '50', height: '50', target: '_top', tooltip: 'Ingles' },
       { image: '../assets/brflag.png', width: '50', height: '50', target: '_top', tooltip: 'Portugues' },
       { image: '../assets/spainflag.png', width: '50', height: '50', target: '_top', tooltip: 'Espanhol' },
     ]
-    openCloud(itemClass.current.parentElement.className, ent)
+    openCloud(itemClass.current.parentElement.className, ent, itemClass)
   }
     
 

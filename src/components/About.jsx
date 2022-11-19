@@ -2,10 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import {fireConfetti} from '../js/confetti'
 
-import TimelineObserver from 'react-timeline-animation';
-
-import TSYSTEMS from '../assets/tsystems.png'
-
 import $ from 'jquery'
 
 const Timeline = ({ setObserver, callback }) => {
@@ -278,7 +274,7 @@ const About = () => {
             
             <div class="section-content creative">
               <div style={{display: '-webkit-inline-box;', marginTop: '50px;'}} className='imgsContainer inline-flex'>
-                <img className='tsystemsLogo w-[200px] h-[fit-content]' style={{width: '200px;', marginTop: '40px'}} src="../assets/tsystems.png" alt='T-Systems'/>
+                <img className='tsystemsLogo w-[200px] h-[auto]' style={{width: '200px;', marginTop: '40px'}} src="../assets/tsystems.png" alt='T-Systems'/>
 
                 <div className='mercedesLogo' style={{marginBottom: '20px;'}}>
                   <img className='w-[180px]' style={{width: '200px;', marginLeft: '25px'}} src="../assets/mercedes-logo.png" alt='Mercedes-Benz'/>

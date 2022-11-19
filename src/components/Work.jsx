@@ -1,5 +1,4 @@
 import React, {useEffect, useRef} from 'react';
-import { data } from "../data/data.js";
 
 import { HiCode,HiArrowNarrowDown,HiDatabase,HiCloud} from "react-icons/hi";
 
