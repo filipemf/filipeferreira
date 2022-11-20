@@ -1,9 +1,15 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, Suspense, useState} from 'react';
 
 import { HiCode,HiArrowNarrowDown,HiDatabase,HiCloud} from "react-icons/hi";
 
 
+import $ from 'jquery'
+
+const Spline = React.lazy(() => import('@splinetool/react-spline'));
+
+
 const Work = () => {
+  const [scrollEnabled, setScrollEnabled] = useState(true);
 
   const myRefFE = useRef();
   const myRefBE = useRef();
@@ -62,6 +68,21 @@ const Work = () => {
       }
     }
   }
+
+  function prevent(e){
+    console.log(e)
+    if (e.cancelable) {
+      console.log('vai vai')
+      e.preventDefault();
+   }
+  }
+
+  useEffect(()=>{
+    $("#spline").bind("wheel mousewheel", function(e) {
+      console.log('vai vai')
+      e.preventDefault()
+    });
+  })
     
   
   return (
@@ -70,6 +91,13 @@ const Work = () => {
       <div className='' style={{textAlign: 'center'}}>
         <h1 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>Portfolio</h1>
       
+      
+        <div className='splineContainer'>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Spline id='spline' scene={require('./scene (1).splinecode')}/>
+          </Suspense>
+        </div>
+        
 
       </div>
     </div>

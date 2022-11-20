@@ -297,7 +297,7 @@ const About = () => {
               </div>
             
               
-              <p id='timelineP' style={{fontSize: '.85rem;', fontWeight: '400;', marginLeft: '30px;', marginRight: '30px;', marginTop: '20px;', marginBottom: '10px;'}}>Estagiário em Desenvolvimento. E finalmente, atualmente estou na Deutsche Telekom Global Bussiness Solutions Brasil, trabalhando com:</p>
+              <p id='timelineP' style={{fontSize: '.85rem;', fontWeight: '400;', marginLeft: '30px;', marginRight: '30px;', marginTop: '20px;', marginBottom: '10px;'}}>Atualmente como Estagiário em Desenvolvimento, estou na Deutsche Telekom Global Bussiness Solutions Brasil, trabalhando com:</p>
               <ul className='timelineUL' style={{fontSize: '.85rem;', fontWeight: '400;', marginBottom: '50px;'}}>
                 <li>◉ Desenvolvendo soluções em IOT</li>
                 <li>◉ Dando suporte e atuando em sistemas de Asset Tracking</li>
