@@ -27,7 +27,7 @@ const Navbar = () => {
       </div>
 
       {/* menu */}
-      <ul className='hidden md:flex'>
+      <ul className='hidden md:flex font-bold'>
         <li>
           <Link to='home' smooth={true} duration={500}>
             Home
@@ -56,7 +56,7 @@ const Navbar = () => {
       </ul>
 
 
-      <ul className='hidden md:flex'>
+      <ul className='hidden md:flex font-bold'>
         <li>
           <Link to='work' smooth={true} duration={500}>
             <GiBrazilFlag className='ml-[10px]' size={25}/> pt-BR
@@ -79,7 +79,7 @@ const Navbar = () => {
         className={
           !nav
             ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-[#22232a] flex flex-col justify-center items-center'
+            : 'absolute top-0 left-0 w-full h-screen bg-[#22232a] flex flex-col justify-center items-center font-bold'
         }
       >
         <li className='py-6 text-4xl'>
