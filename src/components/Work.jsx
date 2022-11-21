@@ -42,10 +42,13 @@ const Work = () => {
     
   
   return (
-    <div name='work' id='about' className='w-full h-[100vh] bg-[#2d2f39] text-gray-300 pb-[30px]'>
+    <div name='work' id='about' className='w-full h-[auto] bg-[#2d2f39] text-gray-300 pb-[30px]'>
 
       <div className='' style={{textAlign: 'center'}}>
-        <h1 className='timelineTitle font-bold text-5xl mb-[20px]'>Portfolio</h1>
+
+        <div>
+          <h1 className='timelineTitle font-bold text-5xl mb-[20px]'>Portfolio</h1>
+        </div>
 
         <p className='mt-[30px]'>Conheça alguns dos meus trabalhos!</p>
         
