@@ -24,64 +24,6 @@ const Spline = React.lazy(() => import('@splinetool/react-spline'));
 const Work = () => {
   const [scrollEnabled, setScrollEnabled] = useState(true);
 
-  const myRefFE = useRef();
-  const myRefBE = useRef();
-  const myRefDB = useRef();
-  
-
-  function toggleSkillsFE(){
-    let skillsContent = document.getElementsByClassName('skills__content fe')
-    let itemClass = myRefFE
-
-    console.log(itemClass.current.parentElement.className)
-    
-    if(itemClass.current.parentElement.className === 'skills__content fe skills__close'){
-      console.log('abrir')
-      itemClass.current.parentElement.className = 'skills__content fe skills__open'
-    }
-    else{
-      for(let i=0;i<skillsContent.length; i++){
-        skillsContent[i].className = 'skills__content fe skills__close'
-      }
-    }
-  }
-
-  
-  function toggleSkillsBE(){
-    let skillsContent = document.getElementsByClassName('skills__content be')
-    let itemClass = myRefBE
-
-    console.log(itemClass.current.parentElement.className)
-    
-    if(itemClass.current.parentElement.className === 'skills__content be skills__close'){
-      console.log('abrir')
-      itemClass.current.parentElement.className = 'skills__content be skills__open'
-    }
-    else{
-      for(let i=0;i<skillsContent.length; i++){
-        skillsContent[i].className = 'skills__content be skills__close'
-      }
-    }
-  }
-  
-   
-  function toggleSkillsDB(){
-    let skillsContent = document.getElementsByClassName('skills__content db')
-    let itemClass = myRefDB
-
-    console.log(itemClass.current.parentElement.className)
-    
-    if(itemClass.current.parentElement.className === 'skills__content db skills__close'){
-      console.log('abrir')
-      itemClass.current.parentElement.className = 'skills__content db skills__open'
-    }
-    else{
-      for(let i=0;i<skillsContent.length; i++){
-        skillsContent[i].className = 'skills__content db skills__close'
-      }
-    }
-  }
-
   function prevent(e){
     console.log(e)
     if (e.cancelable) {
@@ -103,7 +45,14 @@ const Work = () => {
 
       <div className='' style={{textAlign: 'center'}}>
         <h1 className='timelineTitle font-bold text-5xl mb-[30px]'>Portfolio</h1>
-      
+
+
+      <video width="750" height="500" src={require('../assets/videoteste.mp4')}>
+      </video>
+
+      {/* <video autoPlay={true} loop={true} muted={true} playsInline={true}>
+        <source src="videoteste.mp4" type="video/mp4" />
+      </video> */}
       
         {/* <div className='splineContainer'>
           <Suspense fallback={<div>Loading...</div>}>
@@ -128,9 +77,9 @@ const Work = () => {
             <h3 className='mb-50px'>DTGBS - Contratos</h3>
 
             <div className='splineContainer'>
-              <Suspense fallback={<div>Loading...</div>}>
+              {/* <Suspense fallback={<div>Loading...</div>}>
                 <Spline id='spline' scene={require('./scene (3).splinecode')}/>
-              </Suspense>
+              </Suspense> */}
             </div>
 
             <p className='mt-[30px]'>Programa criado com o objetivo de automatizar a criação de documentos.</p>
