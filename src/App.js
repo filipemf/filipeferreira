@@ -1,4 +1,5 @@
 import About from "./components/About";
+import BackToTop from "./components/BackToTop";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
@@ -10,6 +11,7 @@ function App() {
   return (
     <div>
       <Navbar />
+      <BackToTop/>
       <Home />
       <About />
       <Skills />
