@@ -17,27 +17,27 @@ import { Pagination, Navigation } from "swiper";
 
 import $ from 'jquery'
 
-const Spline = React.lazy(() => import('@splinetool/react-spline'));
-const video = React.lazy(() => './movie.mp4');
+// const Spline = React.lazy(() => import('@splinetool/react-spline'));
+
 
 
 const Work = () => {
-  const [scrollEnabled, setScrollEnabled] = useState(true);
+  // const [scrollEnabled, setScrollEnabled] = useState(true);
 
-  function prevent(e){
-    console.log(e)
-    if (e.cancelable) {
-      console.log('vai vai')
-      e.preventDefault();
-   }
-  }
+  // function prevent(e){
+  //   console.log(e)
+  //   if (e.cancelable) {
+  //     console.log('vai vai')
+  //     e.preventDefault();
+  //  }
+  // }
 
-  useEffect(()=>{
-    $("#spline").bind("wheel mousewheel", function(e) {
-      console.log('vai vai')
-      e.preventDefault()
-    });
-  })
+  // useEffect(()=>{
+  //   $("#spline").bind("wheel mousewheel", function(e) {
+  //     console.log('vai vai')
+  //     e.preventDefault()
+  //   });
+  // })
     
   
   return (
@@ -74,11 +74,10 @@ const Work = () => {
             <h3 className='mb-50px'>DTGBS - Contratos</h3>
 
             <div className='splineContainer'>
-              <Suspense fallback={<div>Loading...</div>}>
-                <video className='contratosVideo' loop autoPlay muted>
-                  <source src='./movie2.mp4' type="video/mp4" />
-                </video>
-              </Suspense>
+              
+              <video className='contratosVideo' muted={true} loop={'loop'} autoPlay={true}  defaultMuted={true} playsInline={true} onContextMenu={"return fals"}  preload="auto" controls={false}>
+                <source src='./movie2.mp4' type="video/mp4" />
+              </video>
           
               {/* <Suspense fallback={<div>Loading...</div>}>
                 <Spline id='spline' scene={require('./scene (3).splinecode')}/>
