@@ -18,7 +18,7 @@ import { Pagination, Navigation } from "swiper";
 import $ from 'jquery'
 
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
-
+const video = React.lazy(() => './movie.mp4');
 
 
 const Work = () => {
@@ -45,10 +45,7 @@ const Work = () => {
 
       <div className='' style={{textAlign: 'center'}}>
         <h1 className='timelineTitle font-bold text-5xl mb-[30px]'>Portfolio</h1>
-
-
-      <video width="750" height="500" src={require('../assets/videoteste.mp4')}>
-      </video>
+        
 
       {/* <video autoPlay={true} loop={true} muted={true} playsInline={true}>
         <source src="videoteste.mp4" type="video/mp4" />
@@ -77,6 +74,12 @@ const Work = () => {
             <h3 className='mb-50px'>DTGBS - Contratos</h3>
 
             <div className='splineContainer'>
+              <Suspense fallback={<div>Loading...</div>}>
+                <video className='contratosVideo' loop autoPlay muted>
+                  <source src='./movie2.mp4' type="video/mp4" />
+                </video>
+              </Suspense>
+          
               {/* <Suspense fallback={<div>Loading...</div>}>
                 <Spline id='spline' scene={require('./scene (3).splinecode')}/>
               </Suspense> */}
