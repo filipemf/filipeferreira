@@ -26,16 +26,16 @@ const Work = () => {
   // const [scrollEnabled, setScrollEnabled] = useState(true);
 
   // function prevent(e){
-  //   console.log(e)
+  //   // console.log(e)
   //   if (e.cancelable) {
-  //     console.log('vai vai')
+  //     // console.log('vai vai')
   //     e.preventDefault();
   //  }
   // }
 
   // useEffect(()=>{
   //   $("#spline").bind("wheel mousewheel", function(e) {
-  //     console.log('vai vai')
+  //     // console.log('vai vai')
   //     e.preventDefault()
   //   });
   // })

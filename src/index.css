@@ -291,11 +291,6 @@ body {height: 100%;}
     height: 80vh !important;
   }
 
-  #tagcloud{
-    margin-left: -10px !important;
-  }
-
-
 
   /* #etec{
     position: 'static'; 
@@ -304,7 +299,7 @@ body {height: 100%;}
 }
 
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom: 20px !important;
+  bottom: -10px !important;
   position: inherit !important;
 }
 

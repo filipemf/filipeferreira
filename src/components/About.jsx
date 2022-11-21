@@ -176,7 +176,7 @@ const About = () => {
   const [message, setMessage] = useState("");
 
   const onCallback = () => {
-    console.log("awesome");
+    // console.log("awesome");
   };
 
   useEffect(()=>{

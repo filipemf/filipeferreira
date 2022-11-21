@@ -16,7 +16,7 @@ import {GiBrazilFlag, GiSpain} from "react-icons/gi";
 
 
 const scrollTo = (ref) => {
-  console.log(ref)
+  // console.log(ref)
   ref.current.scrollIntoView()
 }
 
@@ -62,10 +62,10 @@ const Skills = () => {
 
 
       arraySkills.forEach(e =>{
-        console.log(e.className)
+        // console.log(e.className)
 
         if(e.className.includes(className)){
-          console.log('opa')
+          // console.log('opa')
           try{
               e.classList.replace('skills__close', 'skills__open')
           }
@@ -141,13 +141,13 @@ const Skills = () => {
     
 
     let skillsContent = document.getElementsByClassName('skills__content fe')
-    console.log(document.getElementsByClassName('skills__content'))
+    // console.log(document.getElementsByClassName('skills__content'))
     let itemClass = myRefFE
 
-    console.log(itemClass.current.parentElement.className)
+    // console.log(itemClass.current.parentElement.className)
     
     if(itemClass.current.parentElement.className === 'skills__content fe skills__close'){
-      console.log('abrir')
+      // console.log('abrir')
       itemClass.current.parentElement.className = 'skills__content fe skills__open'
 
       $('#tagcloud').prependTo($('.skills__content.fe.skills__open  div.skills__list.grid'))
@@ -180,10 +180,10 @@ const Skills = () => {
     let skillsContent = document.getElementsByClassName('skills__content be')
     let itemClass = myRefBE
 
-    console.log(itemClass.current.parentElement.className)
+    // console.log(itemClass.current.parentElement.className)
     
     if(itemClass.current.parentElement.className === 'skills__content be skills__close'){
-      console.log('abrir')
+      // console.log('abrir')
       itemClass.current.parentElement.className = 'skills__content be skills__open'
 
       $('#tagcloud').prependTo($('.skills__content.be.skills__open  div.skills__list.grid'))
@@ -212,10 +212,10 @@ const Skills = () => {
     let skillsContent = document.getElementsByClassName('skills__content db')
     let itemClass = myRefDB
 
-    console.log(itemClass.current.parentElement.className)
+    // console.log(itemClass.current.parentElement.className)
     
     if(itemClass.current.parentElement.className === 'skills__content db skills__close'){
-      console.log('abrir')
+      // console.log('abrir')
       itemClass.current.parentElement.className = 'skills__content db skills__open'
 
       $('#tagcloud').prependTo($('.skills__content.db.skills__open  div.skills__list.grid'))
@@ -245,10 +245,10 @@ const Skills = () => {
     let skillsContent = document.getElementsByClassName('skills__content os')
     let itemClass = myRefOS
 
-    console.log(itemClass.current.parentElement.className)
+    // console.log(itemClass.current.parentElement.className)
     
     if(itemClass.current.parentElement.className === 'skills__content os skills__close'){
-      console.log('abrir')
+      // console.log('abrir')
       itemClass.current.parentElement.className = 'skills__content os skills__open'
 
       $('#tagcloud').prependTo($('.skills__content.os.skills__open  div.skills__list.grid'))
