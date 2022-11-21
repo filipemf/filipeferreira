@@ -279,6 +279,18 @@ body {height: 100%;}
     height: 500px !important;
   }
 
+  .auto-type{
+    font-size: 1.9rem !important;
+  }
+
+  .typed-cursor{
+    font-size: 1.9rem !important;
+  }
+
+  .swiper-wrapper {
+    height: 80vh !important;
+  }
+
 
 
   /* #etec{
@@ -723,7 +735,7 @@ text-decoration: none;
   text-align: center;
   font-size: 18px;
   background: #2d2f39;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -748,7 +760,11 @@ text-decoration: none;
 }
 
 .swiper-slide {
-  height: 780px !important;
+  height: auto !important;
+}
+
+.swiper-wrapper {
+  height: 100vh !important;
 }
 
 .swiper {
@@ -762,6 +778,20 @@ text-decoration: none;
 }
 
 .contratosVideo{
-  width: 100%;
+  width: 500px;
   height: auto;
+}
+
+.auto-type{
+  color: rgba(19, 226, 166, 1);
+  font-size: 2.2rem;
+}
+
+.typed-cursor{
+  color: rgba(19, 226, 166, 1);
+  font-size: 2.2rem;
+}
+
+.swiper-pagination {
+  margin-bottom: 30px !important;
 }

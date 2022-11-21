@@ -14,6 +14,7 @@ import "swiper/css/navigation";
 
 import { Pagination, Navigation } from "swiper";
 
+import {AiFillGithub} from 'react-icons/ai'
 
 import $ from 'jquery'
 
@@ -44,7 +45,9 @@ const Work = () => {
     <div name='work' id='about' className='w-full h-[100vh] bg-[#2d2f39] text-gray-300 pb-[30px]'>
 
       <div className='' style={{textAlign: 'center'}}>
-        <h1 className='timelineTitle font-bold text-5xl mb-[30px]'>Portfolio</h1>
+        <h1 className='timelineTitle font-bold text-5xl mb-[20px]'>Portfolio</h1>
+
+        <p className='mt-[30px]'>Conheça alguns dos meus trabalhos!</p>
         
 
       {/* <video autoPlay={true} loop={true} muted={true} playsInline={true}>
@@ -84,22 +87,30 @@ const Work = () => {
               </Suspense> */}
             </div>
 
-            <p className='mt-[30px]'>Programa criado com o objetivo de automatizar a criação de documentos.</p>
 
-            <div>
-                <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
-                <a href='https://github.com/filipemf/DTGBS-Contratos' className='averageLink flex justify-between items-center w-full text-gray-300'>
-                    Acessar
-                </a>  
-                </button>
+            <div className='contents'>
+                <p className='mt-[30px]'>Programa criado com o objetivo de automatizar a criação de documentos.</p>
+
+                <div>
+                    <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
+                    <a href='https://github.com/filipemf/DTGBS-Contratos' className='averageLink flex justify-between items-center w-full text-gray-300'>
+                        Acessar <AiFillGithub className='ml-[10px]' size={30}/>
+                    </a>  
+                    </button>
+                </div>
             </div>
+            
 
 
           </div>
 
 
         </SwiperSlide>
+
+
         <SwiperSlide>Logo...</SwiperSlide>
+
+
         <SwiperSlide>Logo...</SwiperSlide>
 
       </Swiper>

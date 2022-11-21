@@ -1,8 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { Link } from 'react-scroll';
-
+import Typed from 'typed.js';
 const Home = () => {
+
+  useEffect(()=>{
+    var typed = new Typed('.auto-type',{
+      strings: ['estudante', 'programador', 'quase engenheiro!'],
+      typeSpeed: 100,
+      backSpeed: 100,
+      loop: true,
+
+    })
+
+
+  }, [])
 
   return (
     <div name='home' id='home' className='w-full h-screen bg-[#22232a]'>
@@ -11,20 +23,23 @@ const Home = () => {
         
         <div className='homeContainer flex mt-[100px] justify-center'>
           <div className='homeText width-[695px]'>
+
             <h1 className='text-4xl sm:text-5xl font-bold text-[#ccd6f6]'>
               Filipe Ferreira
             </h1>
           
+          <div className='inline-flex'>
+            <h2 className='auto-type'></h2>
+          </div>
+            
         
-        
-            <div className='wrapper flex-row-reverse contents' id='homeWrapper'>
-              {/* <div className='static-txt'>Eu sou</div> */}
+            {/* <div className='wrapper flex-row-reverse contents' id='homeWrapper'>
               <ul className='dynamic-txts'>
                 <li><span>programador</span></li>
                 <li><span>quase</span></li>
                 <li><span>engenheiro!</span></li>
               </ul>
-            </div>
+            </div> */}
 
             <p className='text-[#8892b0] py-4 max-w-[700px]'>
             Formado em informática (desenvolvimento de sistemas) e atualmente cursando ensino superior em Engenharia da Computação, mas sempre em busca de mais aprendizado. Atualmente trabalhando como Suporte em Redes na Mercedes-Benz do Brasil. Trabalho em projetos individuais com as mais incríveis tecnologias!
