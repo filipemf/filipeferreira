@@ -6,10 +6,10 @@ import '../js/jquery.svg3dtagcloud'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { HiCode,HiArrowNarrowDown,HiDatabase,HiCloud, HiTerminal} from "react-icons/hi";
+import { HiCode,HiArrowNarrowDown,HiCloud, HiTerminal} from "react-icons/hi";
 import { MdLanguage} from "react-icons/md";
 
-import {FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNode, FaCloud, FaGithub, FaGitlab, FaAws, FaAngular,  FaFlagUsa, FaPython} from "react-icons/fa";
+import {FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNode, FaGithub, FaGitlab, FaAws, FaAngular,  FaFlagUsa, FaPython} from "react-icons/fa";
 import {SiMongodb, SiFirebase, SiMysql, SiCisco, SiCsharp, SiTypescript, SiDotnet} from "react-icons/si";
 import {GiBrazilFlag, GiSpain} from "react-icons/gi";
 
@@ -47,8 +47,6 @@ const Skills = () => {
     ];
 
     const svgEl = useRef()
-
-    const myRef = useRef(null)
 
     function openCloud(className = 'nada', entries = entries2, ref = undefined){
       $('#tagcloud').empty()
@@ -466,66 +464,6 @@ const Skills = () => {
             </div>
             {/* BACKEND SKILLS */}
 
-                        
-
-            {/* OTHER SKILLS */}
-            <div className='skills__content os skills__close'>
-              <div className="skills__header"  onClick={toggleSkillsOS} ref={myRefOS}>
-                <MdLanguage size={30} className='skills__icon'/>
-
-                <div>
-                  <h2 className='skills__titles'>Linguagens</h2>
-                </div>
-
-                <HiArrowNarrowDown size={18}/>
-
-              </div>
-
-              <div className="skills__list grid">
-
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Inglês <FaFlagUsa size={20}/> </h3>
-                    <span className='skills__number'>Fluente</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__100"></span>
-                  </div>
-                </div>
-
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Portugues <GiBrazilFlag size={20}/> </h3>
-                    <span className='skills__number'>Nativo</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__100"></span>
-                  </div>
-                </div>
-
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Espanhol <GiSpain size={20}/> </h3>
-                    <span className='skills__number'>Intermediário</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__50"></span>
-                  </div>
-                </div>
-
-
-              </div>
-
-            </div>
-            {/* OTHER SKILLS */}
-
 
             
 
@@ -639,6 +577,68 @@ const Skills = () => {
             </div>
             {/* DATABASE SKILLS */}
 
+                        
+
+            {/* OTHER SKILLS */}
+            <div className='skills__content os skills__close'>
+              <div className="skills__header"  onClick={toggleSkillsOS} ref={myRefOS}>
+                <MdLanguage size={30} className='skills__icon'/>
+
+                <div>
+                  <h2 className='skills__titles'>Idiomas</h2>
+                </div>
+
+                <HiArrowNarrowDown size={18}/>
+
+              </div>
+
+              <div className="skills__list grid">
+
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Inglês <FaFlagUsa size={20}/> </h3>
+                    <span className='skills__number'>Fluente</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__100"></span>
+                  </div>
+                </div>
+
+
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Portugues <GiBrazilFlag size={20}/> </h3>
+                    <span className='skills__number'>Nativo</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__100"></span>
+                  </div>
+                </div>
+
+
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Espanhol <GiSpain size={20}/> </h3>
+                    <span className='skills__number'>Intermediário</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__50"></span>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+            {/* OTHER SKILLS */}
+
+
+
             
             <div id="tagcloud" ref={svgEl} className=''></div>
           </div>
@@ -650,7 +650,7 @@ const Skills = () => {
         
 
 
-        <h2 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>Certificações</h2>
+        <h2 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>Cursos</h2>
         
         <div className='inline-flex gap-[100px]'>
 

@@ -5,7 +5,7 @@ import Typed from 'typed.js';
 const Home = () => {
 
   useEffect(()=>{
-    var typed = new Typed('.auto-type',{
+    new Typed('.auto-type',{
       strings: ['estudante', 'programador', 'quase engenheiro!'],
       typeSpeed: 100,
       backSpeed: 100,
@@ -42,8 +42,8 @@ const Home = () => {
             </div> */}
 
             <p className='text-[#8892b0] py-4 max-w-[700px]'>
-            Formado em informática (desenvolvimento de sistemas) e atualmente cursando ensino superior em Engenharia da Computação, mas sempre em busca de mais aprendizado. Atualmente trabalhando como Suporte em Redes na Mercedes-Benz do Brasil. Trabalho em projetos individuais com as mais incríveis tecnologias!
-            Meus pontos fortes incluem Redes e Cyber Security, JavaScript (frameworks: React.js e React Native), Python, C#, Node.js e SQL (com alguns trabalhos em No-SQL também).
+            Formado em informática e atualmente cursando ensino superior em Engenharia da Computação, mas sempre em busca de mais aprendizado. Atualmente trabalhando como Estagiário em Desenvolvimento na Deutsche Telekom. Trabalho em projetos individuais com as mais incríveis tecnologias!
+            Meus pontos fortes incluem Redes, JavaScript, Python, C#, Node.js e SQL (com alguns trabalhos em No-SQL também).
             </p>
             <div>
               <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>

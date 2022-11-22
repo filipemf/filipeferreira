@@ -672,12 +672,13 @@ body {height: 100%;}
 	text-transform:uppercase;
 	color:#333;
 	letter-spacing:1px;
+  font-weight: bold !important;
 }
 
 #progress-content-section .section-content p {
 	font-size:16px;
 	line-height:1.8em;
-	color:#777;
+	color: #595959;
 }
 
 #progress-content-section .section-content {
@@ -686,6 +687,7 @@ body {height: 100%;}
 	animation-fill-mode:forwards;
 	transform:translateY(15px);
 	opacity:0;
+  background-color: #d1dbdc;
 }
 
 #progress-content-section .section-content.active {
@@ -705,7 +707,7 @@ body {height: 100%;}
 }
 
 .timelineUL{
-  color: #777;
+  color: #595959;
 }
 
 .averageLink{

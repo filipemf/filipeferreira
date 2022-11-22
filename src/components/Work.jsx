@@ -1,9 +1,3 @@
-import React, {useEffect, useRef, Suspense, useState} from 'react';
-
-import { HiCode,HiArrowNarrowDown,HiDatabase,HiCloud} from "react-icons/hi";
-
-import { Link } from 'react-scroll';
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -16,30 +10,8 @@ import { Pagination, Navigation } from "swiper";
 
 import {AiFillGithub} from 'react-icons/ai'
 
-import $ from 'jquery'
-
-// const Spline = React.lazy(() => import('@splinetool/react-spline'));
-
-
 
 const Work = () => {
-  // const [scrollEnabled, setScrollEnabled] = useState(true);
-
-  // function prevent(e){
-  //   // console.log(e)
-  //   if (e.cancelable) {
-  //     // console.log('vai vai')
-  //     e.preventDefault();
-  //  }
-  // }
-
-  // useEffect(()=>{
-  //   $("#spline").bind("wheel mousewheel", function(e) {
-  //     // console.log('vai vai')
-  //     e.preventDefault()
-  //   });
-  // })
-    
   
   return (
     <div name='work' id='about' className='w-full h-[auto] bg-[#2d2f39] text-gray-300 pb-[30px]'>
