@@ -64,7 +64,7 @@ const Work = () => {
 
 
             <div className='contents'>
-                <p className='mt-[30px]'>Programa criado com o objetivo de automatizar a criação de documentos.</p>
+                <p className='mt-[30px] p-[20px]'>Programa criado com o objetivo de automatizar a criação de documentos.</p>
 
                 <div>
                     <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
@@ -101,7 +101,7 @@ const Work = () => {
 
 
             <div className='contents'>
-                <p className='mt-[30px]'>Rede social com o objetivo de contribuir para a criação de bons hábitos do usuário. Projeto de TCC da Escola Técnica de São Paulo.</p>
+                <p className='mt-[30px] p-[20px]'>Rede social com o objetivo de contribuir para a criação de bons hábitos do usuário. Projeto de TCC da Escola Técnica de São Paulo.</p>
 
                 <div>
                     <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
@@ -138,7 +138,7 @@ const Work = () => {
 
 
             <div className='contents'>
-                <p className='mt-[30px]'>Programa com o objetivo de ler, extrair e inserir dados de uma planilha .CSV ou .XLSX (excel). Tudo centralizado em um programa com dashboard, busca e inserção de dados dedicados.</p>
+                <p className='mt-[30px] p-[20px]'>Programa com o objetivo de ler, extrair e inserir dados de uma planilha .CSV ou .XLSX (excel). Tudo centralizado em um programa com dashboard, busca e inserção de dados dedicados.</p>
 
                 <div>
                     <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>

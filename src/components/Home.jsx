@@ -41,7 +41,7 @@ const Home = () => {
               </ul>
             </div> */}
 
-            <p className='text-[#8892b0] py-4 max-w-[700px]'>
+            <p className='text-[#8892b0] py-4 max-w-[700px] text-justify'>
             Formado em informática e atualmente cursando ensino superior em Engenharia da Computação, mas sempre em busca de mais aprendizado. Atualmente trabalhando como Estagiário em Desenvolvimento na Deutsche Telekom. Trabalho em projetos individuais com as mais incríveis tecnologias!
             Meus pontos fortes incluem Redes, JavaScript, Python, C#, Node.js e SQL (com alguns trabalhos em No-SQL também).
             </p>

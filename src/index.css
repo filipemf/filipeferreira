@@ -801,3 +801,11 @@ text-decoration: none;
 .swiper-pagination {
   position: inherit !important;
 }
+
+#progress-content-section .section-content.active {
+  text-align: justify;
+}
+
+.contents{
+  text-align: justify;
+}

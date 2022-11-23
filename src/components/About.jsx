@@ -92,11 +92,11 @@ const About = () => {
             
             <div class="section-content creative">
               <div style={{display: '-webkit-inline-box;', marginTop: '50px;'}} className='imgsContainer inline-flex'>
-                <img className='tsystemsLogo w-[200px] h-[auto]' style={{width: '200px;', marginTop: '40px'}} src="../assets/tsystems.png" alt='T-Systems'/>
+                <img className='tsystemsLogo w-[300px] h-[auto]' style={{width: '200px;', marginTop: '40px'}} src="../assets/tsystems.png" alt='T-Systems'/>
 
                 <div className='mercedesLogo' style={{marginBottom: '20px;'}}>
-                  <img className='w-[180px]' style={{width: '200px;', marginLeft: '25px'}} src="../assets/mercedes-logo.png" alt='Mercedes-Benz'/>
-                  <span className='text-gray-600 font-normal ml-[30px]' style={{marginLeft: '10px;', fontSize: '21px;', fontWeight: '400;', color: '#7f8588 !important'}}>Mercedes-Benz</span>
+                  <img id='mercedesFoto' className='w-[180px] ml-[60px]' style={{width: '200px;'}} src="../assets/mercedes-logo.png" alt='Mercedes-Benz'/>
+                  {/* <span className='text-gray-600 font-normal ml-[30px]' style={{marginLeft: '10px;', fontSize: '21px;', fontWeight: '400;', color: '#7f8588 !important'}}>Mercedes-Benz</span> */}
                 </div>
               </div>
 

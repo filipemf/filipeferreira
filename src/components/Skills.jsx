@@ -274,7 +274,7 @@ const Skills = () => {
 
 
                 
-        <div className='skills__container' style={{width: '100%'}}>
+        <div className='skills__container p-[10px]' style={{width: '100%'}}>
           <div className='skills__subcontainer gap-[50px] inline-block'>
             
             {/* FRONTEND SKILLS */}
@@ -652,7 +652,7 @@ const Skills = () => {
 
         <h2 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>Cursos</h2>
         
-        <div className='inline-flex gap-[100px]'>
+        <div className='inline-flex gap-[20px]'>
 
           <div>
             <h3 className='timelineTitle font-bold text-3xl mt-[50px] mb-[30px]'>Network</h3>
