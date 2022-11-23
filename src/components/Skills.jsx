@@ -622,7 +622,7 @@ const Skills = () => {
                                 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>{i18next.t("skills.spanish")} <GiSpain size={20}/> </h3>
+                    <h3 className='skills__name'>{i18next.t("skills.es")} <GiSpain size={20}/> </h3>
                     <span className='skills__number'>{i18next.t("skills.intermediate")}</span>
                   </div>
 
