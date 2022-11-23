@@ -83,6 +83,7 @@ const Work = () => {
         </SwiperSlide>
 
 
+
         <SwiperSlide className='bg-[#2d2f39]'>
           <div className='flex flex-col items-center'>
 
@@ -91,7 +92,7 @@ const Work = () => {
             <div className='splineContainer'>
               
               <video className='contratosVideo' muted={true} loop={'loop'} autoPlay={true}  defaultMuted={true} playsInline={true} onContextMenu={"return fals"}  preload="auto" controls={false}>
-                <source src='./app.mp4' type="video/mp4" />
+                <source src='./facilitador.mp4' type="video/mp4" />
               </video>
           
               {/* <Suspense fallback={<div>Loading...</div>}>

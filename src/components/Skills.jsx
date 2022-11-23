@@ -274,7 +274,7 @@ const Skills = () => {
 
 
                 
-        <div className='skills__container p-[10px]' style={{width: '100%'}}>
+        <div className='skills__container' style={{width: '100%'}}>
           <div className='skills__subcontainer gap-[50px] inline-block'>
             
             {/* FRONTEND SKILLS */}
