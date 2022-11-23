@@ -1,4 +1,5 @@
 import React, {useRef, useEffect} from 'react'
+import i18next from 'i18next';
 import {AiFillGithub, AiFillLinkedin, AiFillMail} from 'react-icons/ai'
 import emailjs from '@emailjs/browser';
 
@@ -14,14 +15,31 @@ const Contact = () => {
     emailjs.sendForm('service_g749kaq', 'template_2wtd1ue', form.current, 'csBTGeyPlCSQUcwXM')
       .then((result) => {
           console.log(result.text);
-          Swal.fire(
-            'Contato', 'Contato enviado com sucesso! Entrarei em contato assim que possível. Obrigado!', 'success'
-          )
+
+          if(localStorage.getItem('i18nextLng')==='en'){
+            Swal.fire(
+              'Contact', 'Your message has been sent to me. Thank you!', 'success'
+            )
+          }
+          else{
+            Swal.fire(
+              'Contato', 'Contato enviado com sucesso! Entrarei em contato assim que possível. Obrigado!', 'success'
+            )
+          }
+          
       }, (error) => {
           console.log(error.text);
-          Swal.fire(
-            'Contato', 'Ops! Algo deu errado! Certifique-se que todas as informações foram digitadas corretamente.',  'error  '
-          )
+
+          if(localStorage.getItem('i18nextLng')==='pt'){
+            Swal.fire(
+              'Contato', 'Ops! Something has gone wrong. Try again later!', 'success'
+            )
+          }
+          else{
+            Swal.fire(
+              'Contato', 'Ops! Algo deu errado. Tente novamente mais tarde!', 'success'
+            )
+          }
       });
       e.target.reset()
 
@@ -34,16 +52,16 @@ const Contact = () => {
       <div className='flex flex-col justify-center items-center w-full '>
 
       
-        <h1 className='timelineTitle font-bold text-5xl mb-[30px] mt-[30px]'>Contato</h1>
+        <h1 className='timelineTitle font-bold text-5xl mb-[30px] mt-[30px]'>{i18next.t("contact.title")}</h1>
 
 
         <div style={{display: 'flex;'}}>
           <div>
             <form className='flex flex-col max-w-[600px] w-full text-[#000]' ref={form} onSubmit={sendEmail}>
-                <input className='bg-[#d1d4db] p-2' type="text" placeholder='Seu nome' name='from_name' required/>
-                <input className='my-4 p-2 bg-[#d1d4db]' type="email" placeholder='Seu email' name='reply_to' required/>
-                <textarea className='bg-[#d1d4db] p-2' name="message" rows="10" placeholder='O que deseja escrever?' required></textarea>
-                <button className='text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center bg-pink-600'>Entrar em contato</button>
+                <input className='bg-[#d1d4db] p-2' type="text" placeholder={i18next.t("contact.nameInput")} name='from_name' required/>
+                <input className='my-4 p-2 bg-[#d1d4db]' type="email" placeholder={i18next.t("contact.emailInput")} name='reply_to' required/>
+                <textarea className='bg-[#d1d4db] p-2' name="message" rows="10" placeholder={i18next.t("contact.bodyInput")} required></textarea>
+                <button className='text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center bg-pink-600'>{i18next.t("contact.button")}</button>
               </form>
           </div>
 

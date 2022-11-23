@@ -1,3 +1,4 @@
+import i18next from 'i18next';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -22,7 +23,7 @@ const Work = () => {
           <h1 className='timelineTitle font-bold text-5xl mb-[20px]'>Portfolio</h1>
         </div>
 
-        <p className='mt-[30px]'>Conheça alguns dos meus trabalhos!</p>
+        <p className='mt-[30px]'>{i18next.t("portfolio.title")}</p>
         
 
       {/* <video autoPlay={true} loop={true} muted={true} playsInline={true}>
@@ -49,11 +50,11 @@ const Work = () => {
         <SwiperSlide className='bg-[#2d2f39]'>
           <div className='flex flex-col items-center'>
 
-            <h3 className='mb-50px'>DTGBS - Contratos</h3>
+            <h3 className='mb-50px'>{i18next.t("portfolio.firstWork.title")}</h3>
 
             <div className='splineContainer'>
               
-              <video className='contratosVideo' muted={true} loop={'loop'} autoPlay={true}  defaultMuted={true} playsInline={true} onContextMenu={"return fals"}  preload="auto" controls={false}>
+              <video className='contratosVideo' muted={true} loop={'loop'} autoPlay={true}  defaultMuted={true} playsInline={true} onContextMenu={"return false"}  preload="auto" controls={false}>
                 <source src='./contratos.mp4' type="video/mp4" />
               </video>
           
@@ -64,12 +65,12 @@ const Work = () => {
 
 
             <div className='contents'>
-                <p className='mt-[30px] p-[20px]'>Programa criado com o objetivo de automatizar a criação de documentos.</p>
+                <p className='mt-[30px] p-[20px]'>{i18next.t("portfolio.firstWork.about")}</p>
 
                 <div>
                     <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
                     <a href='https://github.com/filipemf/DTGBS-Contratos' className='averageLink flex justify-between items-center w-full text-gray-300'>
-                        Acessar <AiFillGithub className='ml-[10px]' size={30}/>
+                      {i18next.t("portfolio.button")} <AiFillGithub className='ml-[10px]' size={30}/>
                     </a>  
                     </button>
                 </div>
@@ -87,11 +88,11 @@ const Work = () => {
         <SwiperSlide className='bg-[#2d2f39]'>
           <div className='flex flex-col items-center'>
 
-            <h3 className='mb-50px'>Rede Social - Ravit</h3>
+            <h3 className='mb-50px'>{i18next.t("portfolio.secondWork.title")}</h3>
 
             <div className='splineContainer'>
               
-              <video className='contratosVideo' muted={true} loop={'loop'} autoPlay={true}  defaultMuted={true} playsInline={true} onContextMenu={"return fals"}  preload="auto" controls={false}>
+              <video className='contratosVideo' muted={true} loop={'loop'} autoPlay={true}  defaultMuted={true} playsInline={true} onContextMenu={"return false"}  preload="auto" controls={false}>
                 <source src='./app2.mp4' type="video/mp4" />
               </video>
           
@@ -102,12 +103,12 @@ const Work = () => {
 
 
             <div className='contents'>
-                <p className='mt-[30px] p-[20px]'>Rede social com o objetivo de contribuir para a criação de bons hábitos do usuário. Projeto de TCC da Escola Técnica de São Paulo.</p>
+                <p className='mt-[30px] p-[20px]'>{i18next.t("portfolio.secondWork.about")}</p>
 
                 <div>
                     <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
                     <a href='https://github.com/filipemf/Ravit' className='averageLink flex justify-between items-center w-full text-gray-300'>
-                        Acessar <AiFillGithub className='ml-[10px]' size={30}/>
+                      {i18next.t("portfolio.button")} <AiFillGithub className='ml-[10px]' size={30}/>
                     </a>  
                     </button>
                 </div>
@@ -124,11 +125,11 @@ const Work = () => {
         <SwiperSlide className='bg-[#2d2f39]'>
           <div className='flex flex-col items-center'>
 
-            <h3 className='mb-50px'>Facilitador/Automatização - Planilhas</h3>
+            <h3 className='mb-50px'>{i18next.t("portfolio.thirdWork.title")}</h3>
 
             <div className='splineContainer'>
               
-              <video className='contratosVideo' muted={true} loop={'loop'} autoPlay={true}  defaultMuted={true} playsInline={true} onContextMenu={"return fals"}  preload="auto" controls={false}>
+              <video className='contratosVideo' muted={true} loop={'loop'} autoPlay={true}  defaultMuted={true} playsInline={true} onContextMenu={"return false"}  preload="auto" controls={false}>
                 <source src='./facilitador.mp4' type="video/mp4" />
               </video>
           
@@ -139,12 +140,12 @@ const Work = () => {
 
 
             <div className='contents'>
-                <p className='mt-[30px] p-[20px]'>Programa com o objetivo de ler, extrair e inserir dados de uma planilha .CSV ou .XLSX (excel). Tudo centralizado em um programa com dashboard, busca e inserção de dados dedicados.</p>
+                <p className='mt-[30px] p-[20px]'>{i18next.t("portfolio.thirdWork.about")}</p>
 
                 <div>
                     <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
                     <a href='https://github.com/filipemf/electron-facilitador' className='averageLink flex justify-between items-center w-full text-gray-300'>
-                        Acessar <AiFillGithub className='ml-[10px]' size={30}/>
+                      {i18next.t("portfolio.button")} <AiFillGithub className='ml-[10px]' size={30}/>
                     </a>  
                     </button>
                 </div>

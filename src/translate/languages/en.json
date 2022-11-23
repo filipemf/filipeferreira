@@ -1,0 +1,82 @@
+{
+    "left": "ENteste12335345345",
+
+    "home": {
+        "titles": {
+            "title1":"student",
+            "title2":"programmer",
+            "title3":"almost an engineer!"
+        },
+        "about": "Current university student enrolled in Computer Engineering and graduated from technical school in December 2020 with an IT certificate. Currently working with software development at Deutsche Telekom. Also working on independent projects with the most amazing technologies! My Job Skills are: Network and Cyber Security, JavaScript (frameworks: React.js and React Native), Python, C#, Node.js and SQL (already did some No-SQL projects too).",
+        "button": "Know more"
+    },
+    "about": {
+        "title": "About Me",
+        "today": "CURRENT",
+        "etec": {
+            "title": "Technical School of Sao Paulo",
+            "text": "Here, while doing the high school with an IT course, I was able to learn multiple technical skills, such as:",
+            "list": {
+                "list1":"Software Development;",
+                "list2":"Databases;",
+                "list3":"Computer Networking;",
+                "list4":"Operational Systems."
+                }
+        },
+        "college": {
+            "title": "Universisty",
+            "text": "I choose the Computer Engineering course beliving that would be the most complete course to my formation as a professional. Here, I'm able to learn concepts related to both engineering and computers. I'm studing at Universidade Sao Judas Tadeu, in Sao Paulo."
+        },
+        "firstJob": {
+            "text": "Network Intern at Mercedes-Benz. By T-Systems do Brazil, I got my first job at Mercedes! I've worked with:",
+            "list": {
+                "list1":"Updated department documentation such as infrastructure maps and network topology for Mercedes-Benz;",
+                "list2":"Provided network configuration support for Mercedes-Benz;", 
+                "list3":"Monitored network hardware operations to evaluate proper configuration for Mercedes-Benz."
+            }
+        },
+        "actualJob": {
+            "text": "Currently as a Software Developer Intern at Deutsche Telekom Global Business Solutions Brazil. I'm working with:",
+            "list": {
+                "list1":"Developing IOT solutions;",
+                "list2":"Providing support for Asset Tracking and RFID solutions."
+            }
+        }
+    },
+    "skills":{
+        "title": "My Skills",
+        "db": "DB and Other Technologies",
+        "lng": "Languages",
+        "title2": "Courses",
+        "en": "English",
+        "pt": "Portuguese",
+        "es": "Spanish",
+        "fluent": "Fluent",
+        "native": "Native",
+        "intermediate": "Intermediate"
+    },
+    "portfolio": {
+        "title": "Get to know some of my work!",
+        "firstWork": {
+            "title": "DTGBS - Contracts",
+            "about": "Program created to manage and automate the creating of new documents."
+        },
+        "secondWork": {
+            "title": "Social Network - Ravit",
+            "about": "A social network mobile app created to help people develop good habits. Final paper project of Technical School of Sao Paulo."
+        },
+        "thirdWork": {
+            "title": "Facilitator/Automator - Worksheets",
+            "about": "Program created to read, extract, and insert new data into a worksheet. Working with .CSV or .XLSX (Excel). Everything centralized in a program with a dashboard to facilitate the data view."
+        },
+        "button": "Access!"
+    },
+    "contact": {
+        "title": "Contact",
+        "nameInput": "Your name",
+        "emailInput": "Your email",
+        "bodyInput": "What do you wanna write to me?",
+        "button": "Get in touch"
+    }
+        
+}

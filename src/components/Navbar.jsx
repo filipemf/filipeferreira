@@ -18,6 +18,16 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
+  const setLanguageToEN = ()=> {
+    localStorage.setItem('lang', 'en')
+    window.location.reload()
+  }
+
+  const setLanguageToPT = ()=> {
+    localStorage.setItem('lang', 'pt')
+    window.location.reload()
+  }
+
   // transparent #00000000
   return (
     <div id='navbarDefault' className='fixed w-[-webkit-fill-available] h-[80px] flex justify-between items-center px-4 bg-[#17171c] text-gray-300 ml-3 mr-3 mt-2 z-50'>
@@ -56,14 +66,14 @@ const Navbar = () => {
       </ul>
 
 
-      <ul className='hidden md:flex font-bold'>
-        <li>
+      <div className='hidden md:flex font-bold'>
+        <button className='p-[20px]' onClick={setLanguageToPT}>
             <GiBrazilFlag className='ml-[10px]' size={25}/> pt-BR
-        </li>
-        <li className='mt-[5px]'>
+        </button>
+        <button className='mt-[5px] p-[30px]' onClick={setLanguageToEN}>
             <FaFlagUsa size={20}/> en
-        </li>
-      </ul>
+        </button>
+      </div>
 
       {/* Hamburger */}
       <div onClick={handleClick} className='md:hidden z-[1000]'>
@@ -109,10 +119,10 @@ const Navbar = () => {
         </li>
 
           <div className='inline-flex'>
-            <button className='m-[30px] pr-[30px]'>
+            <button className='m-[30px] pr-[30px]' onClick={setLanguageToPT}>
                 <GiBrazilFlag className='ml-[10px]' size={25}/> pt-BR
             </button>
-            <button className='mt-[5px] pr-[30px]'>
+            <button className='mt-[5px] pr-[30px]' onClick={setLanguageToEN}>
               
                 <FaFlagUsa size={20}/> en
             </button>

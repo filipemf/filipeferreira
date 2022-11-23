@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 
 import $ from 'jquery'
 import '../js/jquery.svg3dtagcloud'
-
+import i18next from 'i18next';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -270,7 +270,7 @@ const Skills = () => {
   return (
     <div name='skills' className='w-full h-[auto] pb-[30px] bg-[#22232A] text-gray-300 text-center items-center justify-center'>
       <div className='flex flex-col justify-center items-center w-full text-center'>
-        <h1 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>Minhas habilidades</h1>
+        <h1 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>{i18next.t("about.title")}</h1>
 
 
                 
@@ -473,7 +473,7 @@ const Skills = () => {
                 <HiCloud size={30} className='skills__icon'/>
 
                 <div>
-                  <h2 className='skills__titles'>DB e outras Tecnologias</h2>
+                  <h2 className='skills__titles'>{i18next.t("skills.db")}</h2>
                 </div>
 
                 <HiArrowNarrowDown size={18}/>
@@ -585,7 +585,7 @@ const Skills = () => {
                 <MdLanguage size={30} className='skills__icon'/>
 
                 <div>
-                  <h2 className='skills__titles'>Idiomas</h2>
+                  <h2 className='skills__titles'>{i18next.t("skills.lng")}</h2>
                 </div>
 
                 <HiArrowNarrowDown size={18}/>
@@ -596,8 +596,8 @@ const Skills = () => {
 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>Inglês <FaFlagUsa size={20}/> </h3>
-                    <span className='skills__number'>Fluente</span>
+                    <h3 className='skills__name'>{i18next.t("skills.en")} <FaFlagUsa size={20}/> </h3>
+                    <span className='skills__number'>{i18next.t("skills.fluent")}</span>
                   </div>
 
                   <div className='skills__bar'>
@@ -609,8 +609,8 @@ const Skills = () => {
                                 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>Portugues <GiBrazilFlag size={20}/> </h3>
-                    <span className='skills__number'>Nativo</span>
+                    <h3 className='skills__name'>{i18next.t("skills.pt")} <GiBrazilFlag size={20}/> </h3>
+                    <span className='skills__number'>{i18next.t("skills.native")}</span>
                   </div>
 
                   <div className='skills__bar'>
@@ -622,8 +622,8 @@ const Skills = () => {
                                 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>Espanhol <GiSpain size={20}/> </h3>
-                    <span className='skills__number'>Intermediário</span>
+                    <h3 className='skills__name'>{i18next.t("skills.spanish")} <GiSpain size={20}/> </h3>
+                    <span className='skills__number'>{i18next.t("skills.intermediate")}</span>
                   </div>
 
                   <div className='skills__bar'>
@@ -650,7 +650,7 @@ const Skills = () => {
         
 
 
-        <h2 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>Cursos</h2>
+        <h2 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>{i18next.t("skills.title2")}</h2>
         
         <div className='inline-flex gap-[20px]'>
 

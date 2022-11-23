@@ -1,0 +1,82 @@
+{
+
+        "home": {
+            "titles": {
+
+                        "title1":"estudante",
+                        "title2":"programador",
+                        "title3":"quase engenheiro!"
+            },
+            "about": "Formado em informática e atualmente cursando ensino superior em Engenharia da Computação, mas sempre em busca de mais aprendizado. Atualmente trabalhando como Estagiário em Desenvolvimento na Deutsche Telekom. Trabalho em projetos individuais com as mais incríveis tecnologias! Meus pontos fortes incluem Redes, JavaScript, Python, C#, Node.js e SQL (com alguns trabalhos em No-SQL também).",
+            "button": "Conhecer mais"
+        },
+        "about": {
+            "title": "Sobre mim",
+            "today": "PRESENTE",
+            "etec": {
+                "title": "ESCOLA TÉCNICA ESTADUAL DE SP",
+                "text": "Aqui, cursando o ensino médio com o curso de TI, pude vivenciar o ensino médio com uma formação em tecnologia abrangente, com estudos nas áreas de:",
+                "list": {
+                        "list1":"Desenvolvimento de Sistemas;",
+                        "list2":"Bancos de Dados;",
+                        "list3":"Redes de Computadores;",
+                        "list4": "Sistemas Operacionais."
+                        }
+            },
+           "college": {
+                "title": "FACULDADE",
+                "text": "Escolhi o curso de Engenharia da Computação para estudar por acreditar que seria o curso mais completo para minha formação como profissional. Aqui posso aprender diversos conceitos relacionados a tanto engenharia como a computação. Estudo na Universidade São Judas Tadeu - SP."
+            },
+            "firstJob": {
+                "text": "Estagiário em Redes na Mercedes-Benz. Por meio da T-Systems do Brasil, consegui meu primeiro estágio! Atuei em:",
+                "list": {
+                    "list1":"Atualizando documentação como mapeamento e topologia de rede para Mercedes-Benz;",
+                    "list2":"Providenciando configurações e suporte de redes para Mercedes-Benz;",
+                    "list3":"Monitorando redes e configurações relacionadas a redes na Mercedes-Benz."
+                    }
+            },
+            "actualJob": {
+                "text": "Atualmente como Estagiário em Desenvolvimento, estou na Deutsche Telekom Global Bussiness Solutions Brasil, trabalhando com:",
+                "list": {
+                    "list1":"Desenvolvendo soluções em IOT;",
+                    "list2":"Dando suporte e atuando em sistemas de Asset Tracking."
+                    }
+            }
+        },
+        "skills":{
+            "title": "Minhas habilidades",
+            "db": "DB e outras Tecnologias",
+            "lng": "Idiomas",
+            "title2": "Cursos",
+            "en": "Ingles",
+            "pt": "Português",
+            "es": "Espanhol",
+            "fluent": "Fluente",
+            "native": "Nativo",
+            "intermediate": "Intermediário"
+        },
+        "portfolio": {
+            "title": "Conheça alguns dos meus trabalhos!",
+            "firstWork": {
+                "title": "DTGBS - Contratos",
+                "about": "Programa criado com o objetivo de automatizar a criação de documentos."
+            },
+            "secondWork": {
+                "title": "Rede Social - Ravit",
+                "about": "Rede social mobile com o objetivo de contribuir para a criação de bons hábitos do usuário. Projeto de TCC da Escola Técnica de São Paulo."
+            },
+            "thirdWork": {
+                "title": "Facilitador/Automatização - Planilhas",
+                "about": "Programa com o objetivo de ler, extrair e inserir dados de uma planilha .CSV ou .XLSX (excel). Tudo centralizado em um programa com dashboard, busca e inserção de dados dedicados."
+            },
+            "button": "Acessar!"
+        },
+        "contact": {
+            "title": "Contato",
+            "nameInput": "Seu nome",
+            "emailInput": "Seu email",
+            "bodyInput": "O que você você deseja escrever para mim?",
+            "button": "Entrar em contato"
+        }
+
+}

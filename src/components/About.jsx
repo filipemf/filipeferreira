@@ -4,7 +4,7 @@ import {fireConfetti} from '../js/confetti'
 
 import $ from 'jquery'
 
-
+import i18next from 'i18next';
 
 const About = () => {
 
@@ -52,7 +52,7 @@ const About = () => {
         <div className='' style={{textAlign: 'center'}}>
 
 
-        <h1 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>Sobre mim</h1>
+        <h1 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>{i18next.t("about.title")}</h1>
 
         <div class="process-wrapper">
           <div id="progress-bar-container">
@@ -60,7 +60,7 @@ const About = () => {
               <li class="step step01 active"><div class="step-inner" id='etec'>2017-2020</div></li>
               <li class="step step02"><div class="step-inner" style={{bottom: '-10px !important'}}>2021-2025</div></li>
               <li class="step step03"><div class="step-inner">2021-2022</div></li>
-              <li class="step step04"><div class="step-inner">2022-PRESENTE</div></li>
+              <li class="step step04"><div class="step-inner">2022-{i18next.t("about.today")}</div></li>
               {/* <li class="step step05"><div class="step-inner">OUR LOCATIONS</div></li> */}
             </ul>
             
@@ -71,22 +71,21 @@ const About = () => {
 
           <div id="progress-content-section">
             <div class="section-content discovery active">
-            <h2 style={{color: 'rgba(19, 226, 166, 1);', fontWeight: 'bolder;', fontSize: '2rem;', marginTop: '50px;'}}>Escola Técnica Estadual de SP</h2>
+            <h2 style={{color: 'rgba(19, 226, 166, 1);', fontWeight: 'bolder;', fontSize: '2rem;', marginTop: '50px;'}}>{i18next.t("about.etec.title")}</h2>
 
-            <p id='timelineP' style={{fontSize: '.85rem;', fontWeight: '400;', marginLeft: '30px;', marginRight: '30px;', marginTop: '20px;', marginBottom: '10px;'}}>Aqui, cursando o ensino médio com o curso de TI, pude vivenciar o ensino médio com <span className='text-[#000] font-semibold'>uma formação em tecnologia abrangente</span>, com estudos nas áreas de:</p>
+            <p id='timelineP' style={{fontSize: '.85rem;', fontWeight: '400;', marginLeft: '30px;', marginRight: '30px;', marginTop: '20px;', marginBottom: '10px;'}}>{i18next.t("about.etec.text")}</p>
             <ul className='timelineUL' style={{fontSize: '.85rem;', fontWeight: '400;', marginBottom: '50px;'}}>
-              <li><span className='text-[#000]'>◉</span> Desenvolvimento de Sistemas</li>
-              <li><span className='text-[#000]'>◉</span> Bancos de Dados</li>
-              <li><span className='text-[#000]'>◉</span> Redes de Computadores</li>
-              <li><span className='text-[#000]'>◉</span> Sistemas Operacionais</li>
+              <li><span className='text-[#000]'>◉</span> {i18next.t("about.etec.list.list1")}</li>
+              <li><span className='text-[#000]'>◉</span> {i18next.t("about.etec.list.list2")}</li>
+              <li><span className='text-[#000]'>◉</span> {i18next.t("about.etec.list.list3")}</li>
+              <li><span className='text-[#000]'>◉</span> {i18next.t("about.etec.list.list4")}</li>
             </ul>
             </div>
             
             <div class="section-content strategy">
-              <h2 style={{color: 'rgba(19, 226, 166, 1);', fontWeight: 'bolder;', fontSize: '2rem;', marginTop: '50px;'}}>FACULDADE</h2>
+              <h2 style={{color: 'rgba(19, 226, 166, 1);', fontWeight: 'bolder;', fontSize: '2rem;', marginTop: '50px;'}}>{i18next.t("about.college.title")}</h2>
               
-              <p id='timelineP' style={{fontSize: '.85rem;', fontWeight: '400;', marginLeft: '30px;', marginRight: '30px;', marginTop: '20px;'}}>Escolhi o curso de <span className='text-[#000] font-semibold'>Engenharia da Computação</span> para estudar por acreditar que seria o curso mais completo para minha formação como profissional.</p>
-              <p id='timelineP' style={{fontSize: '.85rem;', fontWeight: '400;', marginLeft: '30px;', marginRight: '30px;', marginTop: '20px;', marginBottom: '50px;'}}> Aqui posso aprender diversos conceitos relacionados a tanto engenharia como a computação. Estudo na Universidade São Judas Tadeu - SP.</p>
+              <p id='timelineP' style={{fontSize: '.85rem;', fontWeight: '400;', marginLeft: '30px;', marginRight: '30px;', marginTop: '20px;'}}>{i18next.t("about.college.text")}</p>
               
             </div>
             
@@ -100,11 +99,11 @@ const About = () => {
                 </div>
               </div>
 
-              <p id='timelineP' style={{fontSize: '.85rem;', fontWeight: '400;', marginLeft: '30px;', marginRight: '30px;', marginTop: '20px;', marginBottom: '10px;'}}>Estagiário em Redes na Mercedes-Benz. Por meio da T-Systems do Brasil, consegui <span className='text-[#000] font-semibold'>meu primeiro estágio!</span> Atuei em:</p>
+              <p id='timelineP' style={{fontSize: '.85rem;', fontWeight: '400;', marginLeft: '30px;', marginRight: '30px;', marginTop: '20px;', marginBottom: '10px;'}}>{i18next.t("about.firstJob.text")}</p>
               <ul className='timelineUL' style={{fontSize: '.85rem;', fontWeight: '400;', marginBottom: '50px;'}}>
-                <li><span className='text-[#000]'>◉</span> Atualizando documentação como mapeamento e topologia de rede para Mercedes-Benz</li>
-                <li><span className='text-[#000]'>◉</span> Providenciando configurações e suporte de redes para Mercedes-Benz</li>
-                <li><span className='text-[#000]'>◉</span> Monitorando redes e configurações relacionadas a redes na Mercedes-Benz</li>
+                <li><span className='text-[#000]'>◉</span> {i18next.t("about.firstJob.list.list1")}</li>
+                <li><span className='text-[#000]'>◉</span> {i18next.t("about.firstJob.list.list2")}</li>
+                <li><span className='text-[#000]'>◉</span> {i18next.t("about.firstJob.list.list3")}</li>
               </ul>
             </div>
             
@@ -115,10 +114,10 @@ const About = () => {
               </div>
             
               
-              <p id='timelineP' style={{fontSize: '.85rem;', fontWeight: '400;', marginLeft: '30px;', marginRight: '30px;', marginTop: '20px;', marginBottom: '10px;'}}>Atualmente como <span className='text-[#000] font-semibold'>Estagiário em Desenvolvimento</span>, estou na Deutsche Telekom Global Bussiness Solutions Brasil, trabalhando com:</p>
+              <p id='timelineP' style={{fontSize: '.85rem;', fontWeight: '400;', marginLeft: '30px;', marginRight: '30px;', marginTop: '20px;', marginBottom: '10px;'}}>{i18next.t("about.actualJob.text")}</p>
               <ul className='timelineUL' style={{fontSize: '.85rem;', fontWeight: '400;', marginBottom: '50px;'}}>
-                <li><span className='text-[#000]'>◉</span> Desenvolvendo soluções em IOT</li>
-                <li><span className='text-[#000]'>◉</span> Dando suporte e atuando em sistemas de Asset Tracking</li>
+                <li><span className='text-[#000]'>◉</span> {i18next.t("about.actualJob.list.list1")}</li>
+                <li><span className='text-[#000]'>◉</span> {i18next.t("about.actualJob.list.list2")}</li>
               </ul>
             </div>
           </div>
