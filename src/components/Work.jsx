@@ -92,7 +92,7 @@ const Work = () => {
             <div className='splineContainer'>
               
               <video className='contratosVideo' muted={true} loop={'loop'} autoPlay={true}  defaultMuted={true} playsInline={true} onContextMenu={"return fals"}  preload="auto" controls={false}>
-                <source src='./facilitador.mp4' type="video/mp4" />
+                <source src='./app2.mp4' type="video/mp4" />
               </video>
           
               {/* <Suspense fallback={<div>Loading...</div>}>
