@@ -25,6 +25,8 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.8",
     "react-timeline-animation": "^1.2.1",
+    "sweetalert2": "^11.6.11",
+    "sweetalert2-react-content": "^5.0.7",
     "swiper": "^8.4.4",
     "typed.js": "^2.0.12",
     "web-vitals": "^2.1.4"
@@ -56,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@emailjs/browser": "^3.9.1",
     "TagCloud": "^2.2.0",
     "gh-pages": "^4.0.0",
     "react-lottie": "^1.2.3",

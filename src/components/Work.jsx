@@ -54,7 +54,7 @@ const Work = () => {
             <div className='splineContainer'>
               
               <video className='contratosVideo' muted={true} loop={'loop'} autoPlay={true}  defaultMuted={true} playsInline={true} onContextMenu={"return fals"}  preload="auto" controls={false}>
-                <source src='./movie2.mp4' type="video/mp4" />
+                <source src='./contratos.mp4' type="video/mp4" />
               </video>
           
               {/* <Suspense fallback={<div>Loading...</div>}>
@@ -83,10 +83,78 @@ const Work = () => {
         </SwiperSlide>
 
 
-        <SwiperSlide>Logo...</SwiperSlide>
+        <SwiperSlide className='bg-[#2d2f39]'>
+          <div className='flex flex-col items-center'>
+
+            <h3 className='mb-50px'>Rede Social - Ravit</h3>
+
+            <div className='splineContainer'>
+              
+              <video className='contratosVideo' muted={true} loop={'loop'} autoPlay={true}  defaultMuted={true} playsInline={true} onContextMenu={"return fals"}  preload="auto" controls={false}>
+                <source src='./app.mp4' type="video/mp4" />
+              </video>
+          
+              {/* <Suspense fallback={<div>Loading...</div>}>
+                <Spline id='spline' scene={require('./scene (3).splinecode')}/>
+              </Suspense> */}
+            </div>
 
 
-        <SwiperSlide>Logo...</SwiperSlide>
+            <div className='contents'>
+                <p className='mt-[30px]'>Rede social com o objetivo de contribuir para a criação de bons hábitos do usuário. Projeto de TCC da Escola Técnica de São Paulo.</p>
+
+                <div>
+                    <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
+                    <a href='https://github.com/filipemf/Ravit' className='averageLink flex justify-between items-center w-full text-gray-300'>
+                        Acessar <AiFillGithub className='ml-[10px]' size={30}/>
+                    </a>  
+                    </button>
+                </div>
+            </div>
+            
+
+
+          </div>
+
+
+        </SwiperSlide>
+
+
+        <SwiperSlide className='bg-[#2d2f39]'>
+          <div className='flex flex-col items-center'>
+
+            <h3 className='mb-50px'>Facilitador/Automatização - Planilhas</h3>
+
+            <div className='splineContainer'>
+              
+              <video className='contratosVideo' muted={true} loop={'loop'} autoPlay={true}  defaultMuted={true} playsInline={true} onContextMenu={"return fals"}  preload="auto" controls={false}>
+                <source src='./facilitador.mp4' type="video/mp4" />
+              </video>
+          
+              {/* <Suspense fallback={<div>Loading...</div>}>
+                <Spline id='spline' scene={require('./scene (3).splinecode')}/>
+              </Suspense> */}
+            </div>
+
+
+            <div className='contents'>
+                <p className='mt-[30px]'>Programa com o objetivo de ler, extrair e inserir dados de uma planilha .CSV ou .XLSX (excel). Tudo centralizado em um programa com dashboard, busca e inserção de dados dedicados.</p>
+
+                <div>
+                    <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
+                    <a href='https://github.com/filipemf/electron-facilitador' className='averageLink flex justify-between items-center w-full text-gray-300'>
+                        Acessar <AiFillGithub className='ml-[10px]' size={30}/>
+                    </a>  
+                    </button>
+                </div>
+            </div>
+            
+
+
+          </div>
+
+
+        </SwiperSlide>
 
       </Swiper>
 

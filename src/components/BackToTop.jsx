@@ -24,7 +24,7 @@ const BackToTop = () => {
   return (
     <div>
       {backToTopButton && (
-        <button className='fixed bottom-[50px] z-[9999999] right-[50px] h-[50px] w-[50px] bg-[#18c8a8] border-solid border-2 border-white rounded' onClick={scrollUp} >
+        <button className='fixed bottom-[50px] z-[10] right-[50px] h-[50px] w-[50px] bg-[#18c8a8] border-solid border-2 border-white rounded' onClick={scrollUp} >
             <SlArrowUp className='ml-[12px] text-[#fff]' size={20}/>
         </button>
       )}

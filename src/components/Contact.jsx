@@ -1,7 +1,34 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import {AiFillGithub, AiFillLinkedin, AiFillMail} from 'react-icons/ai'
+import emailjs from '@emailjs/browser';
+
+import Swal from 'sweetalert2'
 
 const Contact = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) =>{
+    e.preventDefault();
+
+    emailjs.sendForm('service_g749kaq', 'template_2wtd1ue', form.current, 'csBTGeyPlCSQUcwXM')
+      .then((result) => {
+          console.log(result.text);
+          Swal.fire(
+            'Contato', 'Contato enviado com sucesso! Entrarei em contato assim que possível. Obrigado!', 'success'
+          )
+      }, (error) => {
+          console.log(error.text);
+          Swal.fire(
+            'Contato', 'Ops! Algo deu errado! Certifique-se que todas as informações foram digitadas corretamente.',  'error  '
+          )
+      });
+      e.target.reset()
+
+
+
+  }
+
   return (
     <div name='contact' className='w-full h-auto bg-[#22232A] text-gray-300 text-center items-center justify-center'>
       <div className='flex flex-col justify-center items-center w-full '>
@@ -12,10 +39,10 @@ const Contact = () => {
 
         <div style={{display: 'flex;'}}>
           <div>
-            <form method='POST' action="https://getform.io/f/a699a1b2-f225-434e-b317-1fbbde8e006c" className='flex flex-col max-w-[600px] w-full'>
-                <input className='bg-[#d1d4db] p-2' type="text" placeholder='Seu nome' name='name' />
-                <input className='my-4 p-2 bg-[#d1d4db]' type="email" placeholder='Seu email' name='email' />
-                <textarea className='bg-[#d1d4db] p-2' name="message" rows="10" placeholder='O que deseja escrever?'></textarea>
+            <form className='flex flex-col max-w-[600px] w-full text-[#000]' ref={form} onSubmit={sendEmail}>
+                <input className='bg-[#d1d4db] p-2' type="text" placeholder='Seu nome' name='from_name' required/>
+                <input className='my-4 p-2 bg-[#d1d4db]' type="email" placeholder='Seu email' name='reply_to' required/>
+                <textarea className='bg-[#d1d4db] p-2' name="message" rows="10" placeholder='O que deseja escrever?' required></textarea>
                 <button className='text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center bg-pink-600'>Entrar em contato</button>
               </form>
           </div>

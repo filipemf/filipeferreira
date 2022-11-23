@@ -58,19 +58,15 @@ const Navbar = () => {
 
       <ul className='hidden md:flex font-bold'>
         <li>
-          <Link to='work' smooth={true} duration={500}>
             <GiBrazilFlag className='ml-[10px]' size={25}/> pt-BR
-          </Link>
         </li>
         <li className='mt-[5px]'>
-          <Link to='contact' smooth={true} duration={500}>
             <FaFlagUsa size={20}/> en
-          </Link>
         </li>
       </ul>
 
       {/* Hamburger */}
-      <div onClick={handleClick} className='md:hidden z-10'>
+      <div onClick={handleClick} className='md:hidden z-[1000]'>
         {!nav ? <FaBars values={{color: '#fff'}} /> : <FaTimes />}
       </div>
 
@@ -79,7 +75,7 @@ const Navbar = () => {
         className={
           !nav
             ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-[#22232a] flex flex-col justify-center items-center font-bold'
+            : 'absolute top-0 left-0 w-full h-screen bg-[#22232a] flex flex-col justify-center items-center font-bold z-[999]'
         }
       >
         <li className='py-6 text-4xl'>
@@ -111,11 +107,28 @@ const Navbar = () => {
             Contato
           </Link>
         </li>
+
+          <div className='inline-flex'>
+            <button className='m-[30px] pr-[30px]'>
+                <GiBrazilFlag className='ml-[10px]' size={25}/> pt-BR
+            </button>
+            <button className='mt-[5px] pr-[30px]'>
+              
+                <FaFlagUsa size={20}/> en
+            </button>
+        </div>
       </ul>
+
+      
+      
 
       {/* Social icons */}
       {/* <div className='hidden lg:flex fixed flex-col top-[35%] left-0'> */}
-      <div className='hidden fixed flex-col top-[35%] left-0'>
+      <div className={
+          !nav
+            ? 'hidden'
+            : 'hidden fixed flex-col top-[35%] left-0'}
+            >
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
             <a
