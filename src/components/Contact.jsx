@@ -93,6 +93,10 @@ const Contact = () => {
             </div>
 
           </div>
+
+          <div>
+            <p>Copyright © Filipe Ferreira. All Rights Reserved</p>
+          </div>
         </div>
         
         
