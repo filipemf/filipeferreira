@@ -719,7 +719,7 @@ if ( typeof jQuery !== 'undefined' ) {
                         
                         $.data( this, 'plugin_SVG3DTagCloud', new window.SVG3DTagCloud( this, params ) );
 
-                        $.error( 'Method ' +  params + ' does not exist on jQuery.svg3DTagCloud' );
+                        // $.error( 'Method ' +  params + ' does not exist on jQuery.svg3DTagCloud' );
                         
                     }
 

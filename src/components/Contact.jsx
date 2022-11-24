@@ -55,7 +55,7 @@ const Contact = () => {
         <h1 className='timelineTitle font-bold text-5xl mb-[30px] mt-[30px]'>{i18next.t("contact.title")}</h1>
 
 
-        <div style={{display: 'flex;'}}>
+        <div>
           <div>
             <form className='flex flex-col max-w-[600px] w-full text-[#000]' ref={form} onSubmit={sendEmail}>
                 <input className='bg-[#d1d4db] p-2' type="text" placeholder={i18next.t("contact.nameInput")} name='from_name' required/>

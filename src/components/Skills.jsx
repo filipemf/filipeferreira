@@ -270,7 +270,7 @@ const Skills = () => {
   return (
     <div name='skills' className='w-full h-[auto] pb-[30px] bg-[#22232A] text-gray-300 text-center items-center justify-center'>
       <div className='flex flex-col justify-center items-center w-full text-center'>
-        <h1 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>{i18next.t("about.title")}</h1>
+        <h1 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>{i18next.t("skills.title")}</h1>
 
 
                 
