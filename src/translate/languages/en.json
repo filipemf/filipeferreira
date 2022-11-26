@@ -50,7 +50,8 @@
     },
     "skills":{
         "title": "My Skills",
-        "db": "DB and Other Technologies",
+        "instructions": "Click on the options bellow to see more!",
+        "db": "DB and Other Techs",
         "lng": "Languages",
         "title2": "Courses",
         "en": "English",

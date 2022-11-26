@@ -12,13 +12,13 @@ const resources = {
         translation: pt
     }
 }
-
 i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
         resources,
-        lng: 'en'
+        fallbackLng: 'en',
+        lng: (navigator.language==='pt-BR')?'pt':'en'
     })
 
 export default i18n

@@ -50,6 +50,7 @@
     },
     "skills":{
         "title": "Minhas habilidades",
+        "instructions": "Clique nas opções abaixo para conhecer mais!",
         "db": "DB e outras Tecnologias",
         "lng": "Idiomas",
         "title2": "Cursos",

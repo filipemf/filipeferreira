@@ -809,3 +809,17 @@ text-decoration: none;
 .contents{
   text-align: justify;
 }
+
+#tagcloud{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+
+  width: 100% !important;
+}
+
+#cloudSVG{
+  width: 100% !important;
+}

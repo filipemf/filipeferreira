@@ -200,6 +200,7 @@ import jQuery from "jquery";
 
             // original: svg.setAttribute( 'width', svgWidth );
             svg.setAttribute( 'width', 'auto' );
+            svg.id = 'cloudSVG'
             svg.setAttribute( 'height', svgHeight );
 
             if ( settings.bgDraw ) {

@@ -151,6 +151,17 @@ const Skills = () => {
       $('#tagcloud').prependTo($('.skills__content.fe.skills__open  div.skills__list.grid'))
 
     }
+    else if(itemClass.current.parentElement.className === 'skills__content fe skills__open'){
+      for(let i=0;i<skillsContent.length; i++){
+        skillsContent[i].className = 'skills__content fe skills__close'
+      }
+
+      itemClass.current.parentElement.className = 'skills__content fe skills__close'
+
+      $('#tagcloud').appendTo($('.skills__subcontainer'))
+      return openCloud()
+
+    }
     else{
       for(let i=0;i<skillsContent.length; i++){
         skillsContent[i].className = 'skills__content fe skills__close'
@@ -186,6 +197,17 @@ const Skills = () => {
 
       $('#tagcloud').prependTo($('.skills__content.be.skills__open  div.skills__list.grid'))
     }
+    else if(itemClass.current.parentElement.className === 'skills__content be skills__open'){
+      for(let i=0;i<skillsContent.length; i++){
+        skillsContent[i].className = 'skills__content be skills__close'
+      }
+
+      itemClass.current.parentElement.className = 'skills__content be skills__close'
+
+      $('#tagcloud').appendTo($('.skills__subcontainer'))
+      return openCloud()
+
+    }
     else{
       for(let i=0;i<skillsContent.length; i++){
         skillsContent[i].className = 'skills__content be skills__close'
@@ -217,6 +239,17 @@ const Skills = () => {
       itemClass.current.parentElement.className = 'skills__content db skills__open'
 
       $('#tagcloud').prependTo($('.skills__content.db.skills__open  div.skills__list.grid'))
+    }
+    else if(itemClass.current.parentElement.className === 'skills__content db skills__open'){
+      for(let i=0;i<skillsContent.length; i++){
+        skillsContent[i].className = 'skills__content db skills__close'
+      }
+
+      itemClass.current.parentElement.className = 'skills__content db skills__close'
+
+      $('#tagcloud').appendTo($('.skills__subcontainer'))
+      return openCloud()
+
     }
     else{
       for(let i=0;i<skillsContent.length; i++){
@@ -251,6 +284,17 @@ const Skills = () => {
 
       $('#tagcloud').prependTo($('.skills__content.os.skills__open  div.skills__list.grid'))
     }
+    else if(itemClass.current.parentElement.className === 'skills__content os skills__open'){
+      for(let i=0;i<skillsContent.length; i++){
+        skillsContent[i].className = 'skills__content os skills__close'
+      }
+
+      itemClass.current.parentElement.className = 'skills__content os skills__close'
+
+      $('#tagcloud').appendTo($('.skills__subcontainer'))
+      return openCloud()
+
+    }
     else{
       for(let i=0;i<skillsContent.length; i++){
         skillsContent[i].className = 'skills__content os skills__close'
@@ -271,6 +315,8 @@ const Skills = () => {
     <div name='skills' className='w-full h-[auto] pb-[30px] bg-[#22232A] text-gray-300 text-center items-center justify-center'>
       <div className='flex flex-col justify-center items-center w-full text-center'>
         <h1 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>{i18next.t("skills.title")}</h1>
+
+        <p className='mb-[15px]'>{i18next.t("skills.instructions")}</p>
 
 
                 

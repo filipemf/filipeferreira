@@ -76,7 +76,7 @@ const Navbar = () => {
         className={
           !nav
             ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-[#22232a] flex flex-col justify-center items-center font-bold z-[999]'
+            : 'absolute top-0 left-0 w-full h-screen bg-[#22232a] flex flex-col justify-center font-bold z-[999]'
         }
       >
         <li className='py-6 text-4xl'>
@@ -109,7 +109,7 @@ const Navbar = () => {
           </Link>
         </li>
 
-          <div className='inline-flex'>
+          <div className='inline-flex self-center'>
             <button className='m-[30px] pr-[30px]' onClick={setLanguageToPT}>
                 <GiBrazilFlag className='ml-[10px]' size={25}/> pt-BR
             </button>
