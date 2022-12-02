@@ -1,6 +1,7 @@
 {
   "homepage": "http://filipeferreira.me",
   "name": "filipeferreira",
+  "description": "Website portfolio criado por Filipe Marques Ferreira",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

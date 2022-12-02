@@ -17,23 +17,23 @@ const About = () => {
     });
     
     $(".step01").click( function() {
-      $("#line-progress").css("width", "3%");
+      $("#line-progress").css("width", "15%");
       $(".discovery").addClass("active").siblings().removeClass("active");
     });
     
     $(".step02").click( function() {
-      $("#line-progress").css("width", "25%");
+      $("#line-progress").css("width", "35%");
       $(".strategy").addClass("active").siblings().removeClass("active");
     });
     
     $(".step03").click( function() {
-      $("#line-progress").css("width", "50%");
+      $("#line-progress").css("width", "55%");
       $(".creative").addClass("active").siblings().removeClass("active");
     });
     
     $(".step04").click( function() {
       fireConfetti()
-      $("#line-progress").css("width", "75%");
+      $("#line-progress").css("width", "100%");
       $(".production").addClass("active").siblings().removeClass("active");
     });
     
