@@ -47,7 +47,7 @@ const About = () => {
 
   
   return (
-    <div name='about' id='about' className='w-full h-[100vh] bg-[#2d2f39] text-gray-300 pb-[30px]'>
+    <div name='about' id='about' className='w-full h-[auto] bg-[#2d2f39] text-gray-300 pb-[30px]'>
       <div className='flex flex-col justify-center items-center w-full '>
         <div className='text-center'>
 
@@ -80,21 +80,28 @@ const About = () => {
               <li><span className='text-[#000]'>◉</span> {i18next.t("about.etec.list.list3")}</li>
               <li><span className='text-[#000]'>◉</span> {i18next.t("about.etec.list.list4")}</li>
             </ul>
+
+            <img src="../assets/etec.png" className='w-[700px]' alt='teste'/>
             </div>
             
             <div className="section-content strategy">
               <h2>{i18next.t("about.college.title")}</h2>
               
               <p id='timelineP'>{i18next.t("about.college.text")}</p>
+
+              <div className='flex justify-center items-center'>
+                <img src="../assets/saojudas.png" className='w-[700px]' alt='teste'/>
+              </div>
+              
               
             </div>
             
             <div className="section-content creative">
               <div className='imgsContainer inline-flex'>
-                <img className='tsystemsLogo w-[300px] h-[auto]' src="../assets/tsystems.png" alt='T-Systems'/>
+                <img className='tsystemsLogo w-[230px] h-[70px]' src="../assets/tsystems.png" alt='T-Systems'/>
 
                 <div className='mercedesLogo'>
-                  <img id='mercedesFoto' className='w-[180px] ml-[60px]' src="../assets/mercedes-logo.png" alt='Mercedes-Benz'/>
+                  <img id='mercedesFoto' className='ml-[60px] h-[70px]' src="../assets/mercedes-logo.png" alt='Mercedes-Benz'/>
                 </div>
               </div>
 
@@ -117,6 +124,7 @@ const About = () => {
               <ul className='timelineUL'>
                 <li><span className='text-[#000]'>◉</span> {i18next.t("about.actualJob.list.list1")}</li>
                 <li><span className='text-[#000]'>◉</span> {i18next.t("about.actualJob.list.list2")}</li>
+                <li><span className='text-[#000]'>◉</span> {i18next.t("about.actualJob.list.list3")}</li>
               </ul>
             </div>
           </div>

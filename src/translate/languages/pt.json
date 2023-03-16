@@ -12,7 +12,7 @@
             "title2":"programador",
             "title3":"quase engenheiro!"
         },
-        "about": "Formado em informática e atualmente cursando ensino superior em Engenharia da Computação, mas sempre em busca de mais aprendizado. Atualmente trabalhando como Estagiário em Desenvolvimento na Deutsche Telekom. Trabalho em projetos individuais com as mais incríveis tecnologias! Meus pontos fortes incluem Redes, JavaScript, Python, C#, Node.js e SQL (com alguns trabalhos em No-SQL também).",
+        "about": "Sou um estudante universitário atualmente cursando Engenharia da Computação e me formado em uma escola técnica com um certificado de TI em dezembro de 2020. Atualmente, trabalho com desenvolvimento de software na Deutsche Telekom e desenvolvo projetos independentes buscando aprender e utilizar novas tecnologias. Minha especialização está em uma variedade de áreas técnicas, incluindo Rede e Segurança Cibernética, JavaScript (com frameworks como React.js e React Native), Python, C#, Node.js e SQL. Com realizações de alguns projetos em No-SQL que ampliaram ainda mais meu conjunto de habilidades. Através das minhas diversas experiências, desenvolvi um olhar aguçado para os detalhes, habilidades de resolução de problemas e uma curiosidade inata para estar atualizado com as últimas tendências do mercado!",
         "button": "Conhecer mais"
     },
     "about": {
@@ -43,8 +43,9 @@
         "actualJob": {
             "text": "Atualmente como Estagiário em Desenvolvimento, estou na Deutsche Telekom Global Bussiness Solutions Brasil, trabalhando com:",
             "list": {
-                "list1":"Desenvolvendo soluções em IOT;",
-                "list2":"Dando suporte e atuando em sistemas de Asset Tracking."
+                "list1":"Desenvolvendo soluções em IOT usando AI e Visão Computacional;",
+                "list2":"Dando suporte e atuando em sistemas de Asset Tracking e RFID;",
+                "list3":"Desenvolvendo ferramentas internas com objetivo de maximizar e otimizar workflow e os processos internos."
                 }
         }
     },
@@ -59,7 +60,11 @@
         "es": "Espanhol",
         "fluent": "Fluente",
         "native": "Nativo",
-        "intermediate": "Intermediário"
+        "intermediate": "Intermediário",
+        "exp": "ano(s) de experiência",
+        "expMonths": "mes(es) de experiência",
+        "technical": "conhecimento técnico"
+        
     },
     "portfolio": {
         "title": "Conheça alguns dos meus trabalhos!",

@@ -86,7 +86,7 @@ const Contact = () => {
 
             <div className='contactDiv'>
               <a className='averageLink flex justify-between items-center w-full text-gray-300'
-                href='mailto:filipemarquesf01@gmail.com?Subject=Contato%20Filipe%20Ferreira&Body=Oi%21%20Gostei%20do%20seu%20trabalho%21%20Podemos%20entrar%20em%20contato%3F'
+                href='mailto:contact@filipeferreira.me?Subject=Contato%20Filipe%20Ferreira&Body=Oi%21%20Gostei%20do%20seu%20trabalho%21%20Podemos%20entrar%20em%20contato%3F'
                 >
                   Mail<AiFillMail size={30}/>
               </a>
