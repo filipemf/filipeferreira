@@ -19,7 +19,7 @@ const Work = () => {
 
       <div className='' style={{textAlign: 'center'}}>
 
-        <div>
+        <div className='inline-block mt-[40px]'>
           <h1 className='timelineTitle font-bold text-5xl mb-[20px]'>Portfolio</h1>
         </div>
 

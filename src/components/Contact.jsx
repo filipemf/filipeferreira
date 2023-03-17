@@ -1,11 +1,13 @@
 import React, {useRef, useEffect} from 'react'
 import i18next from 'i18next';
-import {AiFillGithub, AiFillLinkedin, AiFillMail} from 'react-icons/ai'
+import {AiFillGithub, AiFillLinkedin, AiFillMail, AiOutlineDownload} from 'react-icons/ai'
 import emailjs from '@emailjs/browser';
 
 import Swal from 'sweetalert2'
 
 const Contact = () => {
+
+  
 
   const form = useRef();
 
@@ -89,6 +91,14 @@ const Contact = () => {
                 href='mailto:contact@filipeferreira.me?Subject=Contato%20Filipe%20Ferreira&Body=Oi%21%20Gostei%20do%20seu%20trabalho%21%20Podemos%20entrar%20em%20contato%3F'
                 >
                   Mail<AiFillMail size={30}/>
+              </a>
+            </div>
+
+            <div className='contactDiv'>
+            <a className='averageLink flex justify-between items-center w-full text-gray-300'
+              href={"../assets/Filipe Ferreira - Resume.pdf"} download
+                >
+                  Download {i18next.t("contact.cv")}<AiOutlineDownload size={30}/>
               </a>
             </div>
 

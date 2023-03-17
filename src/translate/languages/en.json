@@ -86,7 +86,8 @@
         "nameInput": "Your name",
         "emailInput": "Your email",
         "bodyInput": "What do you wanna write to me?",
-        "button": "Get in touch"
+        "button": "Get in touch",
+        "cv": "Resume"
     }
         
 }

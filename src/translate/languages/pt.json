@@ -87,7 +87,8 @@
         "nameInput": "Seu nome",
         "emailInput": "Seu email",
         "bodyInput": "O que você você deseja escrever para mim?",
-        "button": "Entrar em contato"
+        "button": "Entrar em contato",
+        "cv": "CV"
     }
 
 }
