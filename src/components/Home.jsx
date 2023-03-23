@@ -1,6 +1,5 @@
 import i18next from 'i18next';
 import React, {useEffect, useState} from 'react';
-import { HiArrowNarrowRight, HiArrowNarrowDown } from 'react-icons/hi';
 import { Link } from 'react-scroll';
 import Typed from 'typed.js';
 import {AiFillGithub, AiFillLinkedin, AiOutlineWhatsApp} from 'react-icons/ai'
@@ -85,16 +84,8 @@ const Home = () => {
             <div>
 
 
-            {/* <button className='knowMore' id='knowMore'>Know More!</button> */}
-              <Link className='btn' id='btn' to='about' smooth={true} duration={500} style={{ "--content": `"${content}"` }}>Know</Link>
-              {/* <button  className='text-white group border-2 px-6 py-3 my-2 flex items-center'>
-              <Link className='knowMoreText w-[200px] font-bold' to='about' smooth={true} duration={500}>
-                  {i18next.t("home.button")}
-                  <span className='group-hover:rotate-90 duration-300 decoration-none' id='arrow'>
-                    <HiArrowNarrowDown className='ml-3 ' />
-                  </span>
-               </Link>  
-              </button> */}
+              <Link className='btn' id='btn' to='about' smooth={true} duration={500} style={{ "--content": `"${content}"` }}></Link>
+
             </div>
 
           </div>
@@ -102,13 +93,8 @@ const Home = () => {
 
 
           <div className='containerPhoto'>
-            <img className='image h-[500px]' src='../assets/foto3png.png' alt="HTML icon" />
+            <img className='image h-[500px]' src='../assets/foto3compress.png' alt="HTML icon" />
           </div>
-
-          {/* <div className='photoContainer right-0 top-0'>
-            <img className='myPhoto h-[500px]' src={FOTO} alt="HTML icon" />
-          </div> */}
-
           
         </div>
       </div>

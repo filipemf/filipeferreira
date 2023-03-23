@@ -10,7 +10,7 @@ import { HiCode,HiArrowNarrowDown,HiArrowNarrowUp,HiCloud, HiTerminal} from "rea
 import { MdLanguage} from "react-icons/md";
 
 import {FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNode, FaGithub, FaGitlab, FaAws, FaAngular,  FaFlagUsa, FaPython} from "react-icons/fa";
-import {SiMongodb, SiFirebase, SiMysql, SiCisco, SiCsharp, SiTypescript, SiDotnet} from "react-icons/si";
+import {SiMongodb, SiFirebase, SiMysql, SiCisco, SiCsharp, SiTypescript, SiDotnet, SiThreedotjs} from "react-icons/si";
 import {GiBrazilFlag, GiSpain} from "react-icons/gi";
 
 
@@ -29,6 +29,7 @@ const Skills = () => {
       { image: '../assets/react.png', width: '50', height: '50', target: '_top', tooltip: 'ReactJS' },
       { image: '../assets/react-native.png', width: '70', height: '70', target: '_top', tooltip: 'React Native' },
       { image: '../assets/node.png', width: '50', height: '50', target: '_top', tooltip: 'Node' },
+      { image: '../assets/threejs.png', width: '50', height: '50', target: '_top', tooltip: 'Three.js' },
       { image: '../assets/firebase.png', width: '50', height: '50', target: '_top', tooltip: 'Firebase' },
       { image: '../assets/github.png', width: '50', height: '50', target: '_top', tooltip: 'Github' },
       { image: '../assets/mongo.png', width: '50', height: '50', target: '_top', tooltip: 'MongoDB' },
@@ -179,6 +180,7 @@ const Skills = () => {
       { image: '../assets/css.png', width: '50', height: '50', target: '_top', tooltip: 'CSS3' },
       { image: '../assets/javascript.png', width: '50', height: '50', target: '_top', tooltip: 'JavaScript' },
       { image: '../assets/react.png', width: '50', height: '50', target: '_top', tooltip: 'ReactJS' },
+      { image: '../assets/threejs.png', width: '50', height: '50', target: '_top', tooltip: 'Three.js' },
       { image: '../assets/angular.png', width: '70', height: '70', target: '_top', tooltip: 'Angular' },
       { image: '../assets/typescript.png', width: '70', height: '70', target: '_top', tooltip: 'TypeScript' },
     ]
@@ -424,6 +426,18 @@ const Skills = () => {
                     <span className="skills__percentage skills__90"></span>
                   </div>
                   
+                </div>
+
+
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Three.js <SiThreedotjs size={20}/> </h3>
+                    <span className='skills__number'>{i18next.t("skills.technical")}</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__50"></span>
+                  </div>
                 </div>
 
 
