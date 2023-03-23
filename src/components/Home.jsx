@@ -1,10 +1,12 @@
 import i18next from 'i18next';
-import React, {useEffect} from 'react';
-import { HiArrowNarrowRight } from 'react-icons/hi';
+import React, {useEffect, useState} from 'react';
+import { HiArrowNarrowRight, HiArrowNarrowDown } from 'react-icons/hi';
 import { Link } from 'react-scroll';
 import Typed from 'typed.js';
+import {AiFillGithub, AiFillLinkedin, AiOutlineWhatsApp} from 'react-icons/ai'
 
 const Home = () => {
+  const [content, setContent] = useState(i18next.t("home.button"));
 
   useEffect(()=>{
     new Typed('.auto-type',{
@@ -16,8 +18,21 @@ const Home = () => {
     })
 
 
+    const elem = document.querySelector(".btn");
+    const beforeElem = window.getComputedStyle(elem, "::before");
+
+    // Update the content property of the ::before pseudo-element
+    elem.style.setProperty("content", "new content");
+
+    // Log the updated value of the content property
+    console.log(beforeElem.getPropertyValue("content"));
+
+
 
   }, [])
+
+
+  
 
   return (
     <div name='home' id='home' className='w-full h-screen bg-[#22232a]'>
@@ -34,28 +49,52 @@ const Home = () => {
           <div className='inline-flex'>
             <h2 className='auto-type'></h2>
           </div>
+
+          <div className=''>
+
+            <div className='contactDiv'>
+              <a className='averageLink flex justify-between items-center w-full text-gray-300'
+                href='https://github.com/filipemf' target="_blank" rel="noreferrer"
+                >
+                  <AiFillGithub size={30}/>
+              </a>
+            </div>
+
+            <div className='contactDiv'>
+              <a className='averageLink flex justify-between items-center w-full text-gray-300'
+                href='https://www.linkedin.com/in/filipemarquesf/' target="_blank" rel="noreferrer"
+                >
+                  <AiFillLinkedin size={30}/>
+              </a>
+            </div>
+
+            <div className='contactDiv'>
+              <a className='averageLink flex justify-between items-center w-full text-gray-300'
+                href="//api.whatsapp.com/send?phone=5511967174160" target="_blank" rel="noreferrer"
+                >
+                  <AiOutlineWhatsApp size={30}/>
+              </a>
+            </div>
+          </div>
             
-        
-            {/* <div className='wrapper flex-row-reverse contents' id='homeWrapper'>
-              <ul className='dynamic-txts'>
-                <li><span>programador</span></li>
-                <li><span>quase</span></li>
-                <li><span>engenheiro!</span></li>
-              </ul>
-            </div> */}
 
             <p className='text-[#8892b0] py-4 max-w-[700px] text-justify'>
             {i18next.t("home.about")}
             </p>
+
             <div>
-              <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
-              <Link to='about' smooth={true} duration={500}>
+
+
+            {/* <button className='knowMore' id='knowMore'>Know More!</button> */}
+              <Link className='btn' id='btn' to='about' smooth={true} duration={500} style={{ "--content": `"${content}"` }}>Know</Link>
+              {/* <button  className='text-white group border-2 px-6 py-3 my-2 flex items-center'>
+              <Link className='knowMoreText w-[200px] font-bold' to='about' smooth={true} duration={500}>
                   {i18next.t("home.button")}
-                  <span className='group-hover:rotate-90 duration-300'>
-                    <HiArrowNarrowRight className='ml-3 ' />
+                  <span className='group-hover:rotate-90 duration-300 decoration-none' id='arrow'>
+                    <HiArrowNarrowDown className='ml-3 ' />
                   </span>
                </Link>  
-              </button>
+              </button> */}
             </div>
 
           </div>

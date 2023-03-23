@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 
 import $ from 'jquery'
 import '../js/jquery.svg3dtagcloud'
@@ -6,7 +6,7 @@ import i18next from 'i18next';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { HiCode,HiArrowNarrowDown,HiCloud, HiTerminal} from "react-icons/hi";
+import { HiCode,HiArrowNarrowDown,HiArrowNarrowUp,HiCloud, HiTerminal} from "react-icons/hi";
 import { MdLanguage} from "react-icons/md";
 
 import {FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNode, FaGithub, FaGitlab, FaAws, FaAngular,  FaFlagUsa, FaPython} from "react-icons/fa";
@@ -40,11 +40,15 @@ const Skills = () => {
       { image: '../assets/aws.png', width: '70', height: '70', target: '_top', tooltip: 'AWS' },
       { image: '../assets/angular.png', width: '70', height: '70', target: '_top', tooltip: 'Angular' },
       { image: '../assets/typescript.png', width: '70', height: '70', target: '_top', tooltip: 'TypeScript' },
-      { image: '../assets/usflag.png', width: '50', height: '50', target: '_top', tooltip: 'Ingles' },
-      { image: '../assets/brflag.png', width: '50', height: '50', target: '_top', tooltip: 'Portugues' },
-      { image: '../assets/spainflag.png', width: '50', height: '50', target: '_top', tooltip: 'Espanhol' },
+      { image: '../assets/usflag.png', width: '50', height: '50', target: '_top', tooltip: 'English' },
+      { image: '../assets/brflag.png', width: '50', height: '50', target: '_top', tooltip: 'Portuguese' },
+      { image: '../assets/spainflag.png', width: '50', height: '50', target: '_top', tooltip: 'Spanish' },
   
     ];
+    const [isActiveFE, setIsActiveFE] = useState(false);
+    const [isActiveBE, setIsActiveBE] = useState(false);
+    const [isActiveDB, setIsActiveDB] = useState(false);
+    const [isActiveOS, setIsActiveOS] = useState(false);
 
     const svgEl = useRef()
 
@@ -137,7 +141,7 @@ const Skills = () => {
 
   function toggleSkillsFE(){
     
-
+    
     let skillsContent = document.getElementsByClassName('skills__content fe')
     // console.log(document.getElementsByClassName('skills__content'))
     let itemClass = myRefFE
@@ -178,6 +182,7 @@ const Skills = () => {
       { image: '../assets/angular.png', width: '70', height: '70', target: '_top', tooltip: 'Angular' },
       { image: '../assets/typescript.png', width: '70', height: '70', target: '_top', tooltip: 'TypeScript' },
     ]
+    
     openCloud(itemClass.current.parentElement.className, ent, itemClass)
 
     
@@ -303,11 +308,38 @@ const Skills = () => {
     
 
     let ent = [
-      { image: '../assets/usflag.png', width: '50', height: '50', target: '_top', tooltip: 'Ingles' },
-      { image: '../assets/brflag.png', width: '50', height: '50', target: '_top', tooltip: 'Portugues' },
-      { image: '../assets/spainflag.png', width: '50', height: '50', target: '_top', tooltip: 'Espanhol' },
+      { image: '../assets/usflag.png', width: '50', height: '50', target: '_top', tooltip: 'English' },
+      { image: '../assets/brflag.png', width: '50', height: '50', target: '_top', tooltip: 'Portuguese' },
+      { image: '../assets/spainflag.png', width: '50', height: '50', target: '_top', tooltip: 'Spanish' },
     ]
     openCloud(itemClass.current.parentElement.className, ent, itemClass)
+  }
+
+  function setArrowIcon(name){
+    if(name === 'FE'){
+      setIsActiveFE(!isActiveFE)
+      setIsActiveBE(false)
+      setIsActiveDB(false)
+      setIsActiveOS(false)
+    }
+    else if(name === 'BE'){
+      setIsActiveFE(false)
+      setIsActiveBE(!isActiveBE)
+      setIsActiveDB(false)
+      setIsActiveOS(false)
+    }
+    else if(name === 'DB'){
+      setIsActiveFE(false)
+      setIsActiveBE(false)
+      setIsActiveDB(!isActiveDB)
+      setIsActiveOS(false)
+    }
+    else if(name === 'OS'){
+      setIsActiveFE(false)
+      setIsActiveBE(false)
+      setIsActiveDB(false)
+      setIsActiveOS(!isActiveOS)
+    }
   }
     
 
@@ -326,14 +358,17 @@ const Skills = () => {
             {/* FRONTEND SKILLS */}
             <div className='skills__content fe skills__close'>
               
-              <div className="skills__header" onClick={toggleSkillsFE} ref={myRefFE}>
+              <div className="skills__header" onClick={()=> {setArrowIcon('FE');toggleSkillsFE()}} ref={myRefFE}>
                 <HiCode size={30} className='skills__icon'/>
 
                 <div>
                   <h2 className='skills__titles'>Frontend</h2>
                 </div>
 
-                <HiArrowNarrowDown size={18}/>
+                {isActiveFE?
+                  <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
+                }
+                
 
               </div>
 
@@ -430,14 +465,16 @@ const Skills = () => {
 
             {/* BACKEND SKILLS */}
             <div className='skills__content be skills__close'>
-              <div className="skills__header"  onClick={toggleSkillsBE} ref={myRefBE}>
+              <div className="skills__header"  onClick={()=> {setArrowIcon('BE');toggleSkillsBE()}} ref={myRefBE}>
                 <HiTerminal size={30} className='skills__icon'/>
 
                 <div>
                   <h2 className='skills__titles'>Backend</h2>
                 </div>
 
-                <HiArrowNarrowDown size={18}/>
+                {isActiveBE?
+                  <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
+                }
 
               </div>
 
@@ -515,14 +552,16 @@ const Skills = () => {
 
             {/* DATABASE SKILLS */}
             <div className='skills__content db skills__close'>
-              <div className="skills__header"  onClick={toggleSkillsDB} ref={myRefDB}>
+              <div className="skills__header"  onClick={()=> {setArrowIcon('DB');toggleSkillsDB()}} ref={myRefDB}>
                 <HiCloud size={30} className='skills__icon'/>
 
                 <div>
                   <h2 className='skills__titles'>{i18next.t("skills.db")}</h2>
                 </div>
 
-                <HiArrowNarrowDown size={18}/>
+                {isActiveDB?
+                  <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
+                }
 
               </div>
 
@@ -627,14 +666,16 @@ const Skills = () => {
 
             {/* OTHER SKILLS */}
             <div className='skills__content os skills__close'>
-              <div className="skills__header"  onClick={toggleSkillsOS} ref={myRefOS}>
+              <div className="skills__header"  onClick={()=> {setArrowIcon('OS');toggleSkillsOS()}} ref={myRefOS}>
                 <MdLanguage size={30} className='skills__icon'/>
 
                 <div>
                   <h2 className='skills__titles'>{i18next.t("skills.lng")}</h2>
                 </div>
 
-                <HiArrowNarrowDown size={18}/>
+                {isActiveOS?
+                  <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
+                }
 
               </div>
 

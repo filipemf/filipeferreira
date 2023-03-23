@@ -12,7 +12,7 @@
             "title2":"programmer",
             "title3":"almost an engineer!"
         },
-        "about": "I am a current university student pursuing a degree in Computer Engineering, and graduated from a technical school with an IT certificate in December 2020. Currently, I work with software development at Deutsche Telekom and engage in independent projects using cutting-edge technologies. My expertise lies in a range of technical areas, including Network and Cyber Security, JavaScript (with frameworks such as React.js and React Native), Python, C#, Node.js, and SQL. I have even undertaken some No-SQL projects that have further broadened my skill set. Through my diverse experiences, I have developed a keen eye for detail, problem-solving skills, and an innate curiosity to stay up-to-date with the latest industry trends.",
+        "about": "I'm a university student studying Computer Engineering with an IT certificate from a technical school. I currently work in software development at Deutsche Telekom. I have a keen eye for detail, adept problem-solving abilities, and keep up-to-date with the latest developments in the industry.",
         "button": "Know more"
     },
     "about": {
@@ -43,7 +43,7 @@
         "actualJob": {
             "text": "Currently as a Software Developer Intern at Deutsche Telekom Global Business Solutions Brazil. I'm working with:",
             "list": {
-                "list1":"Developing new IOT solutions using AI, Computer Vision, etc;",
+                "list1":"Developing IOT solutions using .NET, Angular, React, Computer Vision and Artificial Intelligence;",
                 "list2":"Providing support for Asset Tracking and RFID solutions;",
                 "list3":"Developing internal tools for maximizing and optimizing workflow and internal processes."
             }
@@ -69,7 +69,7 @@
         "title": "Get to know some of my work!",
         "firstWork": {
             "title": "DTGBS - Contracts",
-            "about": "Program created to manage and automate the creating of new documents."
+            "about": "This program was developed to handle, automate and streamline the process of generating fresh documents."
         },
         "secondWork": {
             "title": "Social Network - Ravit",

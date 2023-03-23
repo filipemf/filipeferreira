@@ -97,11 +97,11 @@ const About = () => {
             </div>
             
             <div className="section-content creative">
-              <div className='imgsContainer inline-flex'>
-                <img className='tsystemsLogo w-[230px] h-[70px]' src="../assets/tsystems.png" alt='T-Systems'/>
+              <div className='imgsContainer inline-flex mb-[10px]'>
+                <img className='tsystemsLogo w-[170px] h-[50px]' src="../assets/tsystems.png" alt='T-Systems'/>
 
                 <div className='mercedesLogo'>
-                  <img id='mercedesFoto' className='ml-[60px] h-[70px]' src="../assets/mercedes-logo.png" alt='Mercedes-Benz'/>
+                  <img id='mercedesFoto' className='ml-[70px] h-[70px]' src="../assets/mercedes-logo.png" alt='Mercedes-Benz'/>
                 </div>
               </div>
 

@@ -1,7 +1,7 @@
 import i18next from 'i18next';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import 'react-awesome-button/dist/styles.css';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 
 import {AiFillGithub} from 'react-icons/ai'
+import { AwesomeButton } from "react-awesome-button";
 
 
 const Work = () => {
@@ -68,11 +69,9 @@ const Work = () => {
                 <p className='mt-[30px] p-[20px]'>{i18next.t("portfolio.firstWork.about")}</p>
 
                 <div>
-                    <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
-                    <a href='https://github.com/filipemf/DTGBS-Contratos' className='averageLink flex justify-between items-center w-full text-gray-300'>
-                      {i18next.t("portfolio.button")} <AiFillGithub className='ml-[10px]' size={30}/>
-                    </a>  
-                    </button>
+                    <a href="https://github.com/filipemf/DTGBS-Contratos" target="_blank" rel="noreferrer">
+                      <AwesomeButton size='large' style={{'height':'70px'}} type="primary" after={<AiFillGithub className='ml-[10px]' size={30}/>}>{i18next.t("portfolio.button")}</AwesomeButton>
+                    </a>
                 </div>
             </div>
             
@@ -106,11 +105,9 @@ const Work = () => {
                 <p className='mt-[30px] p-[20px]'>{i18next.t("portfolio.secondWork.about")}</p>
 
                 <div>
-                    <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
-                    <a href='https://github.com/filipemf/Ravit' className='averageLink flex justify-between items-center w-full text-gray-300'>
-                      {i18next.t("portfolio.button")} <AiFillGithub className='ml-[10px]' size={30}/>
-                    </a>  
-                    </button>
+                  <a href='https://github.com/filipemf/Ravit' target="_blank" rel="noreferrer">
+                    <AwesomeButton size='large' style={{'height':'70px'}}  type="primary" after={<AiFillGithub className='ml-[10px]' size={30}/>}>{i18next.t("portfolio.button")}</AwesomeButton>
+                  </a>
                 </div>
             </div>
             
@@ -142,13 +139,12 @@ const Work = () => {
             <div className='contents'>
                 <p className='mt-[30px] p-[20px]'>{i18next.t("portfolio.thirdWork.about")}</p>
 
-                <div>
-                    <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 bg-pink-600'>
-                    <a href='https://github.com/filipemf/electron-facilitador' className='averageLink flex justify-between items-center w-full text-gray-300'>
-                      {i18next.t("portfolio.button")} <AiFillGithub className='ml-[10px]' size={30}/>
-                    </a>  
-                    </button>
-                </div>
+
+                  <div>
+                    <a href='https://github.com/filipemf/electron-facilitador' target="_blank" rel="noreferrer">
+                      <AwesomeButton size='large' style={{'height':'70px'}}  type="primary" after={<AiFillGithub className='ml-[10px]' size={30}/>}>{i18next.t("portfolio.button")}</AwesomeButton>
+                    </a>
+                  </div>
             </div>
             
 
