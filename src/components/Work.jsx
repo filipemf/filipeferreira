@@ -53,7 +53,7 @@ function CameraController() {
 }
 
 const Work = () => {
-  const [bgColor, setBgColor] = useState('#2d2f39');
+  const [bgColor, setBgColor] = useState('#2d2e39');
 
   SwiperCore.use([Pagination, Navigation]);
 

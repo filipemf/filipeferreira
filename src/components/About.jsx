@@ -47,7 +47,7 @@ const About = () => {
 
   
   return (
-    <div name='about' id='about' className='w-full h-[auto] bg-[#2d2f39] text-gray-300 pb-[30px]'>
+    <div name='about' id='about' className='w-full h-[auto] bg-[#2d2e39] text-gray-300 pb-[30px]'>
       <div className='flex flex-col justify-center items-center w-full '>
         <div className='text-center'>
 
@@ -81,7 +81,7 @@ const About = () => {
               <li><span className='text-[#000]'>◉</span> {i18next.t("about.etec.list.list4")}</li>
             </ul>
 
-            <img src="../assets/etec.png" className='w-[700px]' alt='teste'/>
+            <img src="../assets/etecCompressed.png" className='w-[700px]' alt='teste'/>
             </div>
             
             <div className="section-content strategy">

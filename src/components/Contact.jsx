@@ -104,7 +104,7 @@ const Contact = () => {
             </div>
 
             <div className='contactDiv'>
-              <a href='mailto:contact@filipeferreira.me?Subject=Contato%20Filipe%20Ferreira&Body=Oi%21%20Gostei%20do%20seu%20trabalho%21%20Podemos%20entrar%20em%20contato%3F' target="_blank" rel="noreferrer">
+              <a href='mailto:contact@filipeferreira.me?subject=Website%20Portfolio%20Inquiry&body=Hello%20Filipe%2C%20I%20came%20across%20your%20website%20portfolio%20and%20would%20like%20to%20talk%20to%20you.%20Please%20let%20me%20know%20if%20you%20are%20available%20to%20discuss%20further.%20Thank%20you.' target="_blank" rel="noreferrer">
                 <AwesomeButton size='small' style={{'height':'50px', 'width':'50px'}}  type="primary"><AiFillMail className='ml-[10px]' size={30}/></AwesomeButton>
               </a>
             </div>
