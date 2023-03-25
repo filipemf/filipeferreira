@@ -114,7 +114,7 @@ const Contact = () => {
                 <AwesomeButton size='medium' style={{'height':'70px'}}  type="primary">Download {i18next.t("contact.cv")}<AiOutlineDownload className='ml-[10px]' size={30}/></AwesomeButton>
               </a> */}
 
-              <a href={"../assets/Filipe Ferreira - Resume.pdf"} download target="_blank" rel="noreferrer">
+              <a href={localStorage.getItem('i18nextLng')==='en'?"../assets/Filipe Ferreira - Resume.pdf":"../assets/Filipe Ferreira - Curriculo.pdf"} download target="_blank" rel="noreferrer">
                 <AwesomeButtonProgress style={{'height':'50px'}} after={<AiOutlineFileText className='ml-[10px]' size={30}/>} type="primary" onPress={async (element, next)=>{
                     // await for something then call
                   next();
