@@ -9,8 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { HiCode,HiArrowNarrowDown,HiArrowNarrowUp,HiCloud, HiTerminal} from "react-icons/hi";
 import { MdLanguage} from "react-icons/md";
 
-import {FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNode, FaGithub, FaGitlab, FaAws, FaAngular,  FaFlagUsa, FaPython} from "react-icons/fa";
-import {SiMongodb, SiFirebase, SiMysql, SiCisco, SiCsharp, SiTypescript, SiDotnet, SiThreedotjs} from "react-icons/si";
+import {FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNode, FaGithub, FaGitlab, FaAws, FaAngular,  FaFlagUsa, FaPython, FaJava} from "react-icons/fa";
+import {SiMongodb, SiFirebase, SiMysql, SiCisco, SiCsharp, SiTypescript, SiThreedotjs} from "react-icons/si";
 import {GiBrazilFlag, GiSpain} from "react-icons/gi";
 
 
@@ -36,7 +36,7 @@ const Skills = () => {
       { image: '../assets/mysql.png', width: '100', height: '100', target: '_top', tooltip: 'MySQL' },
       { image: '../assets/cisco.png', width: '70', height: '70', target: '_top', tooltip: 'Cisco' },
       { image: '../assets/csharp.png', width: '70', height: '70', target: '_top', tooltip: 'C#' },
-      { image: '../assets/aspnet.png', width: '70', height: '70', target: '_top', tooltip: 'ASP.NET' },
+      { image: '../assets/java.png', width: '70', height: '70', target: '_top', tooltip: 'Java' },
       { image: '../assets/gitlab.png', width: '70', height: '70', target: '_top', tooltip: 'GitLab' },
       { image: '../assets/aws.png', width: '70', height: '70', target: '_top', tooltip: 'AWS' },
       { image: '../assets/angular.png', width: '70', height: '70', target: '_top', tooltip: 'Angular' },
@@ -224,7 +224,7 @@ const Skills = () => {
 
     let ent = [
       { image: '../assets/react-native.png', width: '70', height: '70', target: '_top', tooltip: 'React Native' },
-      { image: '../assets/aspnet.png', width: '70', height: '70', target: '_top', tooltip: 'ASP.NET' },
+      { image: '../assets/java.png', width: '70', height: '70', target: '_top', tooltip: 'Java' },
       { image: '../assets/node.png', width: '50', height: '50', target: '_top', tooltip: 'Node' },
       { image: '../assets/csharp.png', width: '70', height: '70', target: '_top', tooltip: 'C#' },
       { image: '../assets/python.png', width: '70', height: '70', target: '_top', tooltip: 'Python' },
@@ -510,7 +510,7 @@ const Skills = () => {
                 <div className="skills__data">
                   <div className="skills__titles">
                     <h3 className='skills__name'>C# <SiCsharp size={20}/> </h3>
-                    <span className='skills__number'>{i18next.t("skills.technical")}</span>
+                    <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
                   </div>
 
                   <div className='skills__bar'>
@@ -534,7 +534,7 @@ const Skills = () => {
                                 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>ASP.NET <SiDotnet size={20}/> </h3>
+                    <h3 className='skills__name'>Java <FaJava size={20}/> </h3>
                     <span className='skills__number'>{i18next.t("skills.technical")}</span>
                   </div>
 
