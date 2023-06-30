@@ -419,7 +419,7 @@ const Skills = () => {
                 <div className="skills__data">
                   <div className="skills__titles">
                     <h3 className='skills__name'>React <FaReact size={20}/> </h3>
-                    <span className='skills__number'>2 {i18next.t("skills.exp")}</span>
+                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
                   </div>
 
                   <div className='skills__bar'>
@@ -446,7 +446,7 @@ const Skills = () => {
                 <div className="skills__data">
                   <div className="skills__titles">
                     <h3 className='skills__name'>Angular <FaAngular size={20}/> </h3>
-                    <span className='skills__number'>+8 {i18next.t("skills.expMonths")}</span>
+                    <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
                   </div>
 
                   <div className='skills__bar'>
@@ -461,11 +461,11 @@ const Skills = () => {
                 <div className="skills__data">
                   <div className="skills__titles">
                     <h3 className='skills__name'>Typescript <SiTypescript size={20}/> </h3>
-                    <span className='skills__number'>+8 {i18next.t("skills.expMonths")}</span>
+                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__65"></span>
+                    <span className="skills__percentage skills__100"></span>
                   </div>
                   
                 </div>
@@ -497,7 +497,7 @@ const Skills = () => {
                 <div className="skills__data">
                   <div className="skills__titles">
                     <h3 className='skills__name'>NodeJS <FaNode size={20}/> </h3>
-                    <span className='skills__number'>+1.5 {i18next.t("skills.exp")}</span>
+                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
                   </div>
 
                   <div className='skills__bar'>
@@ -510,7 +510,7 @@ const Skills = () => {
                 <div className="skills__data">
                   <div className="skills__titles">
                     <h3 className='skills__name'>C# <SiCsharp size={20}/> </h3>
-                    <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
+                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
                   </div>
 
                   <div className='skills__bar'>
@@ -535,11 +535,11 @@ const Skills = () => {
                 <div className="skills__data">
                   <div className="skills__titles">
                     <h3 className='skills__name'>Java <FaJava size={20}/> </h3>
-                    <span className='skills__number'>{i18next.t("skills.technical")}</span>
+                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__60"></span>
+                    <span className="skills__percentage skills__90"></span>
                   </div>
                 </div>
 
@@ -547,7 +547,7 @@ const Skills = () => {
                 <div className="skills__data">
                   <div className="skills__titles">
                     <h3 className='skills__name'>React Native <FaReact size={20}/> </h3>
-                    <span className='skills__number'>2 {i18next.t("skills.exp")}</span>
+                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
                   </div>
 
                   <div className='skills__bar'>
@@ -662,11 +662,11 @@ const Skills = () => {
                 <div className="skills__data">
                   <div className="skills__titles">
                     <h3 className='skills__name'>AWS <FaAws size={20}/></h3>
-                    <span className='skills__number'>+8 {i18next.t("skills.expMonths")}</span>
+                    <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
                   </div>
 
                   <div className='skills__bar'>
-                    <span className="skills__percentage skills__60"></span>
+                    <span className="skills__percentage skills__65"></span>
                   </div>
                 </div>
 
