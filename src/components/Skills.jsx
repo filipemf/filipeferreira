@@ -10,7 +10,7 @@ import { HiCode,HiArrowNarrowDown,HiArrowNarrowUp,HiCloud, HiTerminal} from "rea
 import { MdLanguage} from "react-icons/md";
 
 import {FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNode, FaGithub, FaGitlab, FaAws, FaAngular,  FaFlagUsa, FaPython, FaJava} from "react-icons/fa";
-import {SiMongodb, SiFirebase, SiMysql, SiCisco, SiCsharp, SiTypescript, SiThreedotjs} from "react-icons/si";
+import {SiMongodb, SiFirebase, SiMysql, SiCisco, SiCsharp, SiTypescript, SiThreedotjs, SiGooglecloud, SiRedis, SiSpring} from "react-icons/si";
 import {GiBrazilFlag, GiSpain} from "react-icons/gi";
 
 
@@ -225,6 +225,7 @@ const Skills = () => {
     let ent = [
       { image: '../assets/react-native.png', width: '70', height: '70', target: '_top', tooltip: 'React Native' },
       { image: '../assets/java.png', width: '70', height: '70', target: '_top', tooltip: 'Java' },
+      { image: '../assets/spring.png', width: '70', height: '70', target: '_top', tooltip: 'Spring' },
       { image: '../assets/node.png', width: '50', height: '50', target: '_top', tooltip: 'Node' },
       { image: '../assets/csharp.png', width: '70', height: '70', target: '_top', tooltip: 'C#' },
       { image: '../assets/python.png', width: '70', height: '70', target: '_top', tooltip: 'Python' },
@@ -265,7 +266,8 @@ const Skills = () => {
     }
 
     let ent = [
-      { image: '../assets/firebase.png', width: '50', height: '50', target: '_top', tooltip: 'Firebase' },
+      { image: '../assets/firebase.png', width: '50', height: '50', target: '_top', tooltip: 'Google Cloud' },
+      { image: '../assets/redis.png', width: '50', height: '50', target: '_top', tooltip: 'Redis' },
       { image: '../assets/github.png', width: '50', height: '50', target: '_top', tooltip: 'Github' },
       { image: '../assets/mongo.png', width: '50', height: '50', target: '_top', tooltip: 'MongoDB' },
       { image: '../assets/mysql.png', width: '100', height: '100', target: '_top', tooltip: 'MySQL' },
@@ -356,6 +358,103 @@ const Skills = () => {
                 
         <div className='skills__container' style={{width: '100%'}}>
           <div className='skills__subcontainer gap-[50px] inline-block'>
+
+
+            
+
+            {/* BACKEND SKILLS */}
+            <div className='skills__content be skills__close'>
+              <div className="skills__header"  onClick={()=> {setArrowIcon('BE');toggleSkillsBE()}} ref={myRefBE}>
+                <HiTerminal size={30} className='skills__icon'/>
+
+                <div>
+                  <h2 className='skills__titles'>Backend</h2>
+                </div>
+
+                {isActiveBE?
+                  <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
+                }
+
+              </div>
+
+              <div className="skills__list grid">
+
+
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Java <FaJava size={20}/> </h3>
+                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__90"></span>
+                  </div>
+                </div>
+
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Spring <SiSpring size={20}/> </h3>
+                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__90"></span>
+                  </div>
+                </div>
+
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>NodeJS <FaNode size={20}/> </h3>
+                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__90"></span>
+                  </div>
+                </div>
+
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>C# <SiCsharp size={20}/> </h3>
+                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__70"></span>
+                  </div>
+                </div>
+
+
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Python <FaPython size={20}/> </h3>
+                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__80"></span>
+                  </div>
+                </div>
+
+                                
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>React Native <FaReact size={20}/> </h3>
+                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__85"></span>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+            {/* BACKEND SKILLS */}
             
             {/* FRONTEND SKILLS */}
             <div className='skills__content fe skills__close'>
@@ -474,95 +573,7 @@ const Skills = () => {
               </div>
             </div>
             {/* FRONTEND SKILLS */}
-                        
-
-
-            {/* BACKEND SKILLS */}
-            <div className='skills__content be skills__close'>
-              <div className="skills__header"  onClick={()=> {setArrowIcon('BE');toggleSkillsBE()}} ref={myRefBE}>
-                <HiTerminal size={30} className='skills__icon'/>
-
-                <div>
-                  <h2 className='skills__titles'>Backend</h2>
-                </div>
-
-                {isActiveBE?
-                  <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
-                }
-
-              </div>
-
-              <div className="skills__list grid">
-
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>NodeJS <FaNode size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__90"></span>
-                  </div>
-                </div>
-
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>C# <SiCsharp size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__70"></span>
-                  </div>
-                </div>
-
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Python <FaPython size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__80"></span>
-                  </div>
-                </div>
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Java <FaJava size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__90"></span>
-                  </div>
-                </div>
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>React Native <FaReact size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__85"></span>
-                  </div>
-                </div>
-
-
-              </div>
-
-            </div>
-            {/* BACKEND SKILLS */}
-
-
-            
+                       
 
             {/* DATABASE SKILLS */}
             <div className='skills__content db skills__close'>
@@ -583,12 +594,23 @@ const Skills = () => {
 
                 <div className="skills__data">
                   <div className="skills__titles">
-                    <h3 className='skills__name'>Firebase <SiFirebase size={20}/> </h3>
+                    <h3 className='skills__name'>Google Cloud <SiGooglecloud size={20}/> </h3>
                     <span className='skills__number'>{i18next.t("skills.technical")}</span>
                   </div>
 
                   <div className='skills__bar'>
                     <span className="skills__percentage skills__65"></span>
+                  </div>
+                </div>
+
+                <div className="skills__data">
+                  <div className="skills__titles">
+                    <h3 className='skills__name'>Redis <SiRedis size={20}/> </h3>
+                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                  </div>
+
+                  <div className='skills__bar'>
+                    <span className="skills__percentage skills__90"></span>
                   </div>
                 </div>
 
