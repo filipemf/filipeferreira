@@ -12,7 +12,7 @@
             "title2":"programador",
             "title3":"quase engenheiro!"
         },
-        "about": "Desenvolvedor há mais de 5 anos, sou um estudante de Engenharia da Computação com formação técnica em Desenvolvimento de Sistemas. Atualmente, trabalho com desenvolvimento de software na Deutsche Telekom. Sempre disposto a aprender mais, possuo habilidades de resolução de problemas e sempre me mantenho atualizado com as tendências da indústria.",
+        "about": "Desenvolvedor há mais de 5 anos, sou um estudante de Engenharia da Computação com formação técnica em Desenvolvimento de Sistemas. Atualmente, trabalho como Engenheiro de Software na Netcracker. Sempre disposto a aprender mais, possuo habilidades de resolução de problemas e sempre me mantenho atualizado com as tendências da indústria.",
         "button": "Conhecer mais"
     },
     "about": {
@@ -40,12 +40,19 @@
                 "list3":"Monitorando redes e configurações relacionadas a redes na Mercedes-Benz."
                 }
         },
-        "actualJob": {
-            "text": "Atualmente como Estagiário em Desenvolvimento, estou na Deutsche Telekom Global Bussiness Solutions Brasil, trabalhando com:",
+        "deutscheTelekom": {
+            "text": "Em meu período como Estagiário em Desenvolvimento na Deutsche Telekom Global Bussiness Solutions Brasil, minhas responsabilidades eram:",
             "list": {
                 "list1":"Desenvolvendo soluções em IOT usando AI e Visão Computacional;",
                 "list2":"Dando suporte e atuando em sistemas de Asset Tracking e RFID;",
                 "list3":"Desenvolvendo ferramentas internas com objetivo de maximizar e otimizar workflow e os processos internos."
+                }
+        },
+        "actualJob": {
+            "text": "Atualmente atuo como Engenheiro de Software Junior na Netcracker",
+            "list": {
+                "list1":"Trabalhando em projetos internacionais com times internacionais",
+                "list2":"Tecnologias: React, React Native and Angular"
                 }
         }
     },

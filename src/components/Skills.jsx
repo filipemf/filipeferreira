@@ -43,8 +43,7 @@ const Skills = () => {
       { image: '../assets/typescript.png', width: '70', height: '70', target: '_top', tooltip: 'TypeScript' },
       { image: '../assets/usflag.png', width: '50', height: '50', target: '_top', tooltip: 'English' },
       { image: '../assets/brflag.png', width: '50', height: '50', target: '_top', tooltip: 'Portuguese' },
-      { image: '../assets/spainflag.png', width: '50', height: '50', target: '_top', tooltip: 'Spanish' },
-  
+      
     ];
     const [isActiveFE, setIsActiveFE] = useState(false);
     const [isActiveBE, setIsActiveBE] = useState(false);
@@ -152,8 +151,18 @@ const Skills = () => {
     if(itemClass.current.parentElement.className === 'skills__content fe skills__close'){
       // console.log('abrir')
       itemClass.current.parentElement.className = 'skills__content fe skills__open'
+      
+      //$('#tagcloud').appendTo($('.skills__subcontainer'))
+      // $('#tagcloud').prependTo($('.skills__content.fe.skills__open  div.skills__list.grid'))
 
-      $('#tagcloud').prependTo($('.skills__content.fe.skills__open  div.skills__list.grid'))
+      const isMobile = window.matchMedia('(max-width: 767px)').matches;
+
+      if (!isMobile) {
+        $('#tagcloud').appendTo($('.skills__subcontainer'));
+      } else {
+        $('#tagcloud').prependTo($('.skills__content.fe.skills__open  div.skills__list.grid'));
+      }
+
 
     }
     else if(itemClass.current.parentElement.className === 'skills__content fe skills__open'){
@@ -202,7 +211,18 @@ const Skills = () => {
       // console.log('abrir')
       itemClass.current.parentElement.className = 'skills__content be skills__open'
 
-      $('#tagcloud').prependTo($('.skills__content.be.skills__open  div.skills__list.grid'))
+      
+
+      const isMobile = window.matchMedia('(max-width: 767px)').matches;
+
+      if (!isMobile) {
+        $('#tagcloud').appendTo($('.skills__subcontainer'));
+      } else {
+
+        
+        $('#tagcloud').prependTo($('.skills__content.be.skills__open  div.skills__list.grid'));
+      }
+
     }
     else if(itemClass.current.parentElement.className === 'skills__content be skills__open'){
       for(let i=0;i<skillsContent.length; i++){
@@ -211,6 +231,7 @@ const Skills = () => {
 
       itemClass.current.parentElement.className = 'skills__content be skills__close'
 
+      
       $('#tagcloud').appendTo($('.skills__subcontainer'))
       return openCloud()
 
@@ -245,8 +266,16 @@ const Skills = () => {
     if(itemClass.current.parentElement.className === 'skills__content db skills__close'){
       // console.log('abrir')
       itemClass.current.parentElement.className = 'skills__content db skills__open'
+      
+      const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
-      $('#tagcloud').prependTo($('.skills__content.db.skills__open  div.skills__list.grid'))
+      if (!isMobile) {
+        $('#tagcloud').appendTo($('.skills__subcontainer'));
+      } else {
+        $('#tagcloud').prependTo($('.skills__content.db.skills__open  div.skills__list.grid'));
+      }
+
+    
     }
     else if(itemClass.current.parentElement.className === 'skills__content db skills__open'){
       for(let i=0;i<skillsContent.length; i++){
@@ -291,7 +320,16 @@ const Skills = () => {
       // console.log('abrir')
       itemClass.current.parentElement.className = 'skills__content os skills__open'
 
-      $('#tagcloud').prependTo($('.skills__content.os.skills__open  div.skills__list.grid'))
+      
+      const isMobile = window.matchMedia('(max-width: 767px)').matches;
+
+      if (!isMobile) {
+        $('#tagcloud').appendTo($('.skills__subcontainer'));
+      } else {
+        $('#tagcloud').prependTo($('.skills__content.os.skills__open  div.skills__list.grid'));
+      }
+
+
     }
     else if(itemClass.current.parentElement.className === 'skills__content os skills__open'){
       for(let i=0;i<skillsContent.length; i++){
@@ -314,7 +352,7 @@ const Skills = () => {
     let ent = [
       { image: '../assets/usflag.png', width: '50', height: '50', target: '_top', tooltip: 'English' },
       { image: '../assets/brflag.png', width: '50', height: '50', target: '_top', tooltip: 'Portuguese' },
-      { image: '../assets/spainflag.png', width: '50', height: '50', target: '_top', tooltip: 'Spanish' },
+      
     ]
     openCloud(itemClass.current.parentElement.className, ent, itemClass)
   }
@@ -357,413 +395,406 @@ const Skills = () => {
 
                 
         <div className='skills__container' style={{width: '100%'}}>
-          <div className='skills__subcontainer gap-[50px] inline-block'>
+          <div className='skills__subcontainer gap-[50px] inline-flex'>    
+          
+            <div >
 
 
-            
+              <div id='teste2323' className='test2323' style={{display: "flex", flexDirection: "column"}}>
 
-            {/* BACKEND SKILLS */}
-            <div className='skills__content be skills__close'>
-              <div className="skills__header"  onClick={()=> {setArrowIcon('BE');toggleSkillsBE()}} ref={myRefBE}>
-                <HiTerminal size={30} className='skills__icon'/>
+                
+              {/* BACKEND SKILLS */}
+              <div className='skills__content be skills__close'>
+                <div className="skills__header"  onClick={()=> {setArrowIcon('BE');toggleSkillsBE()}} ref={myRefBE}>
+                  <HiTerminal size={30} className='skills__icon'/>
 
-                <div>
-                  <h2 className='skills__titles'>Backend</h2>
+                  <div>
+                    <h2 className='skills__titles'>Backend</h2>
+                  </div>
+
+                  {isActiveBE?
+                    <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
+                  }
+
                 </div>
 
-                {isActiveBE?
-                  <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
-                }
+                <div className="skills__list grid">
+
+
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>Java <FaJava size={20}/> </h3>
+                      <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__90"></span>
+                    </div>
+                  </div>
+
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>Spring <SiSpring size={20}/> </h3>
+                      <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__90"></span>
+                    </div>
+                  </div>
+
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>NodeJS <FaNode size={20}/> </h3>
+                      <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__90"></span>
+                    </div>
+                  </div>
+
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>C# <SiCsharp size={20}/> </h3>
+                      <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__70"></span>
+                    </div>
+                  </div>
+
+
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>Python <FaPython size={20}/> </h3>
+                      <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__80"></span>
+                    </div>
+                  </div>
+
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>React Native <FaReact size={20}/> </h3>
+                      <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__85"></span>
+                    </div>
+                  </div>
+
+
+                </div>
 
               </div>
-
-              <div className="skills__list grid">
-
-
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Java <FaJava size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__90"></span>
-                  </div>
-                </div>
-
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Spring <SiSpring size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__90"></span>
-                  </div>
-                </div>
-
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>NodeJS <FaNode size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__90"></span>
-                  </div>
-                </div>
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>C# <SiCsharp size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__70"></span>
-                  </div>
-                </div>
-
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Python <FaPython size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__80"></span>
-                  </div>
-                </div>
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>React Native <FaReact size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__85"></span>
-                  </div>
-                </div>
-
+              {/* BACKEND SKILLS */}
 
               </div>
-
-            </div>
-            {/* BACKEND SKILLS */}
-            
-            {/* FRONTEND SKILLS */}
-            <div className='skills__content fe skills__close'>
               
-              <div className="skills__header" onClick={()=> {setArrowIcon('FE');toggleSkillsFE()}} ref={myRefFE}>
-                <HiCode size={30} className='skills__icon'/>
-
-                <div>
-                  <h2 className='skills__titles'>Frontend</h2>
-                </div>
-
-                {isActiveFE?
-                  <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
-                }
+              
+              {/* FRONTEND SKILLS */}
+              <div className='skills__content fe skills__close'>
                 
+                <div className="skills__header" onClick={()=> {setArrowIcon('FE');toggleSkillsFE()}} ref={myRefFE}>
+                  <HiCode size={30} className='skills__icon'/>
 
-              </div>
-
-              <div className="skills__list grid">
-
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>HTML <FaHtml5 size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                  <div>
+                    <h2 className='skills__titles'>Frontend</h2>
                   </div>
 
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__100"></span>
-                  </div>
-                </div>
-
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>JavaScript <FaJsSquare size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__100"></span>
-                  </div>
-                </div>
-
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>CSS <FaCss3Alt size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__85"></span>
-                  </div>
+                  {isActiveFE?
+                    <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
+                  }
                   
+
                 </div>
 
-                
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>React <FaReact size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                <div className="skills__list grid">
+
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>HTML <FaHtml5 size={20}/> </h3>
+                      <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__100"></span>
+                    </div>
                   </div>
 
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__90"></span>
+
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>JavaScript <FaJsSquare size={20}/> </h3>
+                      <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__100"></span>
+                    </div>
                   </div>
+
+
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>CSS <FaCss3Alt size={20}/> </h3>
+                      <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__85"></span>
+                    </div>
+                    
+                  </div>
+
                   
-                </div>
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>React <FaReact size={20}/> </h3>
+                      <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    </div>
 
-
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Three.js <SiThreedotjs size={20}/> </h3>
-                    <span className='skills__number'>{i18next.t("skills.technical")}</span>
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__90"></span>
+                    </div>
+                    
                   </div>
 
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__50"></span>
-                  </div>
-                </div>
 
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>Three.js <SiThreedotjs size={20}/> </h3>
+                      <span className='skills__number'>{i18next.t("skills.technical")}</span>
+                    </div>
 
-                
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Angular <FaAngular size={20}/> </h3>
-                    <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__50"></span>
+                    </div>
                   </div>
 
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__60"></span>
-                  </div>
+
                   
-                </div>
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>Angular <FaAngular size={20}/> </h3>
+                      <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
+                    </div>
 
-
-                
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Typescript <SiTypescript size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__60"></span>
+                    </div>
+                    
                   </div>
 
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__100"></span>
-                  </div>
+
                   
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>Typescript <SiTypescript size={20}/> </h3>
+                      <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__100"></span>
+                    </div>
+                    
+                  </div>
+
+
                 </div>
-
-
               </div>
-            </div>
-            {/* FRONTEND SKILLS */}
-                       
-
-            {/* DATABASE SKILLS */}
-            <div className='skills__content db skills__close'>
-              <div className="skills__header"  onClick={()=> {setArrowIcon('DB');toggleSkillsDB()}} ref={myRefDB}>
-                <HiCloud size={30} className='skills__icon'/>
-
-                <div>
-                  <h2 className='skills__titles'>{i18next.t("skills.db")}</h2>
-                </div>
-
-                {isActiveDB?
-                  <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
-                }
-
-              </div>
-
-              <div className="skills__list grid">
-
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Google Cloud <SiGooglecloud size={20}/> </h3>
-                    <span className='skills__number'>{i18next.t("skills.technical")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__65"></span>
-                  </div>
-                </div>
-
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Redis <SiRedis size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__90"></span>
-                  </div>
-                </div>
-
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Github <FaGithub size={20}/> </h3>
-                    <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__90"></span>
-                  </div>
-                </div>
-
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>MongoDB <SiMongodb size={20}/> </h3>
-                    <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__70"></span>
-                  </div>
-                </div>
-
-                
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>MySQL <SiMysql size={20}/></h3>
-                    <span className='skills__number'>{i18next.t("skills.technical")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__65"></span>
-                  </div>
-                </div>
-
-                
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Networks <SiCisco size={20}/></h3>
-                    <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__65"></span>
-                  </div>
-                </div>
-
-                
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>Gitlab <FaGitlab size={20}/></h3>
-                    <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__70"></span>
-                  </div>
-                </div>
-
-                
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>AWS <FaAws size={20}/></h3>
-                    <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__65"></span>
-                  </div>
-                </div>
-
-
-              </div>
-
-            </div>
-            {/* DATABASE SKILLS */}
-
+              {/* FRONTEND SKILLS */}
                         
 
-            {/* OTHER SKILLS */}
-            <div className='skills__content os skills__close'>
-              <div className="skills__header"  onClick={()=> {setArrowIcon('OS');toggleSkillsOS()}} ref={myRefOS}>
-                <MdLanguage size={30} className='skills__icon'/>
+              {/* DATABASE SKILLS */}
+              <div className='skills__content db skills__close'>
+                <div className="skills__header"  onClick={()=> {setArrowIcon('DB');toggleSkillsDB()}} ref={myRefDB}>
+                  <HiCloud size={30} className='skills__icon'/>
 
-                <div>
-                  <h2 className='skills__titles'>{i18next.t("skills.lng")}</h2>
+                  <div>
+                    <h2 className='skills__titles'>{i18next.t("skills.db")}</h2>
+                  </div>
+
+                  {isActiveDB?
+                    <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
+                  }
+
                 </div>
 
-                {isActiveOS?
-                  <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
-                }
+                <div className="skills__list grid">
+
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>Google Cloud <SiGooglecloud size={20}/> </h3>
+                      <span className='skills__number'>{i18next.t("skills.technical")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__65"></span>
+                    </div>
+                  </div>
+
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>Redis <SiRedis size={20}/> </h3>
+                      <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__90"></span>
+                    </div>
+                  </div>
+
+
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>Github <FaGithub size={20}/> </h3>
+                      <span className='skills__number'>+2 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__90"></span>
+                    </div>
+                  </div>
+
+
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>MongoDB <SiMongodb size={20}/> </h3>
+                      <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__70"></span>
+                    </div>
+                  </div>
+
+                  
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>MySQL <SiMysql size={20}/></h3>
+                      <span className='skills__number'>{i18next.t("skills.technical")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__65"></span>
+                    </div>
+                  </div>
+
+                  
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>Networks <SiCisco size={20}/></h3>
+                      <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__65"></span>
+                    </div>
+                  </div>
+
+                  
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>Gitlab <FaGitlab size={20}/></h3>
+                      <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__70"></span>
+                    </div>
+                  </div>
+
+                  
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>AWS <FaAws size={20}/></h3>
+                      <span className='skills__number'>+1 {i18next.t("skills.exp")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__65"></span>
+                    </div>
+                  </div>
+
+
+                </div>
 
               </div>
+              {/* DATABASE SKILLS */}
 
-              <div className="skills__list grid">
+                          
 
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>{i18next.t("skills.en")} <FaFlagUsa size={20}/> </h3>
-                    <span className='skills__number'>{i18next.t("skills.fluent")}</span>
+              {/* OTHER SKILLS */}
+              <div className='skills__content os skills__close'>
+                <div className="skills__header"  onClick={()=> {setArrowIcon('OS');toggleSkillsOS()}} ref={myRefOS}>
+                  <MdLanguage size={30} className='skills__icon'/>
+
+                  <div>
+                    <h2 className='skills__titles'>{i18next.t("skills.lng")}</h2>
                   </div>
 
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__100"></span>
-                  </div>
+                  {isActiveOS?
+                    <HiArrowNarrowUp size={18}/>:<HiArrowNarrowDown size={18}/>
+                  }
+
                 </div>
 
+                <div className="skills__list grid">
 
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>{i18next.t("skills.pt")} <GiBrazilFlag size={20}/> </h3>
-                    <span className='skills__number'>{i18next.t("skills.native")}</span>
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>{i18next.t("skills.en")} <FaFlagUsa size={20}/> </h3>
+                      <span className='skills__number'>{i18next.t("skills.fluent")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__100"></span>
+                    </div>
                   </div>
 
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__100"></span>
+
+                                  
+                  <div className="skills__data">
+                    <div className="skills__titles">
+                      <h3 className='skills__name'>{i18next.t("skills.pt")} <GiBrazilFlag size={20}/> </h3>
+                      <span className='skills__number'>{i18next.t("skills.native")}</span>
+                    </div>
+
+                    <div className='skills__bar'>
+                      <span className="skills__percentage skills__100"></span>
+                    </div>
                   </div>
+
                 </div>
-
-
-                                
-                <div className="skills__data">
-                  <div className="skills__titles">
-                    <h3 className='skills__name'>{i18next.t("skills.es")} <GiSpain size={20}/> </h3>
-                    <span className='skills__number'>{i18next.t("skills.intermediate")}</span>
-                  </div>
-
-                  <div className='skills__bar'>
-                    <span className="skills__percentage skills__50"></span>
-                  </div>
-                </div>
-
 
               </div>
+              {/* OTHER SKILLS */}
 
             </div>
-            {/* OTHER SKILLS */}
 
-
-
-            
             <div id="tagcloud" ref={svgEl} className=''></div>
+          
+          
           </div>
 
           

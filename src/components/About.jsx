@@ -32,16 +32,15 @@ const About = () => {
     });
     
     $(".step04").click( function() {
-      fireConfetti()
-      $("#line-progress").css("width", "100%");
+      $("#line-progress").css("width", "75%");
       $(".production").addClass("active").siblings().removeClass("active");
     });
-    
-    // $(".step05").click( function() {
-    //   $("#line-progress").css("width", "100%");
-    //   $(".analysis").addClass("active").siblings().removeClass("active");
-    // });
-  
+
+    $(".step05").click( function() {
+      fireConfetti()
+      $("#line-progress").css("width", "100%");
+      $(".current").addClass("active").siblings().removeClass("active");
+    });
    
   }, [])
 
@@ -60,7 +59,8 @@ const About = () => {
               <li className="step step01 active"><div className="step-inner" id='etec'>2017-2020</div></li>
               <li className="step step02"><div className="step-inner">2021-2025</div></li>
               <li className="step step03"><div className="step-inner">2021-2022</div></li>
-              <li className="step step04"><div className="step-inner">2022-{i18next.t("about.today")}</div></li>
+              <li className="step step04"><div className="step-inner">2022-2023</div></li>
+              <li className="step step05"><div className="step-inner">2023-{i18next.t("about.today")}</div></li>
               {/* <li className="step step05"><div className="step-inner">OUR LOCATIONS</div></li> */}
             </ul>
             
@@ -120,13 +120,29 @@ const About = () => {
               </div>
             
               
-              <p id='timelineP'>{i18next.t("about.actualJob.text")}</p>
+              <p id='timelineP'>{i18next.t("about.deutscheTelekom.text")}</p>
               <ul className='timelineUL'>
-                <li><span className='text-[#000]'>◉</span> {i18next.t("about.actualJob.list.list1")}</li>
-                <li><span className='text-[#000]'>◉</span> {i18next.t("about.actualJob.list.list2")}</li>
-                <li><span className='text-[#000]'>◉</span> {i18next.t("about.actualJob.list.list3")}</li>
+                <li><span className='text-[#000]'>◉</span> {i18next.t("about.deutscheTelekom.list.list1")}</li>
+                <li><span className='text-[#000]'>◉</span> {i18next.t("about.deutscheTelekom.list.list2")}</li>
+                <li><span className='text-[#000]'>◉</span> {i18next.t("about.deutscheTelekom.list.list3")}</li>
               </ul>
             </div>
+
+            <div className="section-content current">
+              <div className='inline-flex'>
+                <img src="../assets/netcracker.png" className='mb-[20px]' alt='teste'/>
+              </div>
+            
+              <br></br>
+              <p id='timelineP'>{i18next.t("about.actualJob.text")}</p>
+              <ul className='timelineUL'>
+                
+                <li><span className='text-[#000]'>◉</span> {i18next.t("about.actualJob.list.list1")}</li>
+                <li><span className='text-[#000]'>◉</span> {i18next.t("about.actualJob.list.list2")}</li>
+              </ul>
+            </div>
+
+
           </div>
         </div>
         </div>

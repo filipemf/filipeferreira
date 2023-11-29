@@ -93,7 +93,7 @@ const Home = () => {
 
 
           <div className='containerPhoto'>
-            <img className='image h-[500px]' src='../assets/foto3compress.png' alt="HTML icon" />
+            <img className='image h-[500px]' src='../assets/foto-nova-2.png' alt="HTML icon" />
           </div>
           
         </div>

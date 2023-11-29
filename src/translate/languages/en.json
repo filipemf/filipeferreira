@@ -12,7 +12,7 @@
             "title2":"programmer",
             "title3":"almost an engineer!"
         },
-        "about": "Being a developer for more than 5 years, I’m also a university student studying Computer Engineering with an IT certificate from a technical school. I currently work in software development at Deutsche Telekom. I have a keen eye for detail, adept problem-solving abilities, and keep up-to date with the latest developments in the industry.",
+        "about": "Being a developer for more than 5 years, I'm also a university student studying Computer Engineering with an IT certificate from a technical school. I'm currently working as a Software Engineer at Netcracker. I have a keen eye for detail, adept problem-solving abilities, and keep up-to date with the latest developments in the industry.",
         "button": "Know more"
     },
     "about": {
@@ -40,12 +40,21 @@
                 "list3":"Monitored network hardware operations to evaluate proper configuration for Mercedes-Benz."
             }
         },
-        "actualJob": {
-            "text": "Currently as a Software Developer Intern at Deutsche Telekom Global Business Solutions Brazil. I'm working with:",
+
+        "deutscheTelekom": {
+            "text": "While I was working as a Software Developer Intern at Deutsche Telekom Global Business Solutions Brazil, my responsibilities were:",
             "list": {
                 "list1":"Developing IOT solutions using .NET, Angular, React, Computer Vision and Artificial Intelligence;",
                 "list2":"Providing support for Asset Tracking and RFID solutions;",
                 "list3":"Developing internal tools for maximizing and optimizing workflow and internal processes."
+            }
+        },
+        
+        "actualJob": {
+            "text": "My current position at Netcracker is Junior Software Engineer",
+            "list": {
+                "list1":"Worked on international projects with international teams;",
+                "list2":"Using: React, React Native and Angular"
             }
         }
     },

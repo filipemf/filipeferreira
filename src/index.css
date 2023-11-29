@@ -763,7 +763,8 @@ body {height: 100%;}
 #progress-bar-container li {
 	list-style:none;
 	float:left;
-	width:20%;
+  
+	width:15%;
 	text-align:center;
 	color:#f0f0f0;
 	text-transform:uppercase;
