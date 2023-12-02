@@ -10,8 +10,8 @@ const Home = () => {
   useEffect(()=>{
     new Typed('.auto-type',{
       strings: [i18next.t("home.titles.title1"), i18next.t("home.titles.title2"), i18next.t("home.titles.title3")],
-      typeSpeed: 100,
-      backSpeed: 100,
+      typeSpeed: 60,
+      backSpeed: 90,
       loop: true,
 
     })
@@ -41,7 +41,7 @@ const Home = () => {
         <div className='homeContainer flex mt-[100px] justify-center'>
           <div className='homeText width-[695px]'>
 
-            <h1 className='text-4xl sm:text-5xl font-bold text-[#ccd6f6]'>
+            <h1 className='text-4xl sm:text-5xl font-bold text-[#fff]'>
               Filipe Ferreira
             </h1>
           

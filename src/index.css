@@ -57,7 +57,7 @@ body {height: 100%;}
 }
 .dynamic-txts li{
   list-style: none;
-  color: rgba(19, 226, 166, 1);
+  color: #e2134f;
   font-size: 50px;
   font-weight: 500;
   position: relative;
@@ -81,7 +81,7 @@ body {height: 100%;}
   height: 110%;
   width: 100%;
   background: #22232a;
-  border-left: 2px solid rgba(19, 226, 166, 1);
+  border-left: 2px solid #e2134f;
   animation: typing 3s steps(10) infinite;
 }
 @keyframes typing {
@@ -501,7 +501,7 @@ body {height: 100%;}
   font-size: 2em;
   color: transparent;
   text-transform: uppercase;
-  background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+  background-image: linear-gradient(to left, #2ecc71, #3498db, #e2134f,#9b59b6);
   -webkit-background-clip: text;
   animation: animate 5s linear infinite;
   -webkit-background-size: 500%;
@@ -563,7 +563,7 @@ body {height: 100%;}
 
 .skills__icon, .skills__arrow{
   font-size: 2rem;
-  color: #13e2a6;
+  color: #e2134f;
 }
 
 .skills__icon{
@@ -613,7 +613,7 @@ body {height: 100%;}
 .skills__percentage{
   display: block;
   background-image: linear-gradient(to right, #b32439,#f39c12, #3498db, #2ecc71);
-  /* background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12); */
+  /* background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #e2134f,); */
   animation: progress 0.4s ease-in-out forwards;
 }
 
@@ -757,7 +757,8 @@ body {height: 100%;}
 #progress-bar-container li.active:before, #progress-bar-container li:hover:before {
 	border:solid 2px #fff;
        	 
-	background: linear-gradient(to left, #2ecc71, #3498db);
+	/* background: linear-gradient(to left, #2ecc71, #e2134f); */
+  background: linear-gradient(to left, #e2134f, #e2134f);
 }
 
 #progress-bar-container li {
@@ -897,7 +898,7 @@ text-decoration: none;
 }
 .averageLink:hover{
   text-decoration: none;
-  color: #2ecc71;
+  color: #e2134f;
   }
 
 #navbarDefault{
@@ -920,12 +921,12 @@ text-decoration: none;
 }
 
 .auto-type{
-  color: rgba(19, 226, 166, 1);
+  color: #e2134f;
   font-size: 2.2rem;
 }
 
 .typed-cursor{
-  color: rgba(19, 226, 166, 1);
+  color: #fff;
   font-size: 2.2rem;
 }
 
@@ -1008,7 +1009,7 @@ text-decoration: none;
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #2ecc71;
+  background-color: #e2134f;
   transform: scaleX(0);
   transition: transform 0.2s ease-in-out;
 }
@@ -1029,7 +1030,7 @@ text-decoration: none;
 }
 
 .navbarOption:hover {
-  color: #2ecc71;
+  color: #e2134f;
   animation: fadeIn 0.2s ease-in-out;
 }
 
