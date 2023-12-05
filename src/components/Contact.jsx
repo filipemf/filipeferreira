@@ -63,7 +63,7 @@ const Contact = () => {
       <div className='flex flex-col justify-center items-center w-full '>
 
       
-        <h1 className='timelineTitle font-bold text-5xl mb-[30px] mt-[30px]'>{i18next.t("contact.title")}</h1>
+        <h1 className='timelineTitle text-[#fff] font-bold text-5xl mb-[30px] mt-[30px]'>{i18next.t("contact.title")}</h1>
 
 
         <div>

@@ -51,7 +51,7 @@ const About = () => {
         <div className='text-center'>
 
 
-        <h1 className='timelineTitle font-bold text-5xl mt-[50px] mb-[30px]'>{i18next.t("about.title")}</h1>
+        <h1 className='timelineTitle text-[#fff] font-bold text-5xl mt-[50px] mb-[30px]'>{i18next.t("about.title")}</h1>
 
         <div className="process-wrapper">
           <div id="progress-bar-container">
